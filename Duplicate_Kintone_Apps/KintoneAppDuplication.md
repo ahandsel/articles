@@ -32,7 +32,7 @@ The following are not copied to the new App:
   * [App Code](https://get.kintone.help/k/en/user/App_settings/App_othersettings/Appcode.html)
   * [API Token](https://get.kintone.help/k/en/glossary/api_token.html)
   * [Plug-ins](https://developer.kintone.io/hc/en-us/articles/212495268) and corresponding App settings
-  * [App's Records](https://get.kintone.help/k/en/glossary/records.html) (i.e. App's data)
+  * [App's Records](https://get.kintone.help/k/en/glossary/records.html) (i.e., App's data)
 
 ### Steps to Duplicate an Existing App
 (1) Click on the ➕ Button to the right of Apps Create App.
@@ -69,7 +69,7 @@ The following are not copied to the new App:
 
 ⚠️ Caution
   * Templates can be created only from activated Apps.
-  * Template will not include some settings. For more information, refer to the [Settings That Are Not Included in App Templates](https://get.kintone.help/k/en/admin/app_admin/template/template_settings.html) help doc.
+  * The Template will not include some settings. For more information, refer to the [Settings That Are Not Included in App Templates](https://get.kintone.help/k/en/admin/app_admin/template/template_settings.html) help doc.
 
 ### Multiple Apps in one App Template?
 Multiple Apps can be included in one App Template.  
@@ -89,7 +89,7 @@ Following Settings are able to be included in the App Template:
   * `Apps` > `App Templates`
   * App Template Setting's URL: `https://_YourSubdomain_.kintone.com/k/admin/system/template/`
 
-(3) Click the `New` button from the top-left corner
+(3) Click the `New` Button from the top-left corner
   * ![App Templates screen > New Button](./M2_Step2.png)
 
 (4) Select the Apps to be included in the App Template.
@@ -112,7 +112,7 @@ For more information, refer to [Creating a Template from an App](https://get.kin
   * ![From the Kintone Portal, Apps section's plus Button](img/app_template_01.png)
 
 (2) Click the `Create from Template` option under the `Create New App` section.
-  * ![From the Kintone Marketplace, Create from Template button](img/app_template_02.png)
+  * ![From the Kintone Marketplace, Create from Template Button](img/app_template_02.png)
 
 (3) Click `Use This Template` for the desired template.
   * **Pack** label is placed on App Templates that creates multiple Apps.
@@ -189,7 +189,7 @@ The is no one function to copy a Kintone App that includes the original Records.
 
 (1) Configure the View to list the desired records to be exported.
 
-(2) Click the options button `...` on the upper right of the screen, and then click **Export to File**.
+(2) Click the Options Button `...` on the upper right of the screen, and then click **Export to File**.
   * If the **Export to File** Button is not shown, the user does not have permission to export data to a file.
   * ![App List View > Option Drop-down List > Export to File Button](img/data_export_img03.png)
 
@@ -199,9 +199,9 @@ The is no one function to copy a Kintone App that includes the original Records.
   * ![Character Encoding and Delimiter are selected as English and Comma respectively](img/data_export_img05.png)
 
 (5) Drag and drop items to be exported.
-  * Click on **Add All** button to include all fields in the data export.
+  * Click on **Add All** Button to include all fields in the data export.
   * ![Gif showing Record number being dragged & dropped](img/data_export_img06.gif)
-  * ![Gif showing Add All button](img/data_export_img07.gif)
+  * ![Gif showing Add All Button](img/data_export_img07.gif)
 
 (6) Click **Export** on the upper left of the screen.
   * When a data exporting process begins, you are moved to the **Exported Files** screen.
@@ -220,19 +220,19 @@ For more information, refer to [Exporting Data to a File](https://get.kintone.he
 
 ### Importing App Data (Records) from a CSV file
 
-(1) Click the options button `...` on the upper right of the screen, and then click **Import from File** button.
+(1) Click the Options Button `...` on the upper right of the screen, and then click the **Import from File** button.
   * ![Import from file button](img/import_csv_img01.png)
 
 (2) Click **Browse** and specify an Excel file or CSV file to import.
 
-(3) When prompted with **Select Data Scope**, select **First row is header**.
+(3) When prompted with **Select Data Scope**, select the **First row is header** option.
   * ![First row is header Option](img/import_csv_img3.png)
 
 (4) For each field in the App, associate it with the column in the file to import.
   * Make sure to specify **Column in File** for each of the following fields:
     * Fields where values are to be added
     * Fields where entry is required (marked with an asterisk `*`)
-  * If a field is not associated with any column under the **Column in File**, it is created as an empty field or with a default value
+  * If a field is not associated with any column under the **Column in File**, it is created as an empty field or with a default value.
   * ![Match Columns in Imported File to Fields in Kintone App](img/import_csv_img5.png)
 
 (5) Click **Import** on the upper left side of the screen.
