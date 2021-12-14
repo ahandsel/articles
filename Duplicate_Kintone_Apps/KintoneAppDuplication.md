@@ -19,10 +19,14 @@ This article will explore the different ways to duplicate Kintone Apps (copying 
 
 <!-- markdownlint-enable MD007 -->
 
+---
+
 ## Prerequisite
 Management permission is required to duplicate the App.
 
 For details, refer to [Setting App Permissions](https://get.kintone.help/k/en/user/App_settings/rights/App_rights.html) help doc.
+
+---
 
 ## Method 1: Creating a New App by Duplicating an Existing App
 This is the easiest way to get the job as it only uses Kintone's standard functions (no customization).  
@@ -54,8 +58,7 @@ The following are not copied to the new App:
   * Only the App's fields and Process Management settings will be duplicated.
   * ![New Customer Database](https://get.kintone.help/k/img-en/App_recycle_img08.png)
 
-### Sources <!-- omit in toc -->
-[Creating a New App by Duplicating an Existing App (Copying an App)](https://get.kintone.help/k/en/user/create_App/App_recycle.html)
+For more information, refer to [Creating a New App by Duplicating an Existing App (Copying an App)](https://get.kintone.help/k/en/user/create_App/App_recycle.html) help doc.
 
 ---
 
@@ -175,6 +178,8 @@ Assignee
     * "Created by" field
     * "Updated by" field
 
+---
+
 ## Migrating Records from the Original App to the New App
 The is no one function to copy a Kintone App that includes the original Records. Ultimately, the App must be duplicated, and the Records from the Original App be exported as a CSV file and imported into the New App.
 
@@ -266,6 +271,8 @@ A button should appear on the Record List.
 Click the Button to start running the process to download Attachment files as a Zip file.
 
 For more information, refer to the [Bulk download attachments using JSZip](https://developer.kintone.io/hc/en-us/articles/115004137213) tutorial.
+
+---
 
 ## Guest Space
   * In a Guest Space, only Apps within the same Guest Space can be duplicated with [Method 1](#method-1-creating-a-new-app-by-duplicating-an-existing-app).
