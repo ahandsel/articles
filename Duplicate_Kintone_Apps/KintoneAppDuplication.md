@@ -1,7 +1,7 @@
 # How to Duplicate Kintone Apps? <!-- omit in toc -->
 This article will explore the different ways to duplicate Kintone Apps (copying an App) with and without the data stored inside.
 
-Outline: <!-- markdownlint-disable MD007 -->
+## Outline <!-- omit in toc --><!-- markdownlint-disable MD007 -->
 * [Prerequisite](#prerequisite)
 * [Method 1: Creating a New App by Duplicating an Existing App](#method-1-creating-a-new-app-by-duplicating-an-existing-app)
   * [Steps to Duplicate an Existing App](#steps-to-duplicate-an-existing-app)
@@ -16,6 +16,8 @@ Outline: <!-- markdownlint-disable MD007 -->
   * [Importing App Data (Records) from a CSV file](#importing-app-data-records-from-a-csv-file)
   * [How to bulk download all the Attachments from a Kintone App?](#how-to-bulk-download-all-the-attachments-from-a-kintone-app)
 * [Guest Space](#guest-space)
+
+<!-- markdownlint-enable MD007 -->
 
 ## Prerequisite
 Management permission is required to duplicate the App.
@@ -60,14 +62,14 @@ The following are not copied to the new App:
 ## Method 2: App Template
 
 ### What Is an App Template?
-* An App Template is a model that users can use to create Apps with the defined settings preemptively applied to the new App.
-* App templates can be created from existing Apps.
-* Creating or deleting App templates requires Kintone Administrative permission.
-* For more information, refer to [What Is an App Template?](https://get.kintone.help/k/en/admin/app_admin/template/whats_template.html) help doc.
+  * An App Template is a model that users can use to create Apps with the defined settings preemptively applied to the new App.
+  * App templates can be created from existing Apps.
+  * Creating or deleting App templates requires Kintone Administrative permission.
+  * For more information, refer to [What Is an App Template?](https://get.kintone.help/k/en/admin/app_admin/template/whats_template.html) help doc.
 
-  ⚠️ Caution  
-* Templates can be created only from activated Apps.
-* Template will not include some settings. For more information, refer to the [Settings That Are Not Included in App Templates](https://get.kintone.help/k/en/admin/app_admin/template/template_settings.html) help doc.
+⚠️ Caution
+  * Templates can be created only from activated Apps.
+  * Template will not include some settings. For more information, refer to the [Settings That Are Not Included in App Templates](https://get.kintone.help/k/en/admin/app_admin/template/template_settings.html) help doc.
 
 ### Multiple Apps in one App Template?
 Multiple Apps can be included in one App Template.  
@@ -95,7 +97,7 @@ Following Settings are able to be included in the App Template:
   * Multiple Apps can be included together in one App Template pack.
   * Click `Next` once the Apps are selected.
 
-Step 4. Fill in the details for the App Template, including Name, Icon, and Description.
+(5) Fill in the details for the App Template, including Name, Icon, and Description.
   * The included Apps' description can be configured as well.
   * Click `Save` once completed.
 
@@ -106,13 +108,13 @@ An App Template can be exported as a ZIP file to transfer the App outside a Kint
 For more information, refer to [Creating a Template from an App](https://get.kintone.help/k/en/admin/App_admin/template/add_template.html) help doc.
 
 ### Creating an App from an App Template
-Step 1. Click on the ➕ Plus Button right of Apps.
+(1) Click on the ➕ Plus Button right of Apps.
   * ![From the Kintone Portal, Apps section's plus Button](img/app_template_01.png)
 
-Step 2. Click the `Create from Template` option under the `Create New App` section.
+(2) Click the `Create from Template` option under the `Create New App` section.
   * ![From the Kintone Marketplace, Create from Template button](img/app_template_02.png)
 
-Step 3. Click `Use This Template` for the desired template.
+(3) Click `Use This Template` for the desired template.
   * **Pack** label is placed on App Templates that creates multiple Apps.
   * ![Create App from Template](img/app_template_03.png)
 
@@ -177,11 +179,11 @@ Assignee
 The is no one function to copy a Kintone App that includes the original Records. Ultimately, the App must be duplicated, and the Records from the Original App be exported as a CSV file and imported into the New App.
 
   ⚠️ Caution  
-* The App's **Export to file** and **Import from file** permissions are required.
-  * By default, the **Import from file** permission is granted only to App Creators.
-  * It is set using the [Permissions for App](https://get.kintone.help/k/en/user/app_settings/rights/app_rights.html) in the App settings page.
-* Some fields cannot be exported or imported.
-  * For the full list, refer to the [Data Types That Can Be Imported or Exported](https://get.kintone.help/k/en/admin/other/import_export.html) help doc.
+  * The App's **Export to file** and **Import from file** permissions are required.
+    * By default, the **Import from file** permission is granted only to App Creators.
+    * It is set using the [Permissions for App](https://get.kintone.help/k/en/user/app_settings/rights/app_rights.html) in the App settings page.
+  * Some fields cannot be exported or imported.
+    * For the full list, refer to the [Data Types That Can Be Imported or Exported](https://get.kintone.help/k/en/admin/other/import_export.html) help doc.
 
 ### Exporting App Data (Records) as a CSV file
 
@@ -219,22 +221,22 @@ For more information, refer to [Exporting Data to a File](https://get.kintone.he
 ### Importing App Data (Records) from a CSV file
 
 (1) Click the options button `...` on the upper right of the screen, and then click **Import from File** button.
-* ![Import from file button](img/import_csv_img01.png)
+  * ![Import from file button](img/import_csv_img01.png)
 
 (2) Click **Browse** and specify an Excel file or CSV file to import.
 
 (3) When prompted with **Select Data Scope**, select **First row is header**.
-* ![First row is header Option](img/import_csv_img3.png)
+  * ![First row is header Option](img/import_csv_img3.png)
 
 (4) For each field in the App, associate it with the column in the file to import.
-* Make sure to specify **Column in File** for each of the following fields:
-  * Fields where values are to be added
-  * Fields where entry is required (marked with an asterisk `*`)
-* If a field is not associated with any column under the **Column in File**, it is created as an empty field or with a default value
-* ![Match Columns in Imported File to Fields in Kintone App](img/import_csv_img5.png)
+  * Make sure to specify **Column in File** for each of the following fields:
+    * Fields where values are to be added
+    * Fields where entry is required (marked with an asterisk `*`)
+  * If a field is not associated with any column under the **Column in File**, it is created as an empty field or with a default value
+  * ![Match Columns in Imported File to Fields in Kintone App](img/import_csv_img5.png)
 
 (5) Click **Import** on the upper left side of the screen.
-* ![Import button](img/import_csv_img9.png)
+  * ![Import button](img/import_csv_img9.png)
 
 Completion: The App now has the imported data!
 
@@ -246,10 +248,10 @@ There is no standard function to bulk download all the Attachments (files upload
 Here is an overview of building a JavaScript customization to bulk download attachments.
 
 Required files:
-* [JSZipUtils(v0.0.2)](https://github.com/Stuk/jszip-utils) --- used when downloading the files.
-* [js(v1.0.0)](https://github.com/eligrey/FileSaver.js) --- used when saving the files.
-* [ZipAllFiles.js](ZipAllFiles.js) --- JS Customization by Kintone Developer Program
-  * Change the `fieldCode` value to the Attachment field's field code
+  * [JSZipUtils(v0.0.2)](https://github.com/Stuk/jszip-utils) --- used when downloading the files.
+  * [js(v1.0.0)](https://github.com/eligrey/FileSaver.js) --- used when saving the files.
+  * [ZipAllFiles.js](ZipAllFiles.js) --- JS Customization by Kintone Developer Program
+    * Change the `fieldCode` value to the Attachment field's field code
 
 Upload or state the URL of the files in the **JavaScript and CSS Customization settings** of the App as below, and be sure to list them in the same order.
 1. FileSaver.min.js
