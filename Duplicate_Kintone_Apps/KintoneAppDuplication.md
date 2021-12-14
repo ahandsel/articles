@@ -1,5 +1,5 @@
 # How to Duplicate Kintone Apps? <!-- omit in toc -->
-This article will go over the different ways to duplicate Kintone Apps (copying an App) with and without the data stored inside.
+This article will explore the different ways to duplicate Kintone Apps (copying an App) with and without the data stored inside.
 
 Outline: <!-- markdownlint-disable MD007 -->
 * [Prerequisite](#prerequisite)
@@ -18,7 +18,8 @@ Outline: <!-- markdownlint-disable MD007 -->
 * [Guest Space](#guest-space)
 
 ## Prerequisite
-Users can only duplicate Apps for which they have the management permission.  
+Management permission is required to duplicate the App.
+
 For details, refer to [Setting App Permissions](https://get.kintone.help/k/en/user/App_settings/rights/App_rights.html) help doc.
 
 ## Method 1: Creating a New App by Duplicating an Existing App
@@ -38,15 +39,15 @@ The following are not copied to the new App:
 
 (2) From the Kintone Marketplace screen, click on the `Create from Existing App` option.
   * ![Kintone Marketplace > Create New App Section](https://get.kintone.help/k/img-en/App_recycle_img03.png)
-  * If the `Create from Existing App` option does not Appear, the user does not have management permissions for any App or no App has been yet created on Kintone.
+  * If the `Create from Existing App` option does not appear, the user does not have management permissions for any App or has not been created on Kintone.
 
-(3) From the Create from an Existing App screen, click on the `Duplicate This App` button next to the desired App to duplicate.
+(3) From the Create from an Existing App screen, click on the `Duplicate This App` Button next to the desired App to duplicate.
   * ![Create from an Existing App](https://get.kintone.help/k/img-en/App_recycle_img04.png)
 
 (4) The App is duplicated & the settings screen of the new App will open
   * ![Customer Database- Copy](https://get.kintone.help/k/img-en/App_recycle_img05.png)
 
-(5) Click on the `Activate App` button to complete the process.
+(5) Click on the `Activate App` Button to complete the process.
   * The new App will contain no Records.
   * Only the App's fields and Process Management settings will be duplicated.
   * ![New Customer Database](https://get.kintone.help/k/img-en/App_recycle_img08.png)
@@ -59,14 +60,14 @@ The following are not copied to the new App:
 ## Method 2: App Template
 
 ### What Is an App Template?
-* An App Template is a model that users can use to create Apps with the defined settings that are preemptively applied to the new App.
+* An App Template is a model that users can use to create Apps with the defined settings preemptively applied to the new App.
 * App templates can be created from existing Apps.
 * Creating or deleting App templates requires Kintone Administrative permission.
 * For more information, refer to [What Is an App Template?](https://get.kintone.help/k/en/admin/app_admin/template/whats_template.html) help doc.
 
   ⚠️ Caution  
 * Templates can be created only from activated Apps.
-* Template will not include some settings. For details, refer to the [Settings That Are Not Included in App Templates](https://get.kintone.help/k/en/admin/app_admin/template/template_settings.html) help doc.
+* Template will not include some settings. For more information, refer to the [Settings That Are Not Included in App Templates](https://get.kintone.help/k/en/admin/app_admin/template/template_settings.html) help doc.
 
 ### Multiple Apps in one App Template?
 Multiple Apps can be included in one App Template.  
@@ -94,21 +95,21 @@ Following Settings are able to be included in the App Template:
   * Multiple Apps can be included together in one App Template pack.
   * Click `Next` once the Apps are selected.
 
-Step 4. Fill in the details for the App Template including Name, Icon, and Description.
+Step 4. Fill in the details for the App Template, including Name, Icon, and Description.
   * The included Apps' description can be configured as well.
   * Click `Save` once completed.
 
-Completion: The App Template that generates the selected App(s) are created!
+Completion: The App Template that generates the selected App(s) is created!
 
-An App Template can be exported as a ZIP file to transfer the App outside of a Kintone Subdomain.
+An App Template can be exported as a ZIP file to transfer the App outside a Kintone Subdomain.
 
 For more information, refer to [Creating a Template from an App](https://get.kintone.help/k/en/admin/App_admin/template/add_template.html) help doc.
 
 ### Creating an App from an App Template
-Ste 1. Click on the ➕ Plus Button right of Apps.
-  * ![From the Kintone Portal, Apps section's plus button](img/app_template_01.png)
+Step 1. Click on the ➕ Plus Button right of Apps.
+  * ![From the Kintone Portal, Apps section's plus Button](img/app_template_01.png)
 
-Step 2. Click `Create from Template` option under the `Create New App` section.
+Step 2. Click the `Create from Template` option under the `Create New App` section.
   * ![From the Kintone Marketplace, Create from Template button](img/app_template_02.png)
 
 Step 3. Click `Use This Template` for the desired template.
@@ -133,7 +134,7 @@ Following settings are not included in App Template:
 Following settings are not included in App Template unless configured as specified:
 
 Notification settings
-  * Unless the notifications is set to the following recipients:
+  * Unless the notifications are set to the following recipients:
     * Administrator user
     * Administrators group
     * Everyone group
@@ -163,7 +164,7 @@ Filter conditions of views or reports that use the User Selection, Created by, o
   * Unless the condition uses the User Selection field and an Administrator user and/or login user is set
 
 Process management
-  * Unless the Branch Criteria uses a User Selection field that is set to Administrator user
+  * Unless the Branch Criteria uses a User Selection field that is set to the Administrator user
 
 Assignee
   * Unless the assignee is set to the following:
@@ -173,21 +174,21 @@ Assignee
     * "Updated by" field
 
 ## Migrating Records from the Original App to the New App
-The is no one function to copy a Kintone App that includes the original Records. Ultimately, the App must be duplicated and the Records from the Original App be exported as a CSV file and imported into the New .
+The is no one function to copy a Kintone App that includes the original Records. Ultimately, the App must be duplicated, and the Records from the Original App be exported as a CSV file and imported into the New App.
 
   ⚠️ Caution  
 * The App's **Export to file** and **Import from file** permissions are required.
   * By default, the **Import from file** permission is granted only to App Creators.
   * It is set using the [Permissions for App](https://get.kintone.help/k/en/user/app_settings/rights/app_rights.html) in the App settings page.
-* Some fields cannot be exported nor imported.
+* Some fields cannot be exported or imported.
   * For the full list, refer to the [Data Types That Can Be Imported or Exported](https://get.kintone.help/k/en/admin/other/import_export.html) help doc.
 
 ### Exporting App Data (Records) as a CSV file
 
 (1) Configure the View to list the desired records to be exported.
 
-(2) Click the option button `...` on the upper right of the screen, and then click **Export to File**.
-  * If the **Export to File** button is not shown, the user does not have permission to export data to a file.
+(2) Click the options button `...` on the upper right of the screen, and then click **Export to File**.
+  * If the **Export to File** Button is not shown, the user does not have permission to export data to a file.
   * ![App List View > Option Drop-down List > Export to File Button](img/data_export_img03.png)
 
 (3) Leave the **Include header row** option enabled.
@@ -195,7 +196,7 @@ The is no one function to copy a Kintone App that includes the original Records.
 (4) Select a character encoding and a delimiter to use, if necessary.
   * ![Character Encoding and Delimiter are selected as English and Comma respectively](img/data_export_img05.png)
 
-(5) Drag and drop items to export in the order they need to be displayed in the exported file.
+(5) Drag and drop items to be exported.
   * Click on **Add All** button to include all fields in the data export.
   * ![Gif showing Record number being dragged & dropped](img/data_export_img06.gif)
   * ![Gif showing Add All button](img/data_export_img07.gif)
@@ -217,7 +218,7 @@ For more information, refer to [Exporting Data to a File](https://get.kintone.he
 
 ### Importing App Data (Records) from a CSV file
 
-(1) Click the option button `...` on the upper right of the screen, and then click **Import from File** button.
+(1) Click the options button `...` on the upper right of the screen, and then click **Import from File** button.
 * ![Import from file button](img/import_csv_img01.png)
 
 (2) Click **Browse** and specify an Excel file or CSV file to import.
@@ -229,7 +230,7 @@ For more information, refer to [Exporting Data to a File](https://get.kintone.he
 * Make sure to specify **Column in File** for each of the following fields:
   * Fields where values are to be added
   * Fields where entry is required (marked with an asterisk `*`)
-* If a field is not associated with any column under the **Column in File**, it is created as an empty field, or with a default value
+* If a field is not associated with any column under the **Column in File**, it is created as an empty field or with a default value
 * ![Match Columns in Imported File to Fields in Kintone App](img/import_csv_img5.png)
 
 (5) Click **Import** on the upper left side of the screen.
@@ -242,7 +243,7 @@ For more information, refer to the [Create/Update Records in Bulk: Importing a F
 ### How to bulk download all the Attachments from a Kintone App?
 There is no standard function to bulk download all the Attachments (files uploaded to a Kintone Record via Attachment field) at once.  
 
-Here is an overview of how to build a JavaScript customization to bulk download attachments.
+Here is an overview of building a JavaScript customization to bulk download attachments.
 
 Required files:
 * [JSZipUtils(v0.0.2)](https://github.com/Stuk/jszip-utils) --- used when downloading the files.
@@ -260,10 +261,10 @@ Upload or state the URL of the files in the **JavaScript and CSS Customization s
 
 A button should appear on the Record List.
 
-Click the button to start running the process to download Attachment files as a Zip file.
+Click the Button to start running the process to download Attachment files as a Zip file.
 
 For more information, refer to the [Bulk download attachments using JSZip](https://developer.kintone.io/hc/en-us/articles/115004137213) tutorial.
 
 ## Guest Space
-  * In a Guest Space, only Apps that are within the same Guest Space can be duplicated with [Method 1](#method-1-creating-a-new-app-by-duplicating-an-existing-app).
+  * In a Guest Space, only Apps within the same Guest Space can be duplicated with [Method 1](#method-1-creating-a-new-app-by-duplicating-an-existing-app).
   * To duplicate Apps not inside a Guest Space, refer to [Method 2](#method-2-app-template).
