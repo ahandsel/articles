@@ -69,11 +69,11 @@ The following are not copied to the new App:
 
 ⚠️ Caution
   * Templates can be created only from activated Apps.
-  * The Template will not include some settings. For more information, refer to the [Settings That Are Not Included in App Templates](https://get.kintone.help/k/en/admin/app_admin/template/template_settings.html) help doc.
+  * The App Template will not include some settings. For more information, refer to the [Settings That Are Not Included in App Templates](https://get.kintone.help/k/en/admin/app_admin/template/template_settings.html) help doc.
 
 ### Multiple Apps in one App Template?
 Multiple Apps can be included in one App Template.  
-Also, when an App references other Apps (e.g., Lookup field), the referenced Apps are automatically included in the template.
+Also, when an App references other Apps (e.g., Lookup field), the referenced Apps are automatically included in the App Template.
 
 Following Settings are able to be included in the App Template:
   * [Lookup fields](https://get.kintone.help/k/en/user/app_settings/form/form_parts/field_lookup.html)
@@ -114,7 +114,7 @@ For more information, refer to [Creating a Template from an App](https://get.kin
 (2) Click the `Create from Template` option under the `Create New App` section.
   * ![From the Kintone Marketplace, Create from Template Button](img/app_template_02.png)
 
-(3) Click `Use This Template` for the desired template.
+(3) Click `Use This Template` for the desired App Template.
   * **Pack** label is placed on App Templates that creates multiple Apps.
   * ![Create App from Template](img/app_template_03.png)
 
