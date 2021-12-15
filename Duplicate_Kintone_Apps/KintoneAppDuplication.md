@@ -86,14 +86,14 @@ Following Settings are able to be included in the App Template:
 ### Steps to Create an App Template
 
 (1) From the Kintone Portal Top screen, click on the Kintone Menu Bar's Gear Icon ⚙ > `Kintone Administration`.
-  * ![Gear Dropdown Options](./M2_Step1.png)
+  * ![Gear Dropdown Options](img/M2_Step1.png)
 
 (2) From the Kintone Administration screen, click on the `App Templates` link.
   * `Apps` > `App Templates`
   * App Template Setting's URL: `https://_YourSubdomain_.kintone.com/k/admin/system/template/`
 
 (3) Click the `New` Button from the top-left corner
-  * ![App Templates screen > New Button](./M2_Step2.png)
+  * ![App Templates screen > New Button](img/M2_Step2.png)
 
 (4) Select the Apps to be included in the App Template.
   * If an App includes a field referencing another App, both Apps will be included.
@@ -107,6 +107,8 @@ Following Settings are able to be included in the App Template:
 Completion: The App Template that generates the selected App(s) is created!
 
 An App Template can be exported as a ZIP file to transfer the App outside a Kintone Subdomain.
+
+![Gif going over the steps to create an App Template](img/Steps_to_Create_an_App_Template.gif)
 
 For more information, refer to [Creating a Template from an App](https://get.kintone.help/k/en/admin/App_admin/template/add_template.html) help doc.
 
