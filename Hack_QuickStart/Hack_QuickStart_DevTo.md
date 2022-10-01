@@ -1,7 +1,21 @@
-# Quick Start on Using Kintone Web Database in a Hackathon Project
-<!-- https://forum.kintone.dev/t/quick-start-on-using-kintone-web-database-in-a-hackathon-project/611 -->
-
-<div data-theme-toc="true"> </div>
+## Outline
+* [Outline](#outline)
+* [3 Reasons to Use Kintone for your hack](#3-reasons-to-use-kintone-for-your-hack)
+* [🚀 Getting your FREE Kintone Database](#-getting-your-free-kintone-database)
+  * [1. Fill out the Kintone Developer License Registration form](#1-fill-out-the-kintone-developer-license-registration-form)
+  * [2. Check your email & click `Activate Now`](#2-check-your-email--click-activate-now)
+* [💪 Using your Kintone Database](#-using-your-kintone-database)
+  * [3. Let's Log into Kintone](#3-lets-log-into-kintone)
+  * [4. Create a Kintone Database App](#4-create-a-kintone-database-app)
+* [📺 How to Create a Kintone Database App? - Video](#-how-to-create-a-kintone-database-app---video)
+* [How to generate a Kintone API Token?](#how-to-generate-a-kintone-api-token)
+* [Where Can I Get Help?](#where-can-i-get-help)
+* [What can I build with Kintone?](#what-can-i-build-with-kintone)
+  * [Running an easily configurable Space Invaders game on Kintone](#running-an-easily-configurable-space-invaders-game-on-kintone)
+  * [Connect IoT Obniz Board to Kintone Web Database all in 10 minutes](#connect-iot-obniz-board-to-kintone-web-database-all-in-10-minutes)
+  * [Deploy a REST API calling node.js App to Heroku](#deploy-a-rest-api-calling-nodejs-app-to-heroku)
+  * [React, REST API, & Kintone: GET & POST to a Web Database](#react-rest-api--kintone-get--post-to-a-web-database)
+* [More Resources](#more-resources)
 
 ## 3 Reasons to Use Kintone for your hack
 1. No servers are needed! - Ridiculously fast to build databases!
@@ -26,9 +40,9 @@ After submitting the form, you will get a confirmation email with an `Activate N
 
 Then you will be redirected to your Kintone Subdomain to set the initial password.
 
-|                                                                                                          |                                                                                                                                     |
-| -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| ![Step 1: Fill out the Kintone Developer license sign-up form](upload://2Ra65kgcFlwA3wsZ6kz9IlP3aj6.png) | ![Step 2: Email address will be the login name & the subdomain will be your unique link](upload://hbxYmUqKx6qTRcD1BUQdlCF4dyU.jpeg) |
+|                                                                                    |                                                                                                              |
+| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| ![Step 1: Fill out the Kintone Developer license sign-up form](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qy5sgtvxduelx2hbaunp.png) | ![Step 2: Email address will be the login name & the subdomain will be your unique link](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jmeaspw6ai720rq0tc6p.png) |
 
 ## 💪 Using your Kintone Database
 ### 3. Let's Log into Kintone
@@ -41,9 +55,9 @@ Simply go to `YOUR_SUBDOMAIN.kintone.com` with `YOUR_SUBDOMAIN` swapped with you
 
 To create a Database App, from the Portal screen, click the [+] button on the right side next to the **Apps** section.
 
-|                                                                        |                                                                                |
-| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| ![3. Let's Log into Kintone](upload://3ZqCmBpLChHDmcurt2wm2qT0kad.png) | ![4. Create a Kintone Database App](upload://qz2oGPi5Pz6KU0AORod4KcV3Hr6.jpeg) |
+|                                                   |                                                          |
+| ------------------------------------------------- | -------------------------------------------------------- |
+| ![3. Let's Log into Kintone](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zai929fl2pe3zsrp9dxb.png) | ![4. Create a Kintone Database App](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qvmmrydddwgvj25hoecm.png) |
 
 ---
 
@@ -87,7 +101,7 @@ Here are a few projects that use Kintone as the web database!
 ### Running an easily configurable Space Invaders game on Kintone
 
 <div align="center">
-  <img src="upload://mbBW7OggpwEwioCJOUts979Yf7n.gif" alt="Gif of Space Invaders on Kintone Custom View" width="350">
+  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--vxR2YT4p--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/lvkj9nqfkancgioqo4re.gif" alt="Gif of Space Invaders on Kintone Custom View" width="350"/>
 </div>
 
 This is a phaser.io game running on Kintone. It is super easy to get started! No need to set up a node.js environment or AWS serverless environment! You just need a code editor & Kintone account.
@@ -112,7 +126,7 @@ Here is a step-by-step tutorial explaining everything you need to get an Obniz B
 ### Deploy a REST API calling node.js App to Heroku
 
 <div align="center">
-  <img src="upload://lIYVr5ODvkko6Bpm3HqGWR21Us7.png" alt="Node JS on Heroku displays a result to a browser while requesting data to Kintone which responses with the data" width="350">
+  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--P5qzxkHQ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/zsq260svhd13oj0km172.png" alt="Node JS on Heroku displays a result to a browser while requesting data to Kintone which responses with the data" width="350"/>
 </div>
 
 In this particular example, the node.js app retrieves record data from a Kintone web database via REST API and displays it on the page of the node.js app.
