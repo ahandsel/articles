@@ -31,9 +31,6 @@ Databases are created with intuitive drag-and-drop GUI and since your data lives
 * [Configure the Script.js](#configure-the-scriptjs)
     * [Code's Author](#codes-author)
 * [Get a FREE Kintone Developer License](#get-a-free-kintone-developer-license)
-  * [① Sign-Up for Developer Program Account (Website)](#-sign-up-for-developer-program-account-website)
-  * [② THEN Create a Kintone Subdomain (Database)](#-then-create-a-kintone-subdomain-database)
-  * [📺️ Quick Video on the Sign-Up Process:](#️-quick-video-on-the-sign-up-process)
 * [Create the Database](#create-the-database)
 * [Verify](#verify)
   * [📺️ Demo Video](#️-demo-video)
@@ -149,20 +146,17 @@ The above code is in large part by written by **[@RyBB](https://github.com/RyBB)
 RyBB is a Technical Evangelist at Cybozu where he promotes fun hacks using the Kintone Platform. Check out his Japanese articles at [Qitta @RyBB](https://qiita.com/RyBB).
 
 ## Get a FREE Kintone Developer License
+Sign up for the FREE Kintone Developer License by filling out this web form: [kintone.dev/new](http://kintone.dev/new)
 
-### ① Sign-Up for Developer Program Account (Website)
-* [bit.ly/KDP_signup](https://bit.ly/KDP_signup)
-* ⚠️ Do NOT use Safari
-* ⚡ Accept Cookies First
-* ✅ Use Chrome & Firefox
+When selecting your subdomain, please...
+* ⚡ Only use lowercase, numbers, & hyphens
+* ⚠ Do not use uppercase or special characters
 
-### ② THEN Create a Kintone Subdomain (Database)
-* [bit.ly/K_DevLic](https://bit.ly/K_DevLic)
-* ⚠️ No Special Characters
-* ⚡ Only use lowercase, numbers, & hyphens in the Subdomain
+The Subdomain will be used to access your Kintone Database.
+* Your Kintone login link will be `YOUR_SUBDOMAIN.kintone.com`
+* Example: `example.kintone.com`
 
-### 📺️ Quick Video on the Sign-Up Process:
-{% youtube Gzz8SbTuoFg %}
+By default, the login name is your email.
 
 ## Create the Database
 Databases in Kintone are called "Apps".
@@ -177,22 +171,22 @@ The steps it takes are also written below.
     * Ex/ `demo` subdomain is accessed at [demo.kintone.com](http://demo.kintone.com/)}
 2. Find the "**Apps**" section on the left side of the Portal page
     * Click on the [ **+** ] button on the left side
-    * ![](https://dev-to-uploads.s3.amazonaws.com/i/lu0uvfbhxw22wh97ay7f.png)
+    * ![Kintone Portal > Create Apps Button](https://dev-to-uploads.s3.amazonaws.com/i/lu0uvfbhxw22wh97ay7f.png)
 3. Select the "**Create App from Scratch**" button from the Kintone Marketplace page
-    * ![](https://get.kintone.help/k/img-en/tutorial_01.png)
+    * ![Create App from Scratch button](https://get.kintone.help/k/img-en/tutorial_01.png)
 4. Name the Database by clicking on & replacing `New App` with `Obniz Counter`
-    * ![Step 4](https://dev-to-uploads.s3.amazonaws.com/i/0zmixcjchl1cu1kf0pdv.gif)
+    * ![Gif to name the app Obniz Counter](https://dev-to-uploads.s3.amazonaws.com/i/0zmixcjchl1cu1kf0pdv.gif)
 5. Drag-&-Drop a **Number** field, click on the left gear ⚙️ icon & name it `Count`
 6. Drag-&-Drop the **Created datetime** field
 7. Click the green **Save Form** button
-    * ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/shumjv4mcrt1hznp11cv.gif)
+    * ![Gif to drag the required fields and set field settings](https://dev-to-uploads.s3.amazonaws.com/i/shumjv4mcrt1hznp11cv.gif)
 8. Click the **App Settings** tab, then click on the **JavaScript and CSS Customization** section
-9.  Under the **Upload JavaScript for PC** section, click on the **Add Link** button & past-in `https://unpkg.com/obniz@2.0.3/obniz.js`
+9. Under the **Upload JavaScript for PC** section, click on the **Add Link** button & past-in `https://unpkg.com/obniz@2.0.3/obniz.js`
     * This is the CDN URL to the Obniz's JavaScript library
 10. Still under the **Upload JavaScript for PC** section, click on the **Add File** and upload the `Script.js` file from the [Configure the Script.js](#configure-the-scriptjs) section
 11. Click the blue **Save** button at the top
 12. Finally, click on the blue **Activate App** button
-    * ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/1gd7emuvq5f879bqbfic.gif)
+    * ![Upload JavaScript Gif](https://dev-to-uploads.s3.amazonaws.com/i/1gd7emuvq5f879bqbfic.gif)
 
 Your Kintone Database is now ready!  
 You can access it from the **Portal** Page under the **Apps** section.
@@ -204,13 +198,13 @@ Time to test your new counter!
 1. Open your browser to Kintone Database App's Record List View.  
     * ⚠️ Enter your obnizID a prompt requesting it appears. To prevent this prompt from appearing in the future, configure the `Script.js` with your obnizID.
 2. Verify if Obniz Board is connected by seeing it display a `PIN ASSIGN` screen like below.
-    * ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/o60omk79zul4em69wyc3.png)
+    * ![Black nub on Obniz](https://dev-to-uploads.s3.amazonaws.com/i/o60omk79zul4em69wyc3.png)
 3. Now move the **Dial Switch** (Black Wheel Nob, Top Left) to the **Right** and click **Click** it
 4. A new record in the `Obniz Counter` Database App should appear with `1` as the count.
 
 | Record List Page | Record Details Page |
 | ---------------- | ------------------- |
-| ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/3eo3zmqltdce5jlh5avo.png) | ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/qbiojy43ob26je003jcl.png) |
+| ![Blue record button on All Records view](https://dev-to-uploads.s3.amazonaws.com/i/3eo3zmqltdce5jlh5avo.png) | ![Count field from Record Detail view](https://dev-to-uploads.s3.amazonaws.com/i/qbiojy43ob26je003jcl.png) |
 
 ### 📺️ Demo Video
 
@@ -225,12 +219,12 @@ If you have any questions or problems with **Kintone**, post a comment & I will 
 If you have any questions or problems with **Obniz Board**, tweet at them at [@obniz_io](https://twitter.com/obniz_io) or make a post in their [forum](https://forum.obniz.com/).
 
 ### References for Obniz Board
-- [Obniz Board Specs](https://Obniz.com/products/Obnizboard/)
-- [Interesting Projects Using Obniz](https://blog.Obniz.com/en/example/)
-- [2-min Video on Obniz Board's Functionality](https://youtu.be/sFnDtFq3dJY)
-- [Obniz Board Quick Start](https://obniz.com/doc/reference/board-1y/quick-start/)
+* [Obniz Board Specs](https://Obniz.com/products/Obnizboard/)
+* [Interesting Projects Using Obniz](https://blog.Obniz.com/en/example/)
+* [2-min Video on Obniz Board's Functionality](https://youtu.be/sFnDtFq3dJY)
+* [Obniz Board Quick Start](https://obniz.com/doc/reference/board-1y/quick-start/)
 
 ### References for Kintone
-- [Kintone Developer Docs & Tutorials](http://developer.kintone.io/)
-- [Add Record POST REST API](https://developer.kintone.io/hc/en-us/articles/212494628)
-- [Creating a Kintone App from Scratch](https://get.kintone.help/k/en/user/create_app/tutorial.html)
+* [Kintone Developer Docs & Tutorials](http://developer.kintone.io/)
+* [Add Record POST REST API](https://developer.kintone.io/hc/en-us/articles/212494628)
+* [Creating a Kintone App from Scratch](https://get.kintone.help/k/en/user/create_app/tutorial.html)
