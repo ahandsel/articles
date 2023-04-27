@@ -1,8 +1,8 @@
-# KintoneRestAPIError: [403] [CB_NO02] No privilege to proceed. Error when using kintone-customize-uploader CLI tool
+# KintoneRestAPIError: [403] [CB_NO02] No privilege to proceed. Error when using the kintone-customize-uploader CLI tool
 
 This is an error related to account permissions and kintone-customize-uploader
 
-If you encounter the `KintoneRestAPIError: [403] [CB_NO02] No privilege to proceed.` it is most likely has to do with the account being used to execute the `kintone-customize-uploader` cli tool.
+If you encounter the `KintoneRestAPIError: [403] [CB_NO02] No privilege to proceed.`, it most likely concerns the account used to execute the `kintone-customize-uploader` cli tool.
 
 ## Full Error Message
 
@@ -32,12 +32,12 @@ To upgrade a Kintone account to have **Kintone Administrator** privilege:
 2. Click the ⚙️ in the header.
 
 3. Click the **Users & System Administration** option.
-   * ⚠️ If the link does not appear, you do not have the administrative privilege, so cannot modify a Kintone account.
+   * ⚠️ If the link does not appear, you do not have administrative privilege, so you cannot modify a Kintone account.
    * ![users_and_system_administration_us|690x234, 50%](upload://f1L1CKjzDkAvTKKIz4n5B52ChvC.png)
 
 4. Click the **Administrators** from the left-side menu.
 
-5. Enter a display name or a login name of the user in the search box to search for the target user. Moreover, you can expand the department tree and find the target user.
+5. Enter the user's display name or login name in the search box to search for the target user. Moreover, you can expand the department tree and find the target user.
 
 6. Select the users you want to add as administrators.
    * ![list_domain_auth_img03_us|671x359, 50%](upload://mdwmA0ng4TyRHAWlPv5jd4WLlrx.png)
