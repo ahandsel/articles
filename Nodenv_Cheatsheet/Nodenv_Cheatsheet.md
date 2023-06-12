@@ -61,12 +61,13 @@ cat < ~/.zshrc
 # For Bash users
 echo 'eval "$(nodenv init -)"' >> ~/.bash_profile
 cat < ~/.bash_profile
+```
 
-# ----
-# Close & open a new Terminal window for the changes to take place.
-# ----
+⚡ Now, close & open a new Terminal window for the changes to take place.
 
-# Verify that Nodenv is properly set up
+💪 Debug: Verify that Nodenv is properly set up by running the `nodenv-doctor` script:
+
+```shell
 curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
 ```
 
