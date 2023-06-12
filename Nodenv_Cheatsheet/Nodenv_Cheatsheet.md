@@ -27,7 +27,7 @@ Here is a quick reference guide to the [Nodenv](https://github.com/nodenv/nodenv
 | Switch to a specific Node.js version          | `nodenv shell specify_version`     |
 
 ## What is Nodenv?
-Since Node.js is notorious for its breaking changes, it is important to be able to manage multiple Node.js versions on your machine.
+Since Node.js is notorious for breaking changes, it is important to be able to manage multiple Node.js versions on your machine.
 
 That is where [Nodenv](https://github.com/nodenv/nodenv) comes in. It is a tool that allows you to install and switch between multiple Node.js versions seamlessly.
 
@@ -37,7 +37,7 @@ That is where [Nodenv](https://github.com/nodenv/nodenv) comes in. It is a tool 
 1. Install nodenv with [Homebrew](https://brew.sh/)
 1. Set up nodenv shell integration
 1. Implement the changes by restarting the Terminal window
-1. Verify that nodenv is properly set up using the [nodenv-doctor](https://github.com/nodenv/nodenv-installer/blob/master/bin/nodenv-doctor) script.
+1. Verify that nodenv is set up correctly using the [nodenv-doctor](https://github.com/nodenv/nodenv-installer/blob/master/bin/nodenv-doctor) script.
 
 ```shell
 # Update Homebrew
@@ -66,7 +66,7 @@ cat < ~/.bash_profile
 # Close & open a new Terminal window for the changes to take place.
 # ----
 
-# Verify that nodenv is properly set up
+# Verify that Nodenv is properly set up
 curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
 ```
 
@@ -85,7 +85,7 @@ nodenv local 14.5.0
 Alright! Your Mac is now armed with Node.js!
 
 ### Which Node.js version should I use?
-When in doubt, use the latest **LTS (long-term support)** Node.js version.  
+Use the latest **LTS (long-term support)** Node.js version when in doubt.  
 Find it here: [Node.js](https://nodejs.org/en/)
 
 If you are going to use a framework like [React](https://reactjs.org/), [Vue](https://vuejs.org/), or [Angular](https://angular.io/), you should check their documentation for the recommended Node.js version.
