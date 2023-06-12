@@ -6,13 +6,13 @@ Here is a quick reference guide to the [Nodenv](https://github.com/nodenv/nodenv
 * Example: swap `specify_version` with `14.5.0` to install Node.js version `14.5.0`.
 
 ## Outline
-- [Common Nodenv Commands](#common-nodenv-commands)
-- [What is Nodenv?](#what-is-nodenv)
-- [Install & Setup Nodenv](#install-amp-setup-nodenv)
-- [Usage - Install & Setup a Node.js version](#usage-install-amp-setup-a-nodejs-version)
-  - [Which Node.js version should I use?](#which-nodejs-version-should-i-use)
-- [Nodenv Plugins](#nodenv-plugins)
-  - [Install Nodenv Plugins - Example: nodenv-nvmrc](#install-nodenv-plugins-example-nodenvnvmrc)
+* [Common Nodenv Commands](#common-nodenv-commands)
+* [What is Nodenv?](#what-is-nodenv)
+* [Install & Setup Nodenv](#install-amp-setup-nodenv)
+* [Usage - Install & Setup a Node.js version](#usage-install-amp-setup-a-nodejs-version)
+  * [Which Node.js version should I use?](#which-nodejs-version-should-i-use)
+* [Nodenv Plugins](#nodenv-plugins)
+  * [Install Nodenv Plugins - Example: nodenv-nvmrc](#install-nodenv-plugins-example-nodenvnvmrc)
 
 ## Common Nodenv Commands
 
