@@ -16,10 +16,10 @@ Here is a quick reference guide to the [Nodenv](https://github.com/nodenv/nodenv
 
 ## Common Nodenv Commands
 
-| Action                                        | Command                           |
-| --------------------------------------------- | --------------------------------- |
-| List all available Node.js versions           | `nodenv install --list`           |
-| List installed Node.js versions               | `nodenv versions`                 |
+| Action                                        | Command                            |
+| --------------------------------------------- | ---------------------------------- |
+| List all available Node.js versions           | `nodenv install --list`            |
+| List installed Node.js versions               | `nodenv versions`                  |
 | Install a specific Node.js version            | `nodenv install specify_version`   |
 | Set a global Node.js version                  | `nodenv global specify_version`    |
 | Set a local (folder-specific) Node.js version | `nodenv local specify_version`     |
@@ -94,11 +94,11 @@ If you are going to use a framework like [React](https://reactjs.org/), [Vue](ht
 
 What are plugins? Plugins are additional features that you can add to nodenv to enhance its functionality. You can find a list of plugins here: [Plugins · nodenv/nodenv Wiki](https://github.com/nodenv/nodenv/wiki/Plugins)
 
-| Action                                               | Command                               |
-| ---------------------------------------------------- | ------------------------------------- |
-| List available nodenv plugins                        | `nodenv plugins`                      |
-| Set Nodenv [Homebrew Tap](https://docs.brew.sh/Taps) | `brew tap nodenv/nodenv`              |
-| Install a nodenv plugin                              | `brew install specify_plugin`          |
+| Action                                               | Command                                 |
+| ---------------------------------------------------- | --------------------------------------- |
+| List available nodenv plugins                        | `nodenv plugins`                        |
+| Set Nodenv [Homebrew Tap](https://docs.brew.sh/Taps) | `brew tap nodenv/nodenv`                |
+| Install a nodenv plugin                              | `brew install specify_plugin`           |
 | Enable a nodenv plugin                               | `nodenv specify_plugin specify_command` |
 
 ### Install Nodenv Plugins - Example: nodenv-nvmrc
