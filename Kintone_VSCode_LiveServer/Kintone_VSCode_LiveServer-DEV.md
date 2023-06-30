@@ -77,7 +77,7 @@ Open your Kintone customization project in VS Code as a [VS Code Workspace](http
 
 Add a VS Code Workspace Setting file named `.vscode/settings.json` to the project folder.
 
-Finally add the following code to the `.vscode/settings.json` file.
+Finally, add the following code to the `.vscode/settings.json` file.
 
 ```json
 {
