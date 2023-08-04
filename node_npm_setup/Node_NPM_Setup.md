@@ -8,6 +8,8 @@ This is a step-by-step guide that will go over everything you need to do before 
 * [Windows with nvm-windows](#windows-with-nvm-windows)
 * [Installing Node.js - Video](#installing-nodejs---video)
 
+## Which
+
 ## Check if you already have Node.js or npm
 Since we will be using the [create-react-app](https://github.com/facebook/create-react-app) tool, **Node ≥ 14.0.0** is required!
 
