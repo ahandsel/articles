@@ -76,5 +76,5 @@ javascript: (() => {
 ```
 
 ## References
-* [Outlook live | add-event-to-calendar-docs](https://interactiondesignfoundation.github.io/add-event-to-calendar-docs/services/outlook-web.html)
+* [Outlook live - add-event-to-calendar-docs](https://interactiondesignfoundation.github.io/add-event-to-calendar-docs/services/outlook-web.html)
 * [スケジュールオブジェクト - cybozu developer network](https://cybozu.dev/ja/garoon/docs/overview/schedule-object/)
