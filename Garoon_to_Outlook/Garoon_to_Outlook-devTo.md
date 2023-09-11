@@ -14,7 +14,7 @@ Importing a Garoon Event to Outlook Calendar
 
 ## Using Outlook Live or Office 365?
 
-Outlook Live and Office 365 uses a different domain so please change the URL accorringly
+Outlook Live and Office 365 uses a different domain so please change the URL accordingly.
 
 Outlook Live:
 * URL: `https://outlook.live.com/calendar/deeplink/compose`
