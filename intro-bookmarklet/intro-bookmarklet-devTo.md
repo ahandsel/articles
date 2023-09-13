@@ -29,11 +29,11 @@ Creating a bookmarklet is relatively straightforward. Below are the steps:
 
 2. **Create Bookmark Manually**: Add a new bookmark to your browser via the bookmark manager. Give it a name and save it.
 
-    | Browser                                                                                    | Bookmark Manager Shortcut                 |
-    | ------------------------------------------------------------------------------------------ | ----------------------------------------- |
-    | [Chrome](https://support.google.com/chrome/answer/188842)                                  | [chrome://bookmarks](chrome://bookmarks/) |
-    | [Safari](https://support.apple.com/guide/safari/bookmark-webpages-to-revisit-ibrw1039/mac) | [bookmarks://](bookmarks://)              |
-    | [FireFox](https://support.mozilla.org/en-US/kb/bookmarks-firefox)                          | `Command + Shift + O`                     |
+    | Browser                                                                                    | Bookmark Manager Shortcut |
+    | ------------------------------------------------------------------------------------------ | ------------------------- |
+    | [Chrome](https://support.google.com/chrome/answer/188842)                                  | `chrome://bookmarks`      |
+    | [Safari](https://support.apple.com/guide/safari/bookmark-webpages-to-revisit-ibrw1039/mac) | `bookmarks://`            |
+    | [FireFox](https://support.mozilla.org/en-US/kb/bookmarks-firefox)                          | `Command + Shift + O`     |
 
 3. **Add Code**: Edit the bookmark and place `javascript:` before your code in the URL field.
 
