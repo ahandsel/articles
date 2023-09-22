@@ -1,8 +1,6 @@
 # Force Enable Copy and Paste on Websites! JavaScript Bookmarklet
 
-I despise websites that disable copy/paste functionality. I understand that forcing users to type in their information manually is one way to make them verify their information is correct, but it's a horrible user experience.
-
-Here is my JavaScript bookmarklet that I use to enable copy/paste on websites that disable it.
+I despise websites that disable copy/paste functionality. I understand that forcing users to type in their information manually is one way to make them verify their information is correct, but it's a horrible user experience. Here is the bookmarklet that I use to get around this limitation.
 
 ## Table of Content <!-- omit in toc -->
 * [forceEnableCopyPaste.js](#forceenablecopypastejs)
@@ -14,7 +12,7 @@ Here is my JavaScript bookmarklet that I use to enable copy/paste on websites th
 
 ## forceEnableCopyPaste.js
 
-The bookmarklet is a JavaScript code snippet that disables the website's function that disables copying and pasting. When you activate the bookmarklet, it attaches event listeners that overrides these restricting functions.
+The bookmarklet is a JavaScript code snippet that disables the website's function that disables copying and pasting. When you activate the bookmarklet, it attaches event listeners that override these restricting functions.
 
 ```javascript
 javascript: (function () {
@@ -56,7 +54,7 @@ const forceEnableCopyPaste = (e) => {
 };
 ```
 
-The function `forceEnableCopyPaste` is an event handler that takes an event object `e` as its argument. The function stops the immediate propagation of the event by calling `e.stopImmediatePropagation()`. This prevents other listeners from handling the event, effectively negating any website-specific code that restricts copy-pasting.
+The function `forceEnableCopyPaste` is an event handler that takes an event object `e` as its argument. The function stops the immediate propagation of the event by calling `e.stopImmediatePropagation()`. This prevents other listeners from handling the event, negating any website-specific code restricting copy-pasting.
 
 ```javascript
 ['paste', 'copy'].forEach(event => {
