@@ -9,7 +9,7 @@ Initial Setup
 
 Importing a Garoon Event to Apple Calendar
 1. Go to the Garoon event's page
-1. Click on the Bookmark
+1. Click on the bookmarklet
 1. Open the downloaded `ical` file
 1. Confirm that the imported event in Apple Calendar App
 

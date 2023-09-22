@@ -9,7 +9,7 @@ Initial Setup
 
 Importing a Garoon Event to Outlook Calendar
 1. Go to the Garoon event's page
-1. Click on the Bookmark
+1. Click on the bookmarklet
 1. Confirm the imported event in Outlook Calendar & click `Save`
 
 ## Using Outlook Live or Office 365?

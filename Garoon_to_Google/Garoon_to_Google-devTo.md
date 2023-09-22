@@ -9,7 +9,7 @@ Initial Setup
 
 Importing a Garoon Event to Google Calendar
 1. Go to the Garoon event's page
-1. Click on the Bookmark
+1. Click on the bookmarklet
 1. Confirm the imported event in Google Calendar & click `Save`
 
 ## Not working? 🤔
