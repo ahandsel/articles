@@ -15,7 +15,7 @@ Following is a quick demo of the number to textual representation live conversio
   * [Edit the Script](#edit-the-script)
   * [Add the Script](#add-the-script)
 * [Usage](#usage)
-* [kintone-numbers-to-words-v3.js](#kintone-numbers-to-words-v3js)
+* [kintone-numbers-to-words.js](#kintone-numbers-to-wordsjs)
 * [Code Breakdown](#code-breakdown)
   * [Script Structure](#script-structure)
   * [Configuration](#configuration)
@@ -39,7 +39,7 @@ Check out the Kintone developer resources at [kintone.dev](https://kintone.dev/e
 
 ## Quick Overview of the Kintone JavaScript Customization
 
-The kintone-numbers-to-words-v3.js JavaScript code is meant to be attached to a Kintone App with a [Number field](https://get.kintone.help/k/en/id/040534.html) or [Text field](https://get.kintone.help/k/en/id/040539.html).
+The kintone-numbers-to-words.js JavaScript code is meant to be attached to a Kintone App with a [Number field](https://get.kintone.help/k/en/id/040534.html) or [Text field](https://get.kintone.help/k/en/id/040539.html).
 
 The script automatically converts a numerical value from the input field (`INPUT_FIELD_CODE`) into its corresponding word form (e.g., `123` to `one hundred twenty-three`) and populates the output field (`OUTPUT_FIELD_CODE`) with the result.
 
@@ -47,7 +47,7 @@ There are several helper functions (`singleDigitToWords`, `doubleDigitToWords`, 
 
 Kintone Event handlers trigger the script when the input field is edited, leading to live number-to-word conversion on the Kintone Edit Record view.
 
-There is an option to include commas between the words for better readability.
+There is an option to include commas, dashes, and 'and's between the words for better readability.
 
 ---
 
@@ -66,6 +66,8 @@ There are three constants that you need to edit in the script:
 * `INPUT_FIELD_CODE`: The field code of the input field
 * `OUTPUT_FIELD_CODE`: The field code of the output field
 * `ADD_COMMAS`: Set to `true` to add commas between the words
+* `ADD_ADDS`: Set to `true` to add 'and' before the last word
+* `ADD_DASHES`: Set to `true` to add dashes between two-digit numbers
 
 ### Add the Script
 
@@ -73,7 +75,7 @@ There are three constants that you need to edit in the script:
 1. Click the **App Settings** button ⚙️ at the upper right corner
 1. Select the **App Settings** tab
 1. Navigate to **Customization and Integration** and select the **JavaScript and CSS Customization** option
-1. Click the **Upload File** button and upload the edited `kintone-numbers-to-words-v3.js` file
+1. Click the **Upload File** button and upload the edited `kintone-numbers-to-words.js` file
 
 ---
 
@@ -89,26 +91,28 @@ Remember to save the record!
 
 ---
 
-## kintone-numbers-to-words-v3.js
+## kintone-numbers-to-words.js
 
 ```javascript
-// v3 - Kintone JS Customization to convert a number to words
+// Kintone JS Customization to convert a number to words
 (function () {
   'use strict';
 
-  // Configuration needed for this script to work
-  const INPUT_FIELD_CODE = 'Number'; // the field code of either a number field or a text field
-  const OUTPUT_FIELD_CODE = 'Text'; // the field code of a text field
-  const ADD_COMMAS = false; // set to true to add commas
+  // Constants for field codes
+  const NUMBER_FIELD_CODE = 'Number';
+  const TEXT_FIELD_CODE = 'Text';
+  const ADD_COMMAS = true; // set to true to add commas
+  const ADD_ADDS = true; // set to true to add 'and' before the last number
+  const ADD_DASHES = true; // set to true to add dashes between two-digit numbers
 
-  // Convert single-digit number to its word form
+  // Convert a single-digit number to its word form
   function singleDigitToWords(num) {
     const words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
     return words[num];
   }
 
-  // Convert two-digit number to its word form
-  function doubleDigitToWords(num) {
+  // Convert a two-digit number to its word form
+  function doubleDigitToWords(num, addDashes) {
     const tenToNineteen = [
       'ten', 'eleven', 'twelve', 'thirteen', 'fourteen',
       'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'
@@ -121,28 +125,41 @@ Remember to save the record!
     if (num < 20) return tenToNineteen[num - 10];
     const tens = Math.floor(num / 10);
     const ones = num % 10;
-    return multiplesOfTen[tens - 2] + (ones ? ' ' + singleDigitToWords(ones) : '');
+    return multiplesOfTen[tens - 2] + (ones ? (addDashes ? '-' : ' ') + singleDigitToWords(ones) : '');
   }
 
   // Convert a three-digit number to its word form
-  function tripleDigitToWords(num) {
+  function tripleDigitToWords(num, addDashes) {
     const hundreds = Math.floor(num / 100);
     const remainder = num % 100;
     let words = '';
     if (hundreds) words += singleDigitToWords(hundreds) + ' hundred ';
     if (remainder) {
-      words += remainder < 10 ? singleDigitToWords(remainder) : doubleDigitToWords(remainder);
+      words += remainder < 10 ? singleDigitToWords(remainder) : doubleDigitToWords(remainder, addDashes);
     }
     return words.trim();
   }
 
-  // Main function - Input value & optional comma separation values
-  function numberToWords(inputValue, ADD_COMMAS) {
+  // Capitalize the first letter
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  // Main function to convert a number to words with optional parameters
+  function numberToWords(inputValue, addCommas, addAdds, addDashes) {
+
+    // check if input is a number
     const cleanNumber = String(inputValue).replace(/[^0-9]/g, '');
 
     if (!cleanNumber) {
       alert('Please enter a valid number');
       return;
+    }
+
+    // check if input is a positive number
+    let isNegative = false;
+    if (inputValue < 0) {
+      isNegative = true;
     }
 
     const scales = ['', 'thousand', 'million', 'billion', 'trillion'];
@@ -152,7 +169,7 @@ Remember to save the record!
 
     while (cleanNumberCopy.length) {
       const piece = cleanNumberCopy.slice(-3);
-      const pieceAsWords = tripleDigitToWords(parseInt(piece, 10));
+      const pieceAsWords = tripleDigitToWords(parseInt(piece, 10), addDashes);
       if (pieceAsWords) {
         wordRepresentation.unshift(pieceAsWords + (scales[scaleIndex] ? ' ' + scales[scaleIndex] : ''));
       }
@@ -161,19 +178,37 @@ Remember to save the record!
       scaleIndex++;
     }
 
-    return ADD_COMMAS ? wordRepresentation.join(', ') : wordRepresentation.join(' ');
+    let finalOutput = addCommas ? wordRepresentation.join(', ') : wordRepresentation.join(' ');
+
+    if (addAdds && wordRepresentation.length > 1) {
+      // Split the finalOutput into words, add 'and' before the last word, then join them back.
+      let finalOutputArray = finalOutput.split(' ');
+      finalOutputArray.splice(-1, 0, 'and');
+      finalOutput = finalOutputArray.join(' ');
+    }
+
+    if (isNegative) {
+      finalOutput = 'Negative ' + finalOutput;
+    }
+
+    if (!isNegative) {
+      // Capitalize the first letter of finalOutput
+      finalOutput = capitalizeFirstLetter(finalOutput);
+    }
+
+    return finalOutput;
   }
 
   // Register events
   const events = [
-    `app.record.create.change.${INPUT_FIELD_CODE}`,
-    `app.record.edit.change.${INPUT_FIELD_CODE}`
+    `app.record.create.change.${NUMBER_FIELD_CODE}`,
+    `app.record.edit.change.${NUMBER_FIELD_CODE}`
   ];
 
   kintone.events.on(events, function (event) {
     const record = event.record;
-    const inputNumber = record[INPUT_FIELD_CODE].value;
-    record[OUTPUT_FIELD_CODE].value = numberToWords(inputNumber, ADD_COMMAS);
+    const inputNumber = record[NUMBER_FIELD_CODE].value;
+    record[TEXT_FIELD_CODE].value = numberToWords(inputNumber, ADD_COMMAS, ADD_ADDS, ADD_DASHES);
     return event;
   });
 
@@ -199,13 +234,15 @@ The entire script is wrapped in an [Immediately Invoked Function Expression (IIF
 
 ### Configuration
 
-These three constants store values that are specific to the Kintone App and how the user wants the script to behave.  
+These five constants store values that are specific to the Kintone App and how the user wants the script to behave.  
 It is a common practice for Kintone JavaScript customizations to store these values in constants at the top of the script for easy access and modification.
 
 ```javascript
-  const INPUT_FIELD_CODE = 'Number'; // the field code of either a number field or a text field
-  const OUTPUT_FIELD_CODE = 'Text'; // the field code of a text field
-  const ADD_COMMAS = false; // set to true to add commas
+const NUMBER_FIELD_CODE = 'Number';
+const TEXT_FIELD_CODE = 'Text';
+const ADD_COMMAS = true; // set to true to add commas
+const ADD_ADDS = true; // set to true to add 'and' before the last number
+const ADD_DASHES = true; // set to true to add dashes between two-digit numbers
 ```
 
 ### Helper Functions
@@ -221,7 +258,7 @@ We define some helper functions to keep the code DRY (Don't Repeat Yourself):
 This function does the heavy lifting. It takes a number and converts it to its word form, considering thousands, millions, billions, etc.
 
 ```javascript
-function numberToWords(inputValue, addCommas) {
+  function numberToWords(inputValue, addCommas, addAdds, addDashes) {
   // Implementation
 }
 ```
@@ -242,15 +279,15 @@ kintone.events.on(events, function (event) {
 
 Here are a few test cases that I used to verify the script's performance:
 
-| Input (Number) | Output (Word / Textual Representation)                                                       |
-| -------------- | -------------------------------------------------------------------------------------------- |
-| 4729538016     | `four billion seven hundred twenty nine million five hundred thirty eight thousand sixteen`  |
-| 9214703150     | `nine billion two hundred fourteen million seven hundred three thousand one hundred fifty`   |
-| 638237465      | `six hundred thirty eight million two hundred thirty seven thousand four hundred sixty five` |
-| 857921         | `eight hundred fifty seven thousand nine hundred twenty one`                                 |
-| 523            | `five hundred twenty three`                                                                  |
-| 42             | `forty two`                                                                                  |
-| 7              | `seven`                                                                                      |
+| Input (Number) | Output (Word / Textual Representation)                                                             |
+| -------------- | -------------------------------------------------------------------------------------------------- |
+| 4729538016     | `Four billion, seven hundred twenty-nine million, five hundred thirty-eight thousand, and sixteen` |
+| 9214703150     | `Nine billion, two hundred fourteen million, seven hundred three thousand, one hundred and fifty`  |
+| 638237465      | `Six hundred thirty-eight million, two hundred thirty-seven thousand, four hundred and sixty-five` |
+| 857921         | `Eight hundred fifty-seven thousand, nine hundred and twenty-one`                                  |
+| 523            | `Five hundred twenty-three`                                                                        |
+| 42             | `Forty-two`                                                                                        |
+| 7              | `Seven`                                                                                            |
 
 ---
 
