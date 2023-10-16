@@ -5,7 +5,7 @@ No more manually typing out the textual representation of a number!
 Here is a [Kintone JavaScript customization](https://kintone.dev/en/what-is-kintone-customize/) that automatically converts a number entered in a field to its textual representation (i.e., converts `123` to `"one hundred twenty-three"`). The script is available below or in [kintone-numbers-to-words-v3.js](./kintone-numbers-to-words-v3.js).
 
 Following is a quick demo of the number to textual representation live conversion:
-* ![kintone-numbers-to-words-demo.gif](kintone-numbers-to-words-demo.gif)
+* ![GIF showing how typing 100 in the input field results in "one hundred" in the output field](kintone-numbers-to-words-demo.gif)
 
 ## Table of Content <!-- omit in toc -->
 * [What is Kintone?](#what-is-kintone)
