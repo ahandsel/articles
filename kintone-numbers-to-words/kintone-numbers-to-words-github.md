@@ -70,7 +70,7 @@ There are three constants that you need to edit in the script:
 1. Click the **App Settings** button ⚙️ at the upper right corner
 1. Select the **App Settings** tab
 1. Navigate to **Customization and Integration** and select the **JavaScript and CSS Customization** option
-1. Click the **Upload File** button and upload the edited [kintone-numbers-to-words-v3.js](./kintone-numbers-to-words-v3.js) file
+1. Click the **Upload File** button and upload the edited `kintone-numbers-to-words-v3.js` file
 
 ---
 
