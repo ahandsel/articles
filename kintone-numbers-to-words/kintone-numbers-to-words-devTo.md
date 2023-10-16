@@ -2,7 +2,7 @@
 No more manually typing out the textual representation of a number!
 
 ## TL;DR <!-- omit in toc -->
-Here is a [Kintone JavaScript customization](https://kintone.dev/en/what-is-kintone-customize/) that automatically converts a number entered in a field to its textual representation (i.e., converts `123` to `"one hundred twenty-three"`). The script is available below or in [kintone-numbers-to-words-v3.js](./kintone-numbers-to-words-v3.js).
+Here is a [Kintone JavaScript customization](https://kintone.dev/en/what-is-kintone-customize/) that automatically converts a number entered in a field to its textual representation (i.e., converts `123` to `"one hundred twenty-three"`). The script is available below or in [kintone-numbers-to-words-v3.js](https://github.com/ahandsel/articles/blob/master/kintone-numbers-to-words/kintone-numbers-to-words-v3.js).
 
 ## Table of Content <!-- omit in toc -->
 * [What is Kintone?](#what-is-kintone)
@@ -70,7 +70,7 @@ There are three constants that you need to edit in the script:
 1. Click the **App Settings** button ⚙️ at the upper right corner
 1. Select the **App Settings** tab
 1. Navigate to **Customization and Integration** and select the **JavaScript and CSS Customization** option
-1. Click the **Upload File** button and upload the edited [kintone-numbers-to-words-v3.js](./kintone-numbers-to-words-v3.js) file
+1. Click the **Upload File** button and upload the edited `kintone-numbers-to-words-v3.js` file
 
 ---
 
