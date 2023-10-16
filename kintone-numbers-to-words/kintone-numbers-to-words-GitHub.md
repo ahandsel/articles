@@ -40,7 +40,7 @@ The script automatically converts a numerical value from the input field (`INPUT
 
 There are several helper functions (`singleDigitToWords`, `doubleDigitToWords`, and `tripleDigitToWords`) to convert numbers of varying lengths to words. The main function, `numberToWords`, combines the textual representation of the entire number, even accounting for thousands, millions, and beyond.
 
-Kintone Event handlers trigger the script when the input field is changed, leading to live number-to-word conversion on the Kintone Edit Record view.
+Kintone Event handlers trigger the script when the input field is edited, leading to live number-to-word conversion on the Kintone Edit Record view.
 
 There is an option to include commas between the words for better readability.
 
