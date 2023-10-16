@@ -18,6 +18,7 @@ Here is a [Kintone JavaScript customization](https://kintone.dev/en/what-is-kint
   * [Helper Functions](#helper-functions)
   * [Main Function](#main-function)
   * [Event Registration](#event-registration)
+* [Test Cases](#test-cases)
 * [Got Questions? Need Help?](#got-questions-need-help)
 
 ## What is Kintone?
@@ -80,13 +81,13 @@ There are three constants that you need to edit in the script:
 
 The output field will be automatically populated with the number in its word form.
 
-Don't forget to save the record!
+Remember to save the record!
 
 ---
 
 ## Code Breakdown
 
-Let's take a look at how this script works.
+Let us take a look at how this script works.
 
 ### Script Structure
 
@@ -130,13 +131,29 @@ function numberToWords(inputValue, addCommas) {
 
 ### Event Registration
 
-Finally, we register the Kintone events that will trigger our code. In this example, we're using `app.record.create.change.${NUMBER_FIELD_CODE}` and `app.record.edit.change.${NUMBER_FIELD_CODE}` to handle both new record creation and record editing events.
+Finally, we register the Kintone events that will trigger our code. In this example, we are using `app.record.create.change.${NUMBER_FIELD_CODE}` and `app.record.edit.change.${NUMBER_FIELD_CODE}` to handle both new record creation and record editing events.
 
 ```javascript
 kintone.events.on(events, function (event) {
   // Event Handling
 });
 ```
+
+---
+
+## Test Cases
+
+Here are a few test cases that I used to verify the script's performance:
+
+| Input (Number) | Output (Word / Textual Representation)                                                       |
+| -------------- | -------------------------------------------------------------------------------------------- |
+| 4729538016     | `four billion seven hundred twenty nine million five hundred thirty eight thousand sixteen`  |
+| 9214703150     | `nine billion two hundred fourteen million seven hundred three thousand one hundred fifty`   |
+| 638237465      | `six hundred thirty eight million two hundred thirty seven thousand four hundred sixty five` |
+| 857921         | `eight hundred fifty seven thousand nine hundred twenty one`                                 |
+| 523            | `five hundred twenty three`                                                                  |
+| 42             | `forty two`                                                                                  |
+| 7              | `seven`                                                                                      |
 
 ---
 
