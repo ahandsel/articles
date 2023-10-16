@@ -52,7 +52,7 @@
   // Main function to convert a number to words with optional parameters
   function numberToWords(inputValue, addCommas, addAdds, addDashes) {
 
-    // check if input is a number
+    // check if the input is a number
     const cleanNumber = String(inputValue).replace(/[^0-9]/g, '');
 
     if (!cleanNumber) {
@@ -60,7 +60,7 @@
       return;
     }
 
-    // check if input is a positive number
+    // check if the input is a positive number
     let isNegative = false;
     if (inputValue < 0) {
       isNegative = true;
