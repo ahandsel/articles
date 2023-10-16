@@ -34,13 +34,13 @@ Check out the Kintone developer resources at [kintone.dev](https://kintone.dev/e
 
 ## Quick Overview of the Kintone JavaScript Customization
 
-This is a JavaScript code that is meant to be attached to a Kintone App with a [Number field](https://get.kintone.help/k/en/id/040534.html) or [Text field](https://get.kintone.help/k/en/id/040539.html).
+The kintone-numbers-to-words-v3.js JavaScript code is meant to be attached to a Kintone App with a [Number field](https://get.kintone.help/k/en/id/040534.html) or [Text field](https://get.kintone.help/k/en/id/040539.html).
 
-The script automatically converts numerical value from the input field (`INPUT_FIELD_CODE`) into its corresponding word form (e.g., `123` to `one hundred twenty-three`) and populates the output field (`OUTPUT_FIELD_CODE`) with the result.
+The script automatically converts a numerical value from the input field (`INPUT_FIELD_CODE`) into its corresponding word form (e.g., `123` to `one hundred twenty-three`) and populates the output field (`OUTPUT_FIELD_CODE`) with the result.
 
-There are several several helper functions (`singleDigitToWords`, `doubleDigitToWords`, `tripleDigitToWords`) to convert numbers of varying lengths to words. The main function, `numberToWords`, pieces together the textual representation of the entire number, even accounting for thousands, millions, and beyond.
+There are several helper functions (`singleDigitToWords`, `doubleDigitToWords`, and `tripleDigitToWords`) to convert numbers of varying lengths to words. The main function, `numberToWords`, combines the textual representation of the entire number, even accounting for thousands, millions, and beyond.
 
-Kintone Event handlers trigger the script when the input field is changed which leads to live number-to-word conversion on the Kintone Edit Record view.
+Kintone Event handlers trigger the script when the input field is changed, leading to live number-to-word conversion on the Kintone Edit Record view.
 
 There is an option to include commas between the words for better readability.
 
@@ -78,7 +78,7 @@ There are three constants that you need to edit in the script:
 1. Click the **Add Record** button ➕
 1. Enter a number in the input field
 
-The output field will be automatically populated with the number in its word form
+The output field will be automatically populated with the number in its word form.
 
 Don't forget to save the record!
 
@@ -101,7 +101,7 @@ The entire script is wrapped in an [Immediately Invoked Function Expression (IIF
 
 ### Configuration
 
-These three constants store values that is specific to the Kintone App and how the user wants the script to behave.  
+These three constants store values that are specific to the Kintone App and how the user wants the script to behave.  
 It is a common practice for Kintone JavaScript customizations to store these values in constants at the top of the script for easy access and modification.
 
 ```javascript
