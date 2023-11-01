@@ -19,21 +19,18 @@ javascript: (function () {
     }
   };
   const appId = window.kintone?.app?.getId();
+  const errMsg = `Error: This is not a Kintone App.\nOpen a specific Kintone App when executing this bookmarklet.`;
   if (appId === undefined) {
-    alert(`Error: This is not a Kintone App.\nOpen a specific Kintone App when executing this bookmarklet.`);
-    console.log(`This is not a Kintone App.\nOpen a specific Kintone App when executing this bookmarklet.\nApp ID: ${appId}`);
+    alert(errMsg);
+    console.log(errMsg);
     return;
   }
   console.log(`App ID: ${appId}`);
-  const deleteStart = askForNumber(`First record to delete:`);
-  if (deleteStart === undefined) {
-    return;
-  }
-  console.log(deleteStart);
-  const deleteEnd = askForNumber(`Last record to delete:`);
-  if (deleteEnd === undefined) {
-    return;
-  }
+  const deleteStart = askForNumber('First record to delete:');
+  if (deleteStart === undefined) return;
+
+  const deleteEnd = askForNumber('Last record to delete:');
+  if (deleteEnd === undefined) return;
   let deleteList = [];
   for (let i = deleteStart; i <= deleteEnd; i++) {
     deleteList.push(i);
