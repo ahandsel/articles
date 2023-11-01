@@ -1,21 +1,21 @@
 javascript: (function () {
-  'use strict';
   const askForNumber = (question) => {
-    let userInput = prompt(question);
-    if (userInput === null) {
-      console.log('User cancelled the operation.');
-      return;
-    }
-    if (isNaN(userInput) || userInput.trim() === '') {
-      let reTry = confirm(`${userInput} is not a valid number.\nClick "OK" to try again.\nClick "Cancel" to cancel the operation.`);
-      if (reTry) {
-        askForNumber(question);
-      } else {
+    while (true) {
+      let userInput = prompt(question);
+      if (userInput === null) {
         console.log('User cancelled the operation.');
+        return;
       }
-    } else {
-      console.log(`User entered: ${userInput}`);
-      return Number(userInput);
+      if (isNaN(userInput) || userInput.trim() === '') {
+        let reTry = confirm(`${userInput} is not a valid number.\nClick "OK" to try again.\nClick "Cancel" to cancel the operation.`);
+        if (!reTry) {
+          console.log('User cancelled the operation.');
+          return;
+        }
+      } else {
+        console.log(`User entered: ${userInput}`);
+        return Number(userInput);
+      }
     }
   };
   const appId = window.kintone?.app?.getId();
