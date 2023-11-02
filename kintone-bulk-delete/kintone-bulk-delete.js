@@ -1,15 +1,17 @@
 javascript: (function () {
+  const userCancel = 'User cancelled the operation.';
+  const recNotDeleted = 'No records were deleted.';
   const askForNumber = (question) => {
     while (true) {
       let userInput = prompt(question);
       if (userInput === null) {
-        console.log('User cancelled the operation.');
+        console.log(userCancel);
         return;
       }
       if (isNaN(userInput) || userInput.trim() === '') {
         let reTry = confirm(`${userInput} is not a valid number.\nClick "OK" to try again.\nClick "Cancel" to cancel the operation.`);
         if (!reTry) {
-          console.log('User cancelled the operation.');
+          console.log(userCancel);
           return;
         }
       } else {
@@ -33,17 +35,20 @@ javascript: (function () {
   if (deleteEnd === undefined) return;
   const deleteList = Array.from({ length: deleteEnd - deleteStart + 1 }, (_, i) => i + deleteStart);
   let count = deleteList.length;
-  const userConfirmation = window.confirm(`Records from ${deleteStart} to ${deleteEnd} will be deleted in this Kintone App (App ID: ${appId}).\n${count} records in total. \n\n Click "OK" to delete the records. \n Click "Cancel" to cancel the operation.`);
+  const userConfirmation = window.confirm(`Records from ${deleteStart} to ${deleteEnd} will be deleted in this Kintone App (App ID: ${appId}).\n\n Click "OK" to delete the records. \n Click "Cancel" to cancel the operation.`);
   if (!userConfirmation) {
-    console.log('Operation cancelled by user.');
-    alert('No records were deleted.');
+    console.log(userCancel);
+    alert(recNotDeleted);
     return;
   }
   const body = { 'app': appId, 'ids': deleteList };
+  const msg = `Records from ${deleteStart} to ${deleteEnd} has been deleted.\nRefresh the page to see the changes.`;
   kintone.api(kintone.api.url('/k/v1/records', true), 'DELETE', body, (resp) => {
-    console.log(`Records from ${deleteStart} to ${deleteEnd} has been deleted \n ${count} records in total.\nRefresh the page to see the changes.`);
+    console.log(msg);
+    alert(msg);
   }, (error) => {
+    console.log(recNotDeleted);
     console.log(error);
-    alert(`Records are deleted.\nRefresh the page to see the changes.`)
+    alert(`Error! ${recNotDeleted}\nCheck the console for more details.`);
   });
 })();
