@@ -33,22 +33,45 @@ javascript: (function () {
 
   const deleteEnd = askForNumber('Last record to delete:');
   if (deleteEnd === undefined) return;
-  const deleteList = Array.from({ length: deleteEnd - deleteStart + 1 }, (_, i) => i + deleteStart);
-  let count = deleteList.length;
-  const userConfirmation = window.confirm(`Records from ${deleteStart} to ${deleteEnd} will be deleted in this Kintone App (App ID: ${appId}).\n\n Click "OK" to delete the records. \n Click "Cancel" to cancel the operation.`);
-  if (!userConfirmation) {
-    console.log(userCancel);
-    alert(recNotDeleted);
-    return;
-  }
-  const deleteBody = { 'app': appId, 'ids': deleteList };
-  const deleteMsg = `Records from ${deleteStart} to ${deleteEnd} has been deleted.\nRefresh the page to see the changes.`;
-  kintone.api(kintone.api.url('/k/v1/records', true), 'DELETE', deleteBody, (resp) => {
-    console.log(deleteMsg);
-    alert(deleteMsg);
-  }, (error) => {
-    console.log(recNotDeleted);
+
+
+  let deleteCount = 0;
+  let deleteArray = [];
+  const counterBody = {
+    'app': appId,
+    'query': `$id >= "${deleteStart}" and $id <= "${deleteEnd}" order by $id asc`,
+    'fields': ['$id']
+  };
+  kintone.api(kintone.api.url('/k/v1/records.json', true), 'GET', counterBody, function (resp) {
+    deleteCount = resp.records.length;
+    console.log(resp);
+    if (resp.records && Array.isArray(resp.records)) {
+      deleteArray = resp.records.map(record => {
+        if (record.$id && record.$id.value) {
+          return record.$id.value;
+        }
+        return null;
+      }).filter(id => id !== null);
+    }
+    const userConfirmation = window.confirm(`Records from ${deleteStart} to ${deleteEnd} will be deleted in this Kintone App (App ID: ${appId}).\n${deleteCount} records in total.\n\n Click "OK" to delete the records.\nClick "Cancel" to cancel the operation.`);
+    if (!userConfirmation) {
+      console.log(userCancel);
+      alert(recNotDeleted);
+      return;
+    }
+    console.log('deleteArray');
+    console.log(deleteArray);
+    const deleteBody = { 'app': appId, 'ids': deleteArray };
+    const deleteMsg = `Records from ${deleteStart} to ${deleteEnd} has been deleted.\nRefresh the page to see the changes.`;
+    kintone.api(kintone.api.url('/k/v1/records', true), 'DELETE', deleteBody, (resp) => {
+      console.log(deleteMsg);
+      alert(deleteMsg);
+    }, (error) => {
+      console.log(recNotDeleted);
+      console.log(error);
+      alert(`Error! ${recNotDeleted}\nCheck the console for more details.`);
+    });
+  }, function (error) {
     console.log(error);
-    alert(`Error! ${recNotDeleted}\nCheck the console for more details.`);
   });
 })();
