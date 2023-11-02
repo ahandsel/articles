@@ -31,25 +31,19 @@ javascript: (function () {
 
   const deleteEnd = askForNumber('Last record to delete:');
   if (deleteEnd === undefined) return;
-  let deleteList = [];
-  for (let i = deleteStart; i <= deleteEnd; i++) {
-    deleteList.push(i);
+  const deleteList = Array.from({ length: deleteEnd - deleteStart + 1 }, (_, i) => i + deleteStart);
+  let count = deleteList.length;
+  const userConfirmation = window.confirm(`Records from ${deleteStart} to ${deleteEnd} will be deleted in this Kintone App (App ID: ${appId}).\n${count} records in total. \n\n Click "OK" to delete the records. \n Click "Cancel" to cancel the operation.`);
+  if (!userConfirmation) {
+    console.log('Operation cancelled by user.');
+    alert('No records were deleted.');
+    return;
   }
-  const count = deleteList.length;
-  const userConfirmation = window.confirm(`Records from ${deleteStart} to ${deleteEnd} will be deleted (${count} records in total) in this Kintone App (App ID: ${appId}). \n\n Click "OK" to delete the records. \n Click "Cancel" to cancel the operation.`);
-  if (userConfirmation) {
-    const body = {
-      'app': appId,
-      'ids': deleteList
-    };
-    kintone.api(kintone.api.url('/k/v1/records', true), 'DELETE', body, function (resp) {
-      console.log(`Records from ${deleteStart} to ${deleteEnd} has been deleted \n ${count} records in total.\nRefresh the page to see the changes.`);
-    }, function (error) {
-      console.log(error);
-      alert(`Records are deleted.\nRefresh the page to see the changes.`)
-    });
-  } else {
-    console.log(`Operation cancelled by user.`);
-    alert(`No records were deleted.`);
-  }
+  const body = { 'app': appId, 'ids': deleteList };
+  kintone.api(kintone.api.url('/k/v1/records', true), 'DELETE', body, (resp) => {
+    console.log(`Records from ${deleteStart} to ${deleteEnd} has been deleted \n ${count} records in total.\nRefresh the page to see the changes.`);
+  }, (error) => {
+    console.log(error);
+    alert(`Records are deleted.\nRefresh the page to see the changes.`)
+  });
 })();
