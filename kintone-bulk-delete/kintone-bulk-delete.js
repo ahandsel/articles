@@ -41,11 +41,11 @@ javascript: (function () {
     alert(recNotDeleted);
     return;
   }
-  const body = { 'app': appId, 'ids': deleteList };
-  const msg = `Records from ${deleteStart} to ${deleteEnd} has been deleted.\nRefresh the page to see the changes.`;
-  kintone.api(kintone.api.url('/k/v1/records', true), 'DELETE', body, (resp) => {
-    console.log(msg);
-    alert(msg);
+  const deleteBody = { 'app': appId, 'ids': deleteList };
+  const deleteMsg = `Records from ${deleteStart} to ${deleteEnd} has been deleted.\nRefresh the page to see the changes.`;
+  kintone.api(kintone.api.url('/k/v1/records', true), 'DELETE', deleteBody, (resp) => {
+    console.log(deleteMsg);
+    alert(deleteMsg);
   }, (error) => {
     console.log(recNotDeleted);
     console.log(error);
