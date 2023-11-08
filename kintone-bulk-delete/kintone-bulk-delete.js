@@ -33,7 +33,9 @@ javascript: (function () {
 
   const deleteEnd = askForNumber('Last record to delete:');
   if (deleteEnd === undefined) return;
-
+  if (deleteEnd < deleteStart) {
+    return alert('The last record cannot be before the start record. Deletion cancelled.');
+  }
 
   let deleteCount = 0;
   let deleteArray = [];
