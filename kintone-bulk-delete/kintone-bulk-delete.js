@@ -1,24 +1,22 @@
 javascript: (function () {
+  const logAndAlert = (message, isAlert = true, isConsole = true) => {
+    if (isAlert) alert(message);
+    if (isConsole) console.log(message);
+  };
   const userCancel = 'User cancelled the operation.';
   const recNotDeleted = 'No records were deleted.';
   const askForNumber = (question) => {
-    while (true) {
-      let userInput = prompt(question);
-      if (userInput === null) {
-        console.log(userCancel);
-        return;
+    let userInput;
+    do {
+      userInput = prompt(question);
+      if (userInput === null || userInput === undefined) {
+        return logAndAlert('Deletion canceled by the user.');
       }
-      if (isNaN(userInput) || userInput.trim() === '') {
-        let reTry = confirm(`${userInput} is not a valid number.\nClick "OK" to try again.\nClick "Cancel" to cancel the operation.`);
-        if (!reTry) {
-          console.log(userCancel);
-          return;
-        }
-      } else {
-        console.log(`User entered: ${userInput}`);
-        return Number(userInput);
+      if (!isNaN(userInput) && userInput.trim() !== '') {
+        logAndAlert(`User entered: ${userInput}`, false);
+        return +userInput;
       }
-    }
+    } while (!confirm(`${userInput} is not a valid number.\nClick "OK" to try again.\nClick "Cancel" to cancel the operation.`));
   };
   const appId = window.kintone?.app?.getId();
   const errMsg = `Error: This is not a Kintone App.\nOpen a specific Kintone App when executing this bookmarklet.`;
