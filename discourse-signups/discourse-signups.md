@@ -9,7 +9,7 @@ For a monthly metric report, I need to determine how many new sign-ups we have f
 
 Surprisingly, it is tedious to get this number.
 
-## Solution - Bookmarklet
+## Bookmarklet Method
 
 I created a bookmarklet that will generate the URL to the Discourse Admin Report with the correct parameters.
 
@@ -35,7 +35,7 @@ javascript: (function () {
 })();
 ```
 
-## Solution - Zapier
+## Zapier Method
 Here is the Zapier workflow I created to get a monthly Slack post with the sign-up count.
 
 ### 1. Every Month in Schedule by Zapier
@@ -157,7 +157,7 @@ Here is the Zapier workflow I created to get a monthly Slack post with the sign-
 * Slack: Your Account
 * Step details
   * Channel: `#your_slack_channel`
-  * Message Text: `Last month's sign up count: {5. Output: sum}`
+  * Message Text: `Last month's sign-up count: {5. Output: sum}`
 * Send as a bot?: `yes`
 
 ## Conclusion
