@@ -1,4 +1,4 @@
-# Import a Garoon Event to Apple Calendar Bookmarklet
+# Export a Garoon Event to Apple Calendar Bookmarklet
 
 ## Usage
 
@@ -7,9 +7,9 @@ Initial Setup
 1. Go to Bookmark manager (`chrome://bookmarks/`) > Click on the `⋮` at the top-right-corner
 1. Click `Add new bookmark` & paste the code in the URL field
 
-Importing a Garoon Event to Apple Calendar
+Export a Garoon Event to Apple Calendar
 1. Go to the Garoon event's page
-1. Click on the bookmarklet
+1. Click on the Bookmark
 1. Open the downloaded `ical` file
 1. Confirm that the imported event in Apple Calendar App
 
