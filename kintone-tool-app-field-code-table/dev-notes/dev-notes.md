@@ -1,6 +1,20 @@
 # App Field Code Table Project
 
 
+## Outline <!-- omit in toc -->
+
+* [Status](#status)
+* [Objective](#objective)
+
+
+## Status
+
+* v1 - Testing Kintone API
+* v2 - Basic Markdown table output
+* v3 - Filter out disabled fields
+* v4 - Sort by field name
+
+
 ## Objective
 
 Overall: Create a Markdown table of the App's fields and their codes
