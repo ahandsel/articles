@@ -1,0 +1,122 @@
+{
+  "Status": {
+      "type": "STATUS",
+      "code": "Status",
+      "label": "Status",
+      "enabled": false
+  },
+  "Text_0": {
+      "type": "SINGLE_LINE_TEXT",
+      "code": "Text_0",
+      "label": "Link",
+      "noLabel": false,
+      "required": false,
+      "minLength": "",
+      "maxLength": "",
+      "expression": "",
+      "hideExpression": false,
+      "unique": false,
+      "defaultValue": ""
+  },
+  "Assignee": {
+      "type": "STATUS_ASSIGNEE",
+      "code": "Assignee",
+      "label": "Assignee",
+      "enabled": false
+  },
+  "Updated_datetime": {
+      "type": "UPDATED_TIME",
+      "code": "Updated_datetime",
+      "label": "Updated datetime",
+      "noLabel": false
+  },
+  "Created_datetime": {
+      "type": "CREATED_TIME",
+      "code": "Created_datetime",
+      "label": "Created datetime",
+      "noLabel": false
+  },
+  "Categories": {
+      "type": "CATEGORY",
+      "code": "Categories",
+      "label": "Categories",
+      "enabled": false
+  },
+  "Record_number": {
+      "type": "RECORD_NUMBER",
+      "code": "Record_number",
+      "label": "Record number",
+      "noLabel": false
+  },
+  "Text": {
+      "type": "SINGLE_LINE_TEXT",
+      "code": "Text",
+      "label": "Article Title",
+      "noLabel": false,
+      "required": false,
+      "minLength": "",
+      "maxLength": "",
+      "expression": "",
+      "hideExpression": false,
+      "unique": false,
+      "defaultValue": ""
+  },
+  "Created_by": {
+      "type": "CREATOR",
+      "code": "Created_by",
+      "label": "Created by",
+      "noLabel": false
+  },
+  "Drop_down": {
+      "type": "DROP_DOWN",
+      "code": "Drop_down",
+      "label": "Written By",
+      "noLabel": false,
+      "required": false,
+      "options": {
+          "Lydia Hallie": {
+              "label": "Lydia Hallie",
+              "index": "2"
+          },
+          "Simon Holdorf": {
+              "label": "Simon Holdorf",
+              "index": "6"
+          },
+          "jsmanifest": {
+              "label": "jsmanifest",
+              "index": "0"
+          },
+          "Gajus Kuizinas": {
+              "label": "Gajus Kuizinas",
+              "index": "1"
+          },
+          "SeattleDataGuy": {
+              "label": "SeattleDataGuy",
+              "index": "3"
+          },
+          "Davide Pacilio": {
+              "label": "Davide Pacilio",
+              "index": "4"
+          },
+          "Mark A": {
+              "label": "Mark A",
+              "index": "5"
+          }
+      },
+      "defaultValue": ""
+  },
+  "Updated_by": {
+      "type": "MODIFIER",
+      "code": "Updated_by",
+      "label": "Updated by",
+      "noLabel": false
+  },
+  "Text_area": {
+      "type": "MULTI_LINE_TEXT",
+      "code": "Text_area",
+      "label": "Content",
+      "noLabel": false,
+      "required": false,
+      "defaultValue": ""
+  }
+}
