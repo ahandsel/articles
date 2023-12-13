@@ -108,15 +108,14 @@ javascript: (() => {
   const body = { 'app': kintone.app.getId() };
 
   kintone.api(kintone.api.url('/k/v1/app/form/fields', true), 'GET', body, function (resp) {
-    extractData(resp.properties);
-    console.log(resp.properties);
+    fieldCodeTable(resp.properties);
   }, function (error) {
     console.log(error);
   });
 
-  function extractData(rawProperties) {
-    const mdTableHeader = `| Field Name | Code | Type |\n| ---------- | ---------- | --------------- |`;
-    const mdRows = [];
+  function fieldCodeTable(rawProperties) {
+    const header = `| Field Name | Code | Type |\n| ---------- | ---------- | --------------- |`;
+    const rows = [];
 
     for (const field in rawProperties) {
       const fieldJson = rawProperties[field];
@@ -125,17 +124,17 @@ javascript: (() => {
       const code = fieldJson.code;
       if (fieldJson.hasOwnProperty('enabled')) {
         if (fieldJson.enabled === true) {
-          mdRows.push(`| ${label} | ${code} | ${type} |`);
+          rows.push(`| ${label} | ${code} | ${type} |`);
         }
       } else {
-        mdRows.push(`| ${label} | ${code} | ${type} |`);
+        rows.push(`| ${label} | ${code} | ${type} |`);
       }
     }
-    mdRows.sort();
-    const mdTable = [mdTableHeader, ...mdRows].join('\n');
+    rows.sort();
+    let mdTable = [header, ...rows].join('\n');
+    let formatter = markdownTableFormatter();
+    mdTable = formatter.formatTable(mdTable);
     console.log(mdTable);
     navigator.clipboard.writeText(mdTable);
-    let formatter = markdownTableFormatter();
-    console.log(formatter.formatTable(mdTable));
   }
 })();
