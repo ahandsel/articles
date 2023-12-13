@@ -12,7 +12,7 @@
 * v1 - Testing Kintone API
 * v2 - Basic Markdown table output
 * v3 - Filter out disabled fields
-* v4 - Sort by field name
+* v4 - Bookmarklet + Sort by field name
 
 
 ## Objective
@@ -24,9 +24,8 @@ Core Requirements:
 * [x] Create a Markdown table - Level2-basic.js
 * [x] Filter out disabled fields - Level3-filterOutDisabled.js
 
-
 Additional Requirements:
-* [ ] sort the table by field name
+* [x] sort the table by field name
 * [ ] Test for disabled fields
 * [ ] Test for field group
 * [ ] Test for table
