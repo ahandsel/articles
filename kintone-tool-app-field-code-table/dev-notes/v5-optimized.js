@@ -105,14 +105,6 @@ javascript: (() => {
     };
   }
 
-  const body = { 'app': kintone.app.getId() };
-
-  kintone.api(kintone.api.url('/k/v1/app/form/fields', true), 'GET', body, function (resp) {
-    fieldCodeTable(resp.properties);
-  }, function (error) {
-    console.log(error);
-  });
-
   function fieldCodeTable(rawProperties) {
     const header = `| Field Name | Code | Type |\n| ---------- | ---------- | --------------- |`;
     const rows = [];
@@ -131,10 +123,18 @@ javascript: (() => {
       }
     }
     rows.sort();
-    let mdTable = [header, ...rows].join('\n');
+    const rawTable = [header, ...rows].join('\n');
     let formatter = markdownTableFormatter();
-    mdTable = formatter.formatTable(mdTable);
-    console.log(mdTable);
-    navigator.clipboard.writeText(mdTable);
+    const formattedTable = formatter.formatTable(rawTable);
+    console.log(formattedTable);
+    navigator.clipboard.writeText(formattedTable);
   }
+
+  const body = { 'app': kintone.app.getId() };
+
+  kintone.api(kintone.api.url('/k/v1/app/form/fields', true), 'GET', body, function (resp) {
+    fieldCodeTable(resp.properties);
+  }, function (error) {
+    console.log(error);
+  });
 })();
