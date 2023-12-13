@@ -1,13 +1,18 @@
 # Converting Numbers to Words in a Kintone App Using JavaScript
+
 No more manually typing out the textual representation of a number!
 
+
 ## TL;DR
+
 [kintone-numbers-to-words.js](https://github.com/ahandsel/articles/blob/master/kintone-numbers-to-words/kintone-numbers-to-words.js) is a [Kintone JavaScript customization](https://kintone.dev/en/what-is-kintone-customize/) that automatically converts a number entered in a field to its textual representation (i.e., converts `123` to `"one hundred twenty-three"`).
 
 Following is a quick demo of the number to textual representation live conversion:
 * ![GIF showing how typing 100 in the input field results in "one hundred" in the output field](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7uth9z1vj6f53dzjhxom.gif)
 
+
 ## Table of Content
+
 * [What is Kintone?](#what-is-kintone)
 * [Quick Overview of the Kintone JavaScript Customization](#quick-overview-of-the-kintone-javascript-customization)
 * [Installation](#installation)
@@ -25,6 +30,7 @@ Following is a quick demo of the number to textual representation live conversio
 * [Test Cases](#test-cases)
 * [Got Questions? Need Help?](#got-questions-need-help)
 
+
 ## What is Kintone?
 
 Kintone is a no-code/low-code application platform that provides an easy way to build business applications tailored to your organization's unique needs. Store your vital metrics in a Kintone Web Database!
@@ -36,6 +42,7 @@ Learn more about Kintone at [kintone.com](https://www.kintone.com/en-us/).
 Check out the Kintone developer resources at [kintone.dev](https://kintone.dev/en/).
 
 ---
+
 
 ## Quick Overview of the Kintone JavaScript Customization
 
@@ -51,7 +58,9 @@ There is an option to include commas, dashes, and 'and's between the words for b
 
 ---
 
+
 ## Installation
+
 
 ### Prep a Kintone App
 
@@ -59,6 +68,7 @@ There is an option to include commas, dashes, and 'and's between the words for b
 1. Add an input field - either a Number field or a Text field
 1. Add an output field - a Text field
 1. Note down the field codes for the input and output fields
+
 
 ### Edit the Script
 
@@ -69,6 +79,7 @@ There are three constants that you need to edit in the script:
 * `ADD_ADDS`: Set to `true` to add 'and' before the last word
 * `ADD_DASHES`: Set to `true` to add dashes between two-digit numbers
 
+
 ### Add the Script
 
 1. Navigate to the Kintone App
@@ -78,6 +89,7 @@ There are three constants that you need to edit in the script:
 1. Click the **Upload File** button and upload the edited `kintone-numbers-to-words.js` file
 
 ---
+
 
 ## Usage
 
@@ -90,6 +102,7 @@ The output field will be automatically populated with the number in its word for
 Remember to save the record!
 
 ---
+
 
 ## kintone-numbers-to-words.js
 
@@ -217,9 +230,11 @@ Remember to save the record!
 
 ---
 
+
 ## Code Breakdown
 
 Let us take a look at how this script works.
+
 
 ### Script Structure
 
@@ -231,6 +246,7 @@ The entire script is wrapped in an [Immediately Invoked Function Expression (IIF
   // Code here
 }());
 ```
+
 
 ### Configuration
 
@@ -245,6 +261,7 @@ const ADD_ADDS = true; // set to true to add 'and' before the last number
 const ADD_DASHES = true; // set to true to add dashes between two-digit numbers
 ```
 
+
 ### Helper Functions
 
 We define some helper functions to keep the code DRY (Don't Repeat Yourself):
@@ -252,6 +269,7 @@ We define some helper functions to keep the code DRY (Don't Repeat Yourself):
 * `singleDigitToWords(num)`: Converts a single-digit number to its word form.
 * `doubleDigitToWords(num)`: Converts a two-digit number to its word form.
 * `tripleDigitToWords(num)`: Converts a three-digit number to its word form.
+
 
 ### Main Function
 
@@ -262,6 +280,7 @@ This function does the heavy lifting. It takes a number and converts it to its w
   // Implementation
 }
 ```
+
 
 ### Event Registration
 
@@ -274,6 +293,7 @@ kintone.events.on(events, function (event) {
 ```
 
 ---
+
 
 ## Test Cases
 
@@ -293,6 +313,7 @@ Here are a few test cases that I used to verify the script's performance:
 
 That is it ~  
 Now you can convert numbers to words automatically in your Kintone app using this JavaScript customization.
+
 
 ## Got Questions? Need Help?
 
