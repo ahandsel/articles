@@ -12,7 +12,7 @@
 * v1 - Testing Kintone API
 * v2 - Basic Markdown table output
 * v3 - Filter out disabled fields
-* v4 - Bookmarklet + Sort by field name
+* v4 - Bookmarklet + Sort by field name + Markdown table formatting
 
 
 ## Objective
@@ -65,3 +65,6 @@ Nice to have:
   * [ ] `TIME`: Time
   * [ ] `UPDATED_TIME`: Updated datetime
   * [ ] `USER_SELECT`: User selection
+
+## References
+* Markdown table formatting = [alanwsmith/markdown\_table\_formatter: A javascript form to format markdown tables for easier reading.](https://github.com/alanwsmith/markdown_table_formatter)
