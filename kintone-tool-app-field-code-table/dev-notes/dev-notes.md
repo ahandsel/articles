@@ -18,6 +18,7 @@
 * v6 - Switch from [Get Form Fields](https://kintone.dev/en/docs/kintone/rest-api/apps/get-form-fields/) to [Get Form Layout](https://kintone.dev/en/docs/kintone/rest-api/apps/get-form-layout/) API for blank space and field group support
 * v7 - optimize code
 
+
 ## Objective
 
 Overall: Create a Markdown table of the App's fields and their codes
@@ -30,7 +31,7 @@ Core Requirements:
 Additional Requirements:
 * [x] sort the table by field name
 * [x] Test for disabled fields
-* [ ] Test for field group - failed
+* [x] Test for field group - only gets the field group, does not specify which fields are in the group
 * [x] Test for table
 * [x] test for lookup
 * [x] test for related records
