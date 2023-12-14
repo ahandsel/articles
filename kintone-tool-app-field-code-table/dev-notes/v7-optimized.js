@@ -5,13 +5,13 @@ javascript: (() => {
     let formattedMarkdownTable = "";
 
     function addMissingCellColumns() {
-      for (let row_i = 0, row_l = cells.length; row_i < row_l; row_i++) {
-        for (let col_i = 0, col_l = columnWidths.length; col_i < col_l; col_i++) {
+      cells.forEach((row, row_i) => {
+        columnWidths.forEach((_, col_i) => {
           if (typeof cells[row_i][col_i] === 'undefined') {
             cells[row_i][col_i] = '';
           }
-        }
-      }
+        });
+      });
     }
 
     function getColumnWidths() {
