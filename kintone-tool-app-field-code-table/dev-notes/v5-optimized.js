@@ -105,20 +105,37 @@ javascript: (() => {
     };
   }
 
+  function subTableCodeTable(subTableJson, subTableRows) {
+    const subTableLabel = subTableJson.label;
+    const subFieldsJson = subTableJson.fields;
+    console.log(subFieldsJson);
+    for (const field in subFieldsJson) {
+      const subFieldJson = subFieldsJson[field];
+      const subType = subFieldJson.type;
+      const subLabel = subFieldJson.label;
+      const subCode = subFieldJson.code;
+      subTableRows.push(`| ${subTableLabel}'s ${subLabel} | ${subCode} | ${subType}|`);
+    }
+    subTableRows.sort();
+    return subTableRows;
+  };
   function fieldCodeTable(rawProperties) {
     const header = `| Field Name | Code | Type |\n| ---------- | ---------- | --------------- |`;
     const rows = [];
-
     for (const field in rawProperties) {
       const fieldJson = rawProperties[field];
       const type = fieldJson.type;
       const label = fieldJson.label;
       const code = fieldJson.code;
-      if (fieldJson.hasOwnProperty('enabled')) {
-        if (fieldJson.enabled === true) {
-          rows.push(`| ${label} | ${code} | ${type} |`);
-        }
-      } else {
+      if (fieldJson.hasOwnProperty('enabled') && fieldJson.enabled === false) { }
+      else if (fieldJson.hasOwnProperty('lookup')) {
+        rows.push(`| ${label} | ${code} | Lookup - ${type}|`);
+      }
+      else if (type === `SUBTABLE`) {
+        rows.push(`| ${label} | ${code} | ${type} |`);
+        subTableCodeTable(fieldJson, rows);
+      }
+      else {
         rows.push(`| ${label} | ${code} | ${type} |`);
       }
     }
@@ -133,6 +150,7 @@ javascript: (() => {
   const body = { 'app': kintone.app.getId() };
 
   kintone.api(kintone.api.url('/k/v1/app/form/fields', true), 'GET', body, function (resp) {
+    console.log(resp.properties);
     fieldCodeTable(resp.properties);
   }, function (error) {
     console.log(error);
