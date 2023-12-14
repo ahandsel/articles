@@ -16,16 +16,12 @@ javascript: (() => {
 
     function getColumnWidths() {
       columnWidths = [];
-
-      for (let row_i = 0, row_l = cells.length; row_i < row_l; row_i++) {
-        for (let col_i = 0, col_l = cells[row_i].length; col_i < col_l; col_i++) {
-          if (typeof columnWidths[col_i] === 'undefined') {
-            columnWidths[col_i] = cells[row_i][col_i].length;
-          } else if (columnWidths[col_i] < cells[row_i][col_i].length) {
-            columnWidths[col_i] = cells[row_i][col_i].length;
-          }
-        }
-      }
+      cells.forEach((row) => {
+        row.forEach((cell, col_i) => {
+          const cellLength = cell.length;
+          columnWidths[col_i] = Math.max(columnWidths[col_i] || 0, cellLength);
+        });
+      });
     }
 
     function importTable(table) {
