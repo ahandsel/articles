@@ -91,25 +91,21 @@ javascript: (() => {
   };
 
   const mainFieldTable = (rawProperties) => {
-    const rows = [];
-    for (const field in rawProperties) {
-      const mainFieldObj = rawProperties[field];
-      const type = mainFieldObj.type;
-      const label = mainFieldObj.label;
-      const code = mainFieldObj.code;
-      if (mainFieldObj.enabled === false) { }
-      else if (mainFieldObj.hasOwnProperty('lookup')) {
-        rows.push(`| ${label} | ${code} | ${type} | Lookup |`);
-      }
-      else if (type === `SUBTABLE`) {
-        rows.push(`| ${label} | ${code} | ${type} | SubTable |`);
+    return Object.entries(rawProperties).flatMap(([field, mainFieldObj]) => {
+      const { type, label, code } = mainFieldObj;
+
+      if (mainFieldObj.enabled === false) {
+        return [];
+      } else if (mainFieldObj.hasOwnProperty('lookup')) {
+        return [`| ${label} | ${code} | ${type} | Lookup |`];
+      } else if (type === `SUBTABLE`) {
+        const rows = [`| ${label} | ${code} | ${type} | SubTable |`];
         subTablesTable(mainFieldObj, rows);
+        return rows;
+      } else {
+        return [`| ${label} | ${code} | ${type} |`];
       }
-      else {
-        rows.push(`| ${label} | ${code} | ${type} |`);
-      }
-    }
-    return rows;
+    });
   };
 
   const extractSpacerElementIds = (inputArray) => {
