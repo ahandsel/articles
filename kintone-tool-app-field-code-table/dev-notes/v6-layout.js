@@ -108,8 +108,6 @@ javascript: (() => {
   function subTablesTable(rawSubTable, subTableRows) {
     const subTableLabel = rawSubTable.label;
     const subFieldsObj = rawSubTable.fields;
-    console.log(`subFieldsObj`);
-    console.log(subFieldsObj);
     for (const field in subFieldsObj) {
       const subFieldObj = subFieldsObj[field];
       const subType = subFieldObj.type;
@@ -152,10 +150,9 @@ javascript: (() => {
       }
       return acc;
     }, []);
-
     rawFieldsArray.forEach(field => {
       if (field.type === "SPACER" && field.elementId) {
-        blankSpaceElementIds.push(`| Blank Space | ${field.elementId} | SPACER | |`);
+        blankSpaceElementIds.push(`| Blank Space | ${field.elementId} | SPACER | elementId |`);
       }
     });
     return blankSpaceElementIds;
@@ -165,26 +162,15 @@ javascript: (() => {
     const appID = { 'app': kintone.app.getId() };
     const mdHeader = `| Field Name | Code | Type | Note | \n| - | - | - | - |`;
     kintone.api(kintone.api.url('/k/v1/app/form/fields', true), 'GET', appID, function (resp) {
-      console.log(`resp.properties`);
-      console.log(resp.properties);
       const rawFields = resp.properties;
       const rawMainFieldTableRows = mainFieldTable(rawFields);
-      console.log(`rawMainFieldTableRows`);
-      console.log(rawMainFieldTableRows);
       kintone.api(kintone.api.url('/k/v1/app/form/layout', true), 'GET', appID, function (resp) {
-        console.log(`resp.layout`);
-        console.log(resp.layout);
         const getBlankSpaceRows = extractSpacerElementIds(resp.layout);
-        console.log(`getBlankSpaceRows`);
-        console.log(getBlankSpaceRows);
         const rows = rawMainFieldTableRows.concat(getBlankSpaceRows);
-        console.log(`rows`);
-        console.log(rows);
         rows.sort();
         const rawTable = [mdHeader, ...rows].join('\n');
         let formatter = markdownTableFormatter();
         const formattedTable = formatter.formatTable(rawTable);
-        console.log(`formattedTable`);
         console.log(formattedTable);
         navigator.clipboard.writeText(formattedTable);
       }, function (error) {

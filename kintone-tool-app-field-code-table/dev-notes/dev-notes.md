@@ -15,8 +15,8 @@
 * v3 - Filter out disabled fields
 * v4 - Bookmarklet + Sort by field name + Markdown table formatting
 * v5 - SubTable and Lookup supported
-* v6 - Switch from [Get Form Fields](https://kintone.dev/en/docs/kintone/rest-api/apps/get-form-fields/) to [Get Form Layout](https://kintone.dev/en/docs/kintone/rest-api/apps/get-form-layout/) API for blank space
-* v7 - Add field group support
+* v6 - Switch from [Get Form Fields](https://kintone.dev/en/docs/kintone/rest-api/apps/get-form-fields/) to [Get Form Layout](https://kintone.dev/en/docs/kintone/rest-api/apps/get-form-layout/) API for blank space and field group support
+* v7 - optimize code
 
 ## Objective
 
@@ -34,7 +34,7 @@ Additional Requirements:
 * [x] Test for table
 * [x] test for lookup
 * [x] test for related records
-* [ ] test for blank space - failed
+* [x] test for blank space
 
 Nice to have:
 * [ ] Support options output for
