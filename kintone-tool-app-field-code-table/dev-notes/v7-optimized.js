@@ -25,43 +25,25 @@ javascript: (() => {
     }
 
     function importTable(table) {
-      let tableRows = table.split("\n");
-
-      while (tableRows[0].indexOf('|') === -1) {
-        tableRows.shift();
-      }
-
-      for (let row_i = 0, row_l = tableRows.length; row_i < row_l; row_i++) {
-        if (tableRows[row_i].indexOf('|') === -1) {
-          continue;
+      let tableRows = table.split("\n").filter(row => row.includes('|'));
+      cells = tableRows.map((row, row_i) => {
+        let rowColumns = row.split(/(?<!\\)\|/g).map(cell => cell.trim());
+        if (row_i === 1) {
+          rowColumns = rowColumns.map(cell => cell.replace(/-+/g, "-"));
         }
-
-        cells[row_i] = [];
-        let rowColumns = tableRows[row_i].split(/(?<!\\)\|/g);
-
-        for (let col_i = 0, col_l = rowColumns.length; col_i < col_l; col_i++) {
-          let cell = rowColumns[col_i].trim();
-          if (row_i === 1) {
-            cell = cell.replace(/-+/g, "-");
-          }
-          cells[row_i][col_i] = cell;
-        }
-      }
-
+        return rowColumns;
+      });
       getColumnWidths();
-
       trimCells();
     }
 
     function padCellsForOutput() {
-      for (let row_i = 0, row_l = cells.length; row_i < row_l; row_i++) {
-        for (let col_i = 0, col_l = cells[row_i].length; col_i < col_l; col_i++) {
+      cells.forEach((row, row_i) => {
+        row.forEach((cell, col_i) => {
           let paddingChar = row_i === 1 ? '-' : ' ';
-          while (cells[row_i][col_i].length < columnWidths[col_i]) {
-            cells[row_i][col_i] += paddingChar;
-          }
-        }
-      }
+          cells[row_i][col_i] = cell.padEnd(columnWidths[col_i], paddingChar);
+        });
+      });
     }
 
     function trimCells() {
