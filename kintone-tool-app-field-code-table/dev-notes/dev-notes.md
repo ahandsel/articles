@@ -5,6 +5,7 @@
 
 * [Status](#status)
 * [Objective](#objective)
+* [References](#references)
 
 
 ## Status
@@ -13,6 +14,7 @@
 * v2 - Basic Markdown table output
 * v3 - Filter out disabled fields
 * v4 - Bookmarklet + Sort by field name + Markdown table formatting
+* v5 - Subtable and Lookup supported
 
 
 ## Objective
@@ -26,12 +28,12 @@ Core Requirements:
 
 Additional Requirements:
 * [x] sort the table by field name
-* [ ] Test for disabled fields
-* [ ] Test for field group
-* [ ] Test for table
-* [ ] test for lookup
-* [ ] test for related records
-* [ ] test for blank space
+* [x] Test for disabled fields
+* [ ] Test for field group - failed
+* [x] Test for table
+* [x] test for lookup
+* [x] test for related records
+* [ ] test for blank space - failed
 
 Nice to have:
 * [ ] Support options output for
@@ -66,5 +68,7 @@ Nice to have:
   * [ ] `UPDATED_TIME`: Updated datetime
   * [ ] `USER_SELECT`: User selection
 
+
 ## References
+
 * Markdown table formatting = [alanwsmith/markdown\_table\_formatter: A javascript form to format markdown tables for easier reading.](https://github.com/alanwsmith/markdown_table_formatter)
