@@ -1,10 +1,10 @@
 javascript: (() => {
-  function markdownTableFormatter() {
+  const markdownTableFormatter = () => {
     let cells = [];
     let columnWidths = [];
     let formattedMarkdownTable = "";
 
-    function addMissingCellColumns() {
+    const addMissingCellColumns = () => {
       cells.forEach((row, row_i) => {
         columnWidths.forEach((_, col_i) => {
           if (typeof cells[row_i][col_i] === 'undefined') {
@@ -12,9 +12,9 @@ javascript: (() => {
           }
         });
       });
-    }
+    };
 
-    function getColumnWidths() {
+    const getColumnWidths = () => {
       columnWidths = [];
       cells.forEach((row) => {
         row.forEach((cell, col_i) => {
@@ -22,9 +22,9 @@ javascript: (() => {
           columnWidths[col_i] = Math.max(columnWidths[col_i] || 0, cellLength);
         });
       });
-    }
+    };
 
-    function importTable(table) {
+    const importTable = (table) => {
       let tableRows = table.split("\n").filter(row => row.includes('|'));
       cells = tableRows.map((row, row_i) => {
         let rowColumns = row.split(/(?<!\\)\|/g).map(cell => cell.trim());
@@ -35,24 +35,22 @@ javascript: (() => {
       });
       getColumnWidths();
       trimCells();
-    }
+    };
 
-    function padCellsForOutput() {
+    const padCellsForOutput = () => {
       cells.forEach((row, row_i) => {
         row.forEach((cell, col_i) => {
           let paddingChar = row_i === 1 ? '-' : ' ';
           cells[row_i][col_i] = cell.padEnd(columnWidths[col_i], paddingChar);
         });
       });
-    }
+    };
 
-    function trimCells() {
+    const trimCells = () => {
       if (columnWidths[0] === 0) {
         cells.forEach(row => row.shift());
       }
-
       getColumnWidths();
-
       if (columnWidths[columnWidths.length - 1] === 0) {
         cells.forEach(row => {
           if (row.length === columnWidths.length) {
@@ -60,30 +58,25 @@ javascript: (() => {
           }
         });
       }
-
       getColumnWidths();
-    }
+    };
 
     return {
-      formatTable: function (table) {
+      formatTable: (table) => {
         importTable(table);
         addMissingCellColumns();
         padCellsForOutput();
-
         formattedMarkdownTable = "| " + cells[0].join(" | ") + " |\n";
-
         formattedMarkdownTable += "|-" + cells[1].join("-|-") + "-|\n";
-
         for (let row_i = 2, row_l = cells.length; row_i < row_l; row_i++) {
           formattedMarkdownTable += "| " + cells[row_i].join(" | ") + " |\n";
         }
-
         return formattedMarkdownTable;
       }
     };
-  }
+  };
 
-  function subTablesTable(rawSubTable, subTableRows) {
+  const subTablesTable = (rawSubTable, subTableRows) => {
     const subTableLabel = rawSubTable.label;
     const subFieldsObj = rawSubTable.fields;
     for (const field in subFieldsObj) {
@@ -97,7 +90,7 @@ javascript: (() => {
     return subTableRows;
   };
 
-  function mainFieldTable(rawProperties) {
+  const mainFieldTable = (rawProperties) => {
     const rows = [];
     for (const field in rawProperties) {
       const mainFieldObj = rawProperties[field];
@@ -118,9 +111,9 @@ javascript: (() => {
     }
     rows.sort();
     return rows;
-  }
+  };
 
-  function extractSpacerElementIds(inputArray) {
+  const extractSpacerElementIds = (inputArray) => {
     let blankSpaceElementIds = [];
     let rawFieldsArray = inputArray.reduce((acc, obj) => {
       if (obj.fields && Array.isArray(obj.fields)) {
@@ -134,9 +127,9 @@ javascript: (() => {
       }
     });
     return blankSpaceElementIds;
-  }
+  };
 
-  function main() {
+  const main = () => {
     const appID = { 'app': kintone.app.getId() };
     const mdHeader = `| Field Name | Code | Type | Note | \n| - | - | - | - |`;
     kintone.api(kintone.api.url('/k/v1/app/form/fields', true), 'GET', appID, function (resp) {
@@ -157,6 +150,6 @@ javascript: (() => {
     }, function (error) {
       console.error(error);
     });
-  }
+  };
   main();
 })();
