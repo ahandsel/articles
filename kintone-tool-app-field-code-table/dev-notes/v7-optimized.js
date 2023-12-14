@@ -2,7 +2,7 @@ javascript: (() => {
   function markdownTableFormatter() {
     let cells = [];
     let columnWidths = [];
-    let outputTable = "";
+    let formattedMarkdownTable = "";
 
     function addMissingCellColumns() {
       for (let row_i = 0, row_l = cells.length; row_i < row_l; row_i++) {
@@ -92,15 +92,15 @@ javascript: (() => {
         addMissingCellColumns();
         padCellsForOutput();
 
-        outputTable = "| " + cells[0].join(" | ") + " |\n";
+        formattedMarkdownTable = "| " + cells[0].join(" | ") + " |\n";
 
-        outputTable += "|-" + cells[1].join("-|-") + "-|\n";
+        formattedMarkdownTable += "|-" + cells[1].join("-|-") + "-|\n";
 
         for (let row_i = 2, row_l = cells.length; row_i < row_l; row_i++) {
-          outputTable += "| " + cells[row_i].join(" | ") + " |\n";
+          formattedMarkdownTable += "| " + cells[row_i].join(" | ") + " |\n";
         }
 
-        return outputTable;
+        return formattedMarkdownTable;
       }
     };
   }
