@@ -25,7 +25,7 @@ javascript: (() => {
     };
 
     const importTable = (table) => {
-      let tableRows = table.split("\n").filter(row => row.includes('|'));
+      const tableRows = table.split("\n").filter(row => row.includes('|'));
       cells = tableRows.map((row, row_i) => {
         let rowColumns = row.split(/(?<!\\)\|/g).map(cell => cell.trim());
         if (row_i === 1) {
@@ -40,7 +40,7 @@ javascript: (() => {
     const padCellsForOutput = () => {
       cells.forEach((row, row_i) => {
         row.forEach((cell, col_i) => {
-          let paddingChar = row_i === 1 ? '-' : ' ';
+          const paddingChar = row_i === 1 ? '-' : ' ';
           cells[row_i][col_i] = cell.padEnd(columnWidths[col_i], paddingChar);
         });
       });
@@ -114,8 +114,8 @@ javascript: (() => {
   };
 
   const extractSpacerElementIds = (inputArray) => {
-    let blankSpaceElementIds = [];
-    let rawFieldsArray = inputArray.reduce((acc, obj) => {
+    const blankSpaceElementIds = [];
+    const rawFieldsArray = inputArray.reduce((acc, obj) => {
       if (obj.fields && Array.isArray(obj.fields)) {
         return acc.concat(obj.fields);
       }
