@@ -109,7 +109,6 @@ javascript: (() => {
         rows.push(`| ${label} | ${code} | ${type} |`);
       }
     }
-    rows.sort();
     return rows;
   };
 
@@ -132,24 +131,19 @@ javascript: (() => {
   const main = () => {
     const appID = { 'app': kintone.app.getId() };
     const mdHeader = `| Field Name | Code | Type | Note | \n| - | - | - | - |`;
-    kintone.api(kintone.api.url('/k/v1/app/form/fields', true), 'GET', appID, function (resp) {
+    kintone.api(kintone.api.url('/k/v1/app/form/fields', true), 'GET', appID, resp => {
       const rawFields = resp.properties;
       const rawMainFieldTableRows = mainFieldTable(rawFields);
-      kintone.api(kintone.api.url('/k/v1/app/form/layout', true), 'GET', appID, function (resp) {
+      kintone.api(kintone.api.url('/k/v1/app/form/layout', true), 'GET', appID, resp => {
         const getBlankSpaceRows = extractSpacerElementIds(resp.layout);
-        const rows = rawMainFieldTableRows.concat(getBlankSpaceRows);
-        rows.sort();
-        const rawTable = [mdHeader, ...rows].join('\n');
-        let formatter = markdownTableFormatter();
+        const rows = rawMainFieldTableRows.concat(getBlankSpaceRows).sort();
+        const rawTable = `${mdHeader}\n${rows.join('\n')}`;
+        const formatter = markdownTableFormatter();
         const formattedTable = formatter.formatTable(rawTable);
         console.log(formattedTable);
         navigator.clipboard.writeText(formattedTable);
-      }, function (error) {
-        console.error(error);
-      });
-    }, function (error) {
-      console.error(error);
-    });
+      }, error => console.error(error));
+    }, error => console.error(error));
   };
   main();
 })();
