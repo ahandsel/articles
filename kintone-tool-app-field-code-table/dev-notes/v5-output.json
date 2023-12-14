@@ -1,0 +1,353 @@
+{
+  "Related_records": {
+      "type": "REFERENCE_TABLE",
+      "code": "Related_records",
+      "label": "Related records",
+      "noLabel": false,
+      "referenceTable": {
+          "relatedApp": {
+              "app": "231",
+              "code": ""
+          },
+          "condition": {
+              "field": "Text",
+              "relatedField": "Employee_ID_Number"
+          },
+          "filterCond": "",
+          "displayFields": [
+              "Updated_datetime"
+          ],
+          "sort": "Record_number desc",
+          "size": "5"
+      }
+  },
+  "Field_group": {
+      "type": "GROUP",
+      "code": "Field_group",
+      "label": "Field group",
+      "noLabel": false,
+      "openGroup": false
+  },
+  "Time": {
+      "type": "TIME",
+      "code": "Time",
+      "label": "Time",
+      "noLabel": false,
+      "required": false,
+      "defaultValue": "",
+      "defaultNowValue": true
+  },
+  "Attachment": {
+      "type": "FILE",
+      "code": "Attachment",
+      "label": "Attachment",
+      "noLabel": false,
+      "required": false,
+      "thumbnailSize": "150"
+  },
+  "Group_selection": {
+      "type": "GROUP_SELECT",
+      "code": "Group_selection",
+      "label": "Group selection",
+      "noLabel": false,
+      "required": false,
+      "entities": [],
+      "defaultValue": []
+  },
+  "Check_box": {
+      "type": "CHECK_BOX",
+      "code": "Check_box",
+      "label": "Check box",
+      "noLabel": false,
+      "required": false,
+      "options": {
+          "sample1": {
+              "label": "sample1",
+              "index": "0"
+          },
+          "sample2": {
+              "label": "sample2",
+              "index": "1"
+          }
+      },
+      "defaultValue": [],
+      "align": "HORIZONTAL"
+  },
+  "Updated_by": {
+      "type": "MODIFIER",
+      "code": "Updated_by",
+      "label": "Updated by",
+      "noLabel": false
+  },
+  "Created_datetime": {
+      "type": "CREATED_TIME",
+      "code": "Created_datetime",
+      "label": "Created datetime",
+      "noLabel": false
+  },
+  "Radio_button_0": {
+      "type": "RADIO_BUTTON",
+      "code": "Radio_button_0",
+      "label": "Radio button",
+      "noLabel": false,
+      "required": true,
+      "options": {
+          "sample1": {
+              "label": "sample1",
+              "index": "0"
+          },
+          "sample2": {
+              "label": "sample2",
+              "index": "1"
+          }
+      },
+      "defaultValue": "sample1",
+      "align": "HORIZONTAL"
+  },
+  "Number": {
+      "type": "NUMBER",
+      "code": "Number",
+      "label": "Number",
+      "noLabel": false,
+      "required": false,
+      "minValue": "",
+      "maxValue": "",
+      "digit": false,
+      "unique": false,
+      "defaultValue": "",
+      "displayScale": "",
+      "unit": "",
+      "unitPosition": "BEFORE"
+  },
+  "Record_number": {
+      "type": "RECORD_NUMBER",
+      "code": "Record_number",
+      "label": "Record number",
+      "noLabel": false
+  },
+  "Lookup": {
+      "type": "SINGLE_LINE_TEXT",
+      "code": "Lookup",
+      "label": "Lookup",
+      "noLabel": false,
+      "required": false,
+      "lookup": {
+          "relatedApp": {
+              "app": "231",
+              "code": ""
+          },
+          "relatedKeyField": "Employee_ID_Number",
+          "fieldMappings": [
+              {
+                  "field": "Text_area",
+                  "relatedField": "Phone_Number"
+              }
+          ],
+          "lookupPickerFields": [],
+          "filterCond": "",
+          "sort": "Record_number desc"
+      }
+  },
+  "Created_by": {
+      "type": "CREATOR",
+      "code": "Created_by",
+      "label": "Created by",
+      "noLabel": false
+  },
+  "Multi_choice": {
+      "type": "MULTI_SELECT",
+      "code": "Multi_choice",
+      "label": "Multi-choice",
+      "noLabel": false,
+      "required": false,
+      "options": {
+          "sample1": {
+              "label": "sample1",
+              "index": "0"
+          },
+          "sample4": {
+              "label": "sample4",
+              "index": "3"
+          },
+          "sample3": {
+              "label": "sample3",
+              "index": "2"
+          },
+          "sample2": {
+              "label": "sample2",
+              "index": "1"
+          }
+      },
+      "defaultValue": []
+  },
+  "Drop_down": {
+      "type": "DROP_DOWN",
+      "code": "Drop_down",
+      "label": "Drop-down",
+      "noLabel": false,
+      "required": false,
+      "options": {
+          "sample1": {
+              "label": "sample1",
+              "index": "0"
+          },
+          "sample2": {
+              "label": "sample2",
+              "index": "1"
+          }
+      },
+      "defaultValue": ""
+  },
+  "User_selection": {
+      "type": "USER_SELECT",
+      "code": "User_selection",
+      "label": "User selection",
+      "noLabel": false,
+      "required": false,
+      "entities": [],
+      "defaultValue": []
+  },
+  "Status": {
+      "type": "STATUS",
+      "code": "Status",
+      "label": "Status",
+      "enabled": false
+  },
+  "Assignee": {
+      "type": "STATUS_ASSIGNEE",
+      "code": "Assignee",
+      "label": "Assignee",
+      "enabled": false
+  },
+  "Table": {
+      "type": "SUBTABLE",
+      "code": "Table",
+      "noLabel": false,
+      "label": "Table",
+      "fields": {
+          "Text_0": {
+              "type": "SINGLE_LINE_TEXT",
+              "code": "Text_0",
+              "label": "Text",
+              "noLabel": false,
+              "required": false,
+              "minLength": "",
+              "maxLength": "",
+              "expression": "",
+              "hideExpression": false,
+              "unique": false,
+              "defaultValue": ""
+          }
+      }
+  },
+  "Categories": {
+      "type": "CATEGORY",
+      "code": "Categories",
+      "label": "Categories",
+      "enabled": false
+  },
+  "Rich_text": {
+      "type": "RICH_TEXT",
+      "code": "Rich_text",
+      "label": "Rich text",
+      "noLabel": false,
+      "required": false,
+      "defaultValue": ""
+  },
+  "Department_selection": {
+      "type": "ORGANIZATION_SELECT",
+      "code": "Department_selection",
+      "label": "Department selection",
+      "noLabel": false,
+      "required": false,
+      "entities": [],
+      "defaultValue": []
+  },
+  "Text": {
+      "type": "SINGLE_LINE_TEXT",
+      "code": "Text",
+      "label": "Text",
+      "noLabel": false,
+      "required": false,
+      "minLength": "",
+      "maxLength": "",
+      "expression": "",
+      "hideExpression": false,
+      "unique": false,
+      "defaultValue": ""
+  },
+  "Calculated": {
+      "type": "CALC",
+      "code": "Calculated",
+      "label": "Calculated",
+      "noLabel": false,
+      "required": false,
+      "expression": "1+1",
+      "format": "NUMBER",
+      "displayScale": "",
+      "hideExpression": false,
+      "unit": "",
+      "unitPosition": "BEFORE"
+  },
+  "Date": {
+      "type": "DATE",
+      "code": "Date",
+      "label": "Date",
+      "noLabel": false,
+      "required": false,
+      "unique": false,
+      "defaultValue": "",
+      "defaultNowValue": true
+  },
+  "Text_area": {
+      "type": "MULTI_LINE_TEXT",
+      "code": "Text_area",
+      "label": "Text area",
+      "noLabel": false,
+      "required": false,
+      "defaultValue": ""
+  },
+  "Updated_datetime": {
+      "type": "UPDATED_TIME",
+      "code": "Updated_datetime",
+      "label": "Updated datetime",
+      "noLabel": false
+  },
+  "Number_0": {
+      "type": "NUMBER",
+      "code": "Number_0",
+      "label": "Number",
+      "noLabel": false,
+      "required": false,
+      "minValue": "",
+      "maxValue": "",
+      "digit": false,
+      "unique": false,
+      "defaultValue": "",
+      "displayScale": "",
+      "unit": "",
+      "unitPosition": "BEFORE"
+  },
+  "Date_and_time": {
+      "type": "DATETIME",
+      "code": "Date_and_time",
+      "label": "Date and time",
+      "noLabel": false,
+      "required": false,
+      "unique": false,
+      "defaultValue": "",
+      "defaultNowValue": true
+  },
+  "Link": {
+      "type": "LINK",
+      "code": "Link",
+      "label": "Link",
+      "noLabel": false,
+      "required": false,
+      "protocol": "WEB",
+      "minLength": "",
+      "maxLength": "",
+      "unique": false,
+      "defaultValue": ""
+  }
+}
