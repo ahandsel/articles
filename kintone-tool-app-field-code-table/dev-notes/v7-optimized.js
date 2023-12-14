@@ -7,7 +7,7 @@ javascript: (() => {
     const addMissingCellColumns = () => {
       cells.forEach((row, row_i) => {
         columnWidths.forEach((_, col_i) => {
-          if (typeof cells[row_i][col_i] === 'undefined') {
+          if (!cells[row_i][col_i]) {
             cells[row_i][col_i] = '';
           }
         });
