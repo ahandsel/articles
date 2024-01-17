@@ -1,5 +1,6 @@
 # Import a Garoon Event to Outlook Calendar Bookmarklet
 
+
 ## Usage
 
 Initial Setup
@@ -11,6 +12,7 @@ Importing a Garoon Event to Outlook Calendar
 1. Go to the Garoon event's page
 1. Click on the bookmarklet
 1. Confirm the imported event in Outlook Calendar & click `Save`
+
 
 ## Using Outlook Live or Office 365?
 
@@ -24,11 +26,14 @@ Office 365:
 * URL: `https://outlook.office.com/calendar/deeplink/compose`
 * Code: ```open(`https://outlook.office.com/calendar/deeplink/compose?path=/calendar/action/compose&${params.toString()}`);```
 
+
 ## Not working? 🤔
+
 * Open browser console
   * Mac: `Command+Option+C`
   * Windows, Linux, Chrome OS: `Control+Shift+C`
 * Check if you are getting an error message
+
 
 ## Garoon_to_Outlook_Bookmarklet_v0.js
 
@@ -75,6 +80,8 @@ javascript: (() => {
 })();
 ```
 
+
 ## References
+
 * [Outlook live - add-event-to-calendar-docs](https://interactiondesignfoundation.github.io/add-event-to-calendar-docs/services/outlook-web.html)
 * [スケジュールオブジェクト - cybozu developer network](https://cybozu.dev/ja/garoon/docs/overview/schedule-object/)

@@ -1,5 +1,6 @@
 # Import a Garoon Event to Google Calendar Bookmarklet
 
+
 ## Usage
 
 Initial Setup
@@ -12,11 +13,14 @@ Importing a Garoon Event to Google Calendar
 1. Click on the bookmarklet
 1. Confirm the imported event in Google Calendar & click `Save`
 
+
 ## Not working? 🤔
+
 * Open browser console
   * Mac: `Command+Option+C`
   * Windows, Linux, Chrome OS: `Control+Shift+C`
 * Check if you are getting an error message
+
 
 ## Garoon_to_Google_Bookmarklet.js
 
@@ -50,6 +54,8 @@ javascript: (() => {
 })();
 ```
 
+
 ## References
+
 * [Google - add-event-to-calendar-docs](https://interactiondesignfoundation.github.io/add-event-to-calendar-docs/services/google.html)
 * [スケジュールオブジェクト - cybozu developer network](https://cybozu.dev/ja/garoon/docs/overview/schedule-object/)
