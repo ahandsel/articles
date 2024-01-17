@@ -17,7 +17,6 @@ javascript: (() => {
     params.set("location", url);
     params.set("timezone", event.start.timeZone);
     params.set("calname", `${start}-${event.id}`);
-    if (event.isAllDay) { params.set("all_day", "true"); }
     console.log(params.toString());
     open(`https://calndr.link/d/event/?${params.toString()}`);
   };

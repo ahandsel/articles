@@ -80,7 +80,6 @@ javascript: (() => {
     params.set("location", url);
     params.set("timezone", event.start.timeZone);
     params.set("calname", `${start}-${event.id}`);
-    if (event.isAllDay) { params.set("all_day", "true"); }
     console.log(params.toString());
     open(`https://calndr.link/d/event/?${params.toString()}`);
   };
@@ -231,7 +230,9 @@ params.set("calname", `${start}-${event.id}`);
 
 ### Handling All-Day Events
 
-If the event is all-day, add an `all_day` parameter with a `true` value.
+⚠️ Calndr returns an error when the `all_day` parameter is set to `true` or `false`. (2024-01-17)
+
+~~If the event is all-day, add an `all_day` parameter with a `true` value.~~
 
 ```javascript
 if (event.isAllDay) { params.set("all_day", "true"); }
