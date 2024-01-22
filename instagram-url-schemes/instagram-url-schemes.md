@@ -1,6 +1,6 @@
 # Instagram Url Schemes
 
-Here are the known URL schemes for Instagram that can be used to link directly to specific parts of the Instagram app. It is useful for Apple Shortcuts.
+Here are the URL schemes for Instagram that can link directly to specific parts of the Instagram app. It is useful for Apple Shortcuts.
 
 | URL Scheme                              | Description                          |
 | --------------------------------------- | ------------------------------------ |
@@ -27,7 +27,7 @@ Apple Shortcuts: [Example - Open Instagram Settings](https://www.icloud.com/shor
 
 1. Use the "Ask for Input" Action to ask for a username
 1. Use the "Text" Action to store `instagram://user?username=` in a text variable
-1. Use the "Combine Text" Action to combine the username to the text variable:
+1. Use the "Combine Text" Action to combine the username with the text variable:
     * Combine `instagram://user?username=` with the username's Provided Input with "Custom" set to `` (nothing)
 1. Use the "Get URLs from Input" to convert the "Combine Text" value to a URL
 1. Use the "Open URLs" Action to open the URL
@@ -38,7 +38,7 @@ Apple Shortcuts: [Example - Open A Instagram Profile](https://www.icloud.com/sho
 
 1. Use the "Ask for Input" Action to ask for a hashtag
 1. Use the "Text" Action to store `instagram://tag?name=` in a text variable
-1. Use the "Combine Text" Action to combine the hashtag to the text variable:
+1. Use the "Combine Text" Action to combine the hashtag with the text variable:
     * Combine `instagram://tag?name=` with the hashtag's Provided Input with "Custom" set to `` (nothing)
 1. Use the "Get URLs from Input" to convert the "Combine Text" value to a URL
 1. Use the "Open URLs" Action to open the URL
@@ -47,5 +47,5 @@ Apple Shortcuts: [Example - Search For A Hashtag](https://www.icloud.com/shortcu
 
 ## References
 * [Loggy/instagram-deeplink](https://github.com/Loggy/instagram-deeplink)
-* [bhagyas/app-urls: A long list of App URLs for iOS, macOS and Android](https://github.com/bhagyas/app-urls)
+* [bhagyas/app-urls: A long list of App URLs for iOS, macOS, and Android](https://github.com/bhagyas/app-urls)
 * [tristinDLC's Reddit Post](https://www.reddit.com/r/shortcuts/comments/xnrz7t/comment/ipvnubg/)
