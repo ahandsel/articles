@@ -24,30 +24,25 @@ Alternatively, you can use [`npm-check-updates`](https://github.com/raineorshine
 | `ncu -g -u`                        | Update global packages                                           |
 
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 
 * [NPM Commands To Check And Update Packages](#npm-commands-to-check-and-update-packages)
-  * [npm outdated](#npm-outdated)
-  * [npm update](#npm-update)
-  * [npm update --save-dev --save](#npm-update---save-dev---save)
-  * [npm update -g](#npm-update--g)
+  * [List up the outdated packages](#list-up-the-outdated-packages)
+  * [Update package.json \& packages](#update-packagejson--packages)
 * [npm-check-updates Commands To Check And Update Packages](#npm-check-updates-commands-to-check-and-update-packages)
-  * [npm install -g npm-check-updates](#npm-install--g-npm-check-updates)
-  * [npx npm-check-updates](#npx-npm-check-updates)
-  * [ncu -u](#ncu--u)
-  * [ncu -g -u](#ncu--g--u)
+  * [Install And Run Globally](#install-and-run-globally)
+  * [Run with npx](#run-with-npx)
 
 
 ## NPM Commands To Check And Update Packages
 
 
-### npm outdated
+### List up the outdated packages
 
 ```shell
 npm outdated
 ```
 
-npm Docs: [npm-outdated](https://docs.npmjs.com/cli/v7/commands/npm-outdated)
 This command will check the registry to see if any (or specific) installed packages are currently outdated.
 
 By default, only the root project's direct dependencies and your configured workspaces' direct dependencies are shown. Use `--all` to find all outdated meta-dependencies as well.
@@ -55,73 +50,65 @@ By default, only the root project's direct dependencies and your configured work
 npm Docs: [npm-outdated](https://docs.npmjs.com/cli/v7/commands/npm-outdated)
 
 
-### npm update
+### Update package.json & packages
 
 ```shell
 npm update --save
 ```
 
-npm Docs: [npm-update](https://docs.npmjs.com/cli/v7/commands/npm-update)
-Update packages and save to package.json
+This command will update all the packages listed to the latest version (specified by the tag config), respecting the semver constraints of both your package and its dependencies (if they also require the same package).
 
+The `--save` flag will update the `package.json` file with the new version as well.
 
-### npm update --save-dev --save
+Add the `--dev` flag to update dev packages like so:
 
 ```shell
 npm update --save-dev --save
 ```
 
-npm Docs: [npm-update --save-dev --save](https://docs.npmjs.com/cli/v7/commands/npm-update --save-dev)
-Update dev packages and save to package.json
-
-
-### npm update -g
+Add the `-g` flag to update global packages like so:
 
 ```shell
 npm update -g
 ```
 
-npm Docs: [npm-update -g](https://docs.npmjs.com/cli/v7/commands/npm-update -g)
-Update global packages
+npm Docs: [npm-update](https://docs.npmjs.com/cli/v7/commands/npm-update)
 
 
 ## npm-check-updates Commands To Check And Update Packages
 
 [`npm-check-updates`](https://github.com/raineorshine/npm-check-updates) upgrades your package.json dependencies to the latest versions, ignoring specified versions.
 
+There are two options for using `npm-check-updates`:
+* Install it globally and run it as a command-line app.
+* Simply run with `npx` to use it as a one-off command.
 
-### npm install -g npm-check-updates
+
+### Install And Run Globally
+
+First, install npm-check-updates globally.
 
 ```shell
 npm install -g npm-check-updates
 ```
 
-npm Docs: [npm-install -g npm-check-updates](https://docs.npmjs.com/cli/v7/commands/npm-install -g npm-check-updates)
-Install `npm-check-updates` globally
-
-
-### npx npm-check-updates
-
-```shell
-npx npm-check-updates
-```
-
-Check for outdated packages without installing npm-check-updates
-
-
-### ncu -u
+Run `npm-check-updates` with the `-u` or `--upgrade` flag to upgrade your `package.json` file.
 
 ```shell
 ncu -u
 ```
 
-Update packages and save to package.json
-
-
-### ncu -g -u
+For global packages, run with the `-g` flag.
 
 ```shell
 ncu -g -u
 ```
 
-Update global packages
+
+### Run with npx
+
+Alternatively, use `npx` to run `npm-check-updates` without installing it globally.
+
+```shell
+npx npm-check-updates
+```
