@@ -3,7 +3,7 @@
 This is a step-by-step guide that will go over everything you need to do before our React workshop!
 
 
-## Outline <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 
 * [Check if you already have Node.js or npm](#check-if-you-already-have-nodejs-or-npm)
 * [macOS with nodenv](#macos-with-nodenv)

@@ -6,7 +6,7 @@ Here is a quick reference guide to the [Nodenv](https://github.com/nodenv/nodenv
 * Example: swap `specify_version` with `14.5.0` to install Node.js version `14.5.0`.
 
 
-## Outline <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 
 * [Common Nodenv Commands](#common-nodenv-commands)
 * [What is Nodenv?](#what-is-nodenv)
