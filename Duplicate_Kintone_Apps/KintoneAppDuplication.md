@@ -3,7 +3,7 @@
 This article will explore the different ways to duplicate Kintone Apps (copying an App) with and without the data stored inside.
 
 
-## Outline <!-- omit in toc --><!-- markdownlint-disable MD007 -->
+## Table of Contents <!-- omit in toc -->
 
 * [Prerequisite](#prerequisite)
 * [Method 1: Creating a New App by Duplicating an Existing App](#method-1-creating-a-new-app-by-duplicating-an-existing-app)
@@ -19,8 +19,6 @@ This article will explore the different ways to duplicate Kintone Apps (copying 
   * [Importing App Data (Records) from a CSV file](#importing-app-data-records-from-a-csv-file)
   * [How to bulk download all the Attachments from a Kintone App?](#how-to-bulk-download-all-the-attachments-from-a-kintone-app)
 * [Guest Space](#guest-space)
-
-<!-- markdownlint-enable MD007 -->
 
 ---
 

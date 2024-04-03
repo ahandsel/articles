@@ -3,7 +3,7 @@
 This article will explore the different ways to duplicate Kintone Apps (copying an App) with and without the data stored inside.
 
 
-## Outline <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 
 * [Prerequisite](#prerequisite)
 * [Method 1: Creating a New App by Duplicating an Existing App](#method-1-creating-a-new-app-by-duplicating-an-existing-app)
