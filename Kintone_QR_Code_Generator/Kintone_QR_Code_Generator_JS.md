@@ -1,11 +1,14 @@
 # JS Customization to Generate QR Code from Kintone Record Values
 
+
 ## Overview
+
 This is a quick guide on setting up a Kintone JavaScript customization that generates a QR code from a record value.
 
 The QR code can be generated based on a URL or a text value.
 
 The customization works on both the Kintone desktop and mobile views. (To do this, upload the script under both the `JavaScript/CSS Files for PC` and `JavaScript/CSS Files for Mobile Devices` sections of the Kintone App's [Customize page](https://get.kintone.help/k/en/id/040556.html).)
+
 
 ## Customization
 
@@ -20,6 +23,7 @@ The following Kintone fields are required for the customization:
 * [Number field](https://get.kintone.help/k/en/id/040534.html) to specify the QR code size:
   * Set the maximum value to `1000`.
   * The value is the number of pixels for the QR code width and height
+
 
 ### QR Code Script
 
@@ -61,7 +65,9 @@ The following Kintone fields are required for the customization:
 })();
 ```
 
+
 ## Reference
+
 * [Kintone Developer Program](https://kintone.dev/en/)
 * [kintoneのフィールド値からQRコードを生成するプラグイン - Qiita](https://qiita.com/spica/items/6f7eed5efa8cf4f74167)
 * [QR code API: command “create-qr-code” (generate QR code, QR code generator)](https://goqr.me/api/doc/create-qr-code/)

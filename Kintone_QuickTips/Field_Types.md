@@ -2,6 +2,7 @@
 
 `tips, drop-down-field, attachment-field, text-field, date-and-time-field, check-box-field, date-field, calculated-field, link-field, time-field, radio-button-field, record-number-field, lookup-field, number-field, label-field, border-field, updated-datetime-field, updated-by-field, created-datetime-field, created-by-field, field-groups-field, space-field, related-records-field, multi-choice-field, rich-field, text-area-field, table-field, department-selection-field, group-selection-field, user-selection-field`
 
+
 ## List of Field Types in Kintone
 
 Here is a table of all the field types available in a Kintone App with their corresponding help documentation and related forum posts.

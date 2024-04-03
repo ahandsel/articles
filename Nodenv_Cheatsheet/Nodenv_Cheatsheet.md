@@ -5,7 +5,9 @@ Here is a quick reference guide to the [Nodenv](https://github.com/nodenv/nodenv
 ⚡ Note: Swap out `specify_abc` with the specific `abc` variable for the listed commands.
 * Example: swap `specify_version` with `14.5.0` to install Node.js version `14.5.0`.
 
+
 ## Outline <!-- omit in toc -->
+
 * [Common Nodenv Commands](#common-nodenv-commands)
 * [What is Nodenv?](#what-is-nodenv)
 * [Install \& Setup Nodenv](#install--setup-nodenv)
@@ -13,6 +15,7 @@ Here is a quick reference guide to the [Nodenv](https://github.com/nodenv/nodenv
   * [Which Node.js version should I use?](#which-nodejs-version-should-i-use)
 * [Nodenv Plugins](#nodenv-plugins)
   * [Install Nodenv Plugins - Example: nodenv-nvmrc](#install-nodenv-plugins---example-nodenv-nvmrc)
+
 
 ## Common Nodenv Commands
 
@@ -26,12 +29,16 @@ Here is a quick reference guide to the [Nodenv](https://github.com/nodenv/nodenv
 | Uninstall a specific Node.js version          | `nodenv uninstall specify_version` |
 | Switch to a specific Node.js version          | `nodenv shell specify_version`     |
 
+
 ## What is Nodenv?
+
 Since Node.js is notorious for breaking changes, it is important to be able to manage multiple Node.js versions on your machine.
 
 That is where [Nodenv](https://github.com/nodenv/nodenv) comes in. It is a tool that allows you to install and switch between multiple Node.js versions seamlessly.
 
+
 ## Install & Setup Nodenv
+
 ⚠️ **Warning**: Remove any existing installations of Node.js **before** installing nodenv! Having different Node.js installations can lead to conflict issues.
 
 1. Install nodenv with [Homebrew](https://brew.sh/)
@@ -71,7 +78,9 @@ cat < ~/.bash_profile
 curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
 ```
 
+
 ## Usage - Install & Setup a Node.js version
+
 Now you're ready to install specific Node.js versions!  
 **Inside** `project` folder, install Node.js version `14.5.0`:
 
@@ -85,11 +94,14 @@ nodenv local 14.5.0
 
 Alright! Your Mac is now armed with Node.js!
 
+
 ### Which Node.js version should I use?
+
 Use the latest **LTS (long-term support)** Node.js version when in doubt.  
 Find it here: [Node.js](https://nodejs.org/en/)
 
 If you are going to use a framework like [React](https://reactjs.org/), [Vue](https://vuejs.org/), or [Angular](https://angular.io/), you should check their documentation for the recommended Node.js version.
+
 
 ## Nodenv Plugins
 
@@ -101,6 +113,7 @@ What are plugins? Plugins are additional features that you can add to nodenv to 
 | Set Nodenv [Homebrew Tap](https://docs.brew.sh/Taps) | `brew tap nodenv/nodenv`                |
 | Install a nodenv plugin                              | `brew install specify_plugin`           |
 | Enable a nodenv plugin                               | `nodenv specify_plugin specify_command` |
+
 
 ### Install Nodenv Plugins - Example: nodenv-nvmrc
 

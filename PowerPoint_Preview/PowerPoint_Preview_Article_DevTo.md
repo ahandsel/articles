@@ -2,12 +2,16 @@
 
 Here is an example of Kintone Customization that enables PowerPoint slides to be previewed on the Kintone Record Details page as images.
 
+
 ## Demo
+
 Preview the PowerPoint slides on the Record Details page. The PowerPoint file is saved to the Record with Attachment field. Preview images are generated automatically when the record is saved. This takes about half a minute.
 
 ![Demo Gif](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fetl26ia3ny7y6axddhz.gif)
 
+
 ## ConvertAPI Setup
+
 Convert API is used to convert PowerPoint slides to images.
 You can use the API for free for up to 1500 seconds of conversion time.
 A file can take from a few seconds to tens of seconds, depending on the slide count.
@@ -15,6 +19,7 @@ A file can take from a few seconds to tens of seconds, depending on the slide co
 1. Create an account: [Sign Up - ConvertAPI](https://www.convertapi.com/a/signup).
 2. Memo the value of "Secret" on the [Authentication](https://www.convertapi.com/a/auth) page.
 3. Replace the `*****` value for secrete on **SlidePreview.js** line 4 with your ConvertAPI Secrete value.
+
 
 ## SlidePreview.js
 
@@ -180,7 +185,9 @@ A file can take from a few seconds to tens of seconds, depending on the slide co
 })();
 ```
 
+
 ## Kintone App Setup
+
 
 ### App Fields
 
@@ -195,7 +202,9 @@ Place the **Image URL** Link field inside the **Image URL Table** field. A Table
 
 ![Kintone App Field Setup](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qoe9aess2m52gguhwngz.png)
 
+
 ### JavaScript
+
 Add the following CDN Links under the **Upload JavaScript for PC** section:
 1. <https://unpkg.com/@kintone/rest-api-client@1.1.0/umd/KintoneRestAPIClient.min.js>
 2. <https://unpkg.com/convertapi-js/lib/convertapi.js>
@@ -204,16 +213,21 @@ Add the following CDN Links under the **Upload JavaScript for PC** section:
 
 Then upload the **SlidePreview.js** file.
 
+
 ### CSS
+
 Add the following CDN Links under the **Upload CSS File for PC** section:
 1. <https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css>
 2. <https://js.kintone.com/sweetalert2/v10.15.5/sweetalert2.min.css>
 
 ![JavaScript and CSS Customization Setup](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/embxtbkn3helupl8sskp.png)
 
+
 ## ⚠️ Debugging
+
 * Update **SlidePreview.js** with your ConvertAPI secrete value
 * The order of the CDN Links and JS/CSS files does matter. Verify that the **JavaScript and CSS Customization** have all the required links and files in the order as listed above.
+
 
 ## Libraries Used
 
@@ -227,10 +241,14 @@ Add the following CDN Links under the **Upload CSS File for PC** section:
   * Swiper is a free and modern mobile touch slider intended for mobile websites, mobile web apps, and mobile native/hybrid apps.
   * It is used to create the image slide show.
 
+
 ## Credits
+
 Based on [江田篤史](https://developer.cybozu.io/hc/ja/profiles/5826575706-%E6%B1%9F%E7%94%B0%E7%AF%A4%E5%8F%B2)'s post on cybozu developer network, [パワーポイントファイルをプレビュー](https://cybozudev.zendesk.com/hc/ja/community/posts/900002839683).
 
+
 ## ⚙️ What is Kintone?
+
 [Kintone](https://www.kintone.com/) is a no-code/low-code cloud platform for teams to easily & effectively share and collaborate on their data.
 
 You can add JavaScript, CSS, &/or HTML to enhance the frontend UI/UX of a Kintone App. This can include features such as maps, buttons, and color-coding.

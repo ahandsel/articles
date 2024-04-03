@@ -6,6 +6,7 @@ If so, let's set up your [Visual Studio Code (VS Code)](https://code.visualstudi
 
 No more manually uploading customization files to the Kintone App each time! 🙌
 
+
 ## Setup Overview
 
 ![overview|690x315](upload://jgnZKD8rw9d4KTRpguppZVIr8fh.png)
@@ -16,7 +17,9 @@ No more manually uploading customization files to the Kintone App each time! �
 1. Set the localhost URLs with HTTPS in the Kintone App's settings
 1. Kintone actively fetches the JavaScript and CSS files from the localhost
 
+
 ## Prep
+
 Tools we will use:
 
 * [Visual Studio Code (VS Code)](https://code.visualstudio.com/)
@@ -25,6 +28,7 @@ Tools we will use:
 
 Install VS Code and the Live Server extension on your laptop.
 
+
 ## 5 Steps to Setup the Development Environment
 
 1. Generate a certificate and private key using the mkcert tool
@@ -32,6 +36,7 @@ Install VS Code and the Live Server extension on your laptop.
 1. Launch a local development server using the Live Server extension
 1. Set the localhost URLs with HTTPS in the Kintone App's settings
 1. Refresh the Kintone App to reflect the changes
+
 
 ## Step 1. Generate a Certificate and Private Key Using the mkcert Tool
 
@@ -54,6 +59,7 @@ When you see `The certificate is at "./localhost+2.pem" and the key at "./localh
 For more information, refer to the [mkcert's Installation](https://github.com/FiloSottile/mkcert#installation) documentation.
 
 ⚠️ Do not share the certificate and private key with others.
+
 
 ## Step 2. Enable HTTPS on the Live Server Extension
 
@@ -86,6 +92,7 @@ Finally, add the following code to the `.vscode/settings.json` file.
 1. Set the `enable`, `cert`, `key`, and `passphrase` values as shown below
     * ![live-server-extension-settings-updated|690x315](upload://nyylQgAlK0alkST4cJk8pxro2T7.png)
 
+
 ## Step 3. Launch a Local Development Server Using the Live Server Extension
 
 1. Open the [VS Code Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
@@ -93,6 +100,7 @@ Finally, add the following code to the `.vscode/settings.json` file.
 1. Navigate to `https://localhost:5500` on the web browser to access the server
 
 Navigate to the JavaScript and CSS files.
+
 
 ## Step 4. Set the localhost URLs with HTTPS in the Kintone App's Settings
 
@@ -109,6 +117,7 @@ The JavaScript and CSS files will be accessed and used by the Kintone App.
 
 The setup for the optimized Kintone customization development environment is now complete.
 
+
 ## Step 5. Refresh the Kintone App to Reflect the Changes
 
 Modify a Kintone customization file and refresh the Kintone App.
@@ -117,6 +126,7 @@ The changes should be reflected in the Kintone App immediately. 👏
 
 ⚠️ This is only a development environment setup.  
 ⚠️ The changes are only implemented on other devices once the code is uploaded to the Kintone App.
+
 
 ## Conclusion
 

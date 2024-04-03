@@ -3,7 +3,7 @@
 * [kintoneのフィールド値からQRコードを生成するプラグイン](#kintoneのフィールド値からqrコードを生成するプラグイン)
 * [概要](#概要)
 * [カスタマイズ](#カスタマイズ)
-    * [QR Code script](#qr-code-script)
+  * [QR Code script](#qr-code-script)
 * [プラグイン化もしました](#プラグイン化もしました)
 * [プラグインの設定](#プラグインの設定)
 * [Spicaについて](#spicaについて)
@@ -11,11 +11,13 @@
 
 ## kintoneのフィールド値からQRコードを生成するプラグイン
 
+
 ## 概要
 
 kintoneのフィールド値からQRコードを生成してみます。 やることとしてはとってもシンプルですが、リンクの読み取りだけじゃなくハッシュ値なんかをQRコードで印刷して、電子チケットや入館管理システムなんかもkintoneと連携して作ることができちゃいます。
 
 さくっとできる割には応用範囲の広いカスタマイズではないかということで、スクリプトの例とプラグインを作ってみましたので公開します。
+
 
 ## カスタマイズ
 
@@ -23,10 +25,11 @@ kintoneのフィールド値からQRコードを生成してみます。 やる�
 
 アプリに必要なフィールドは
 
-- 文字列のフィールド（一行文字列、複数行文字列、リンク など）
-- スペース
+* 文字列のフィールド（一行文字列、複数行文字列、リンク など）
+* スペース
 
 です。 以下のコード例では、 文字列フィールドのコードは「文字列_*1行*」 スペースのコードは「output」 というアプリで作っています。
+
 
 ### QR Code script
 
@@ -53,15 +56,17 @@ kintoneのフィールド値からQRコードを生成してみます。 やる�
   });
 ```
 
+
 ## プラグイン化もしました
 
 ここまでやってみて、あまりに簡単なのでちょっとこれだけじゃなあ......ということでプラグインも作ってみました。 kintoneと連携する以上は外部のAPIに文字列を送信しないでQRコードにしたい場合が多いと思うので、プラグインでは <https://github.com/davidshimjs/qrcodejs> を使わせてもらっています。
 
 ![](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F67365%2Fd8463110-639d-2ff4-0e18-1b2419eba684.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&s=2938013568dd2a0099554c3afae16022)
 
-https://spica-git.github.io/gh-projects/zip/kintone_qr_generator.zip
+<https://spica-git.github.io/gh-projects/zip/kintone_qr_generator.zip>
 
 ↑プラグインのzipファイルが **ダウンロード** できます。
+
 
 ## プラグインの設定
 
@@ -74,6 +79,7 @@ https://spica-git.github.io/gh-projects/zip/kintone_qr_generator.zip
 ![](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F67365%2F3407f8b3-7b22-f3d7-8103-9423919b0546.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&s=cf4415d8c41dbb6689ddc343f798da18)
 
 よしよし。大丈夫ですね！
+
 
 ## Spicaについて
 

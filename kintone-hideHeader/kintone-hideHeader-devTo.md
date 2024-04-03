@@ -2,9 +2,11 @@
 
 Here is a script to add a `Hide Header` button in the space element below the header. The button is a toggle to show and hide the Kintone App's header.
 
+
 ## Demo
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rlnjlg2g9klcshs1rr22.gif)
+
 
 ## Code
 
@@ -55,5 +57,7 @@ Here is a script to add a `Hide Header` button in the space element below the he
 })();
 ```
 
+
 ## Debugging
+
 If this code breaks, verify if `gaia-argoui-app-index-toolbar` is still the correct class name for the Kintone App's header.

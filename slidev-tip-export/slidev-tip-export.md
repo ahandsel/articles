@@ -1,7 +1,7 @@
 # How to configure the Slidev export function to include the background theme's styling?
 
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 
 * [What is Slidev?](#what-is-slidev)
 * [Question / Problem](#question--problem)

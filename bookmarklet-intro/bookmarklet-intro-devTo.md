@@ -4,6 +4,7 @@ Bookmarklets are an underrated yet powerful tool for web browsing. In this artic
 
 ---
 
+
 ## What is a Bookmarklet?
 
 A bookmarklet is essentially a bookmark in your web browser that runs JavaScript code on the current page when clicked. Instead of taking you to a new webpage, it performs a function on the page you are already on. For example, it can highlight text, execute an API, or even change the web page's entire layout!
@@ -11,6 +12,7 @@ A bookmarklet is essentially a bookmark in your web browser that runs JavaScript
 Bookmarklets are incredibly convenient for automating tasks or modifying websites to your liking.
 
 ---
+
 
 ## Why Use Bookmarklet Instead of Vanilla JavaScript?
 
@@ -20,6 +22,7 @@ You might ask, "Why should I use a bookmarklet when I can open the console and r
 * **Portability**: You can easily share bookmarklets with others. Bookmarklets can also be synced across different devices.
 
 ---
+
 
 ## How to Create a Bookmarklet?
 
@@ -45,6 +48,7 @@ Creating a bookmarklet is relatively straightforward. Below are the steps:
 
 ---
 
+
 ## How to Use a Bookmarklet?
 
 Using a bookmarklet is as simple as clicking it. Here's how:
@@ -56,6 +60,7 @@ Using a bookmarklet is as simple as clicking it. Here's how:
 The JavaScript code will execute and perform its function on the current webpage.
 
 ---
+
 
 ## How to Debug a Bookmarklet?
 
