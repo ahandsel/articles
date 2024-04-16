@@ -1,4 +1,5 @@
 # Phrase CLI Debug locale_mapping Error
+<!-- https://dev.to/ahandsel/phrase-cli-debug-localemapping-error-4ipd -->
 
 The `locale_mapping` parameter is required when using the `phrase push` command to upload a CSV file to update a Phrase Strings project.
 
