@@ -1,4 +1,4 @@
-# locale_mapping is a required parameter (Not optional)
+# `locale_mapping` is a Required Parameter (Not Optional)
 
 
 ## Table of Contents <!-- omit in toc -->
@@ -34,21 +34,21 @@ locale_mapping: {"LANGUAGE_CODE": "COLUMN"} (object) #Optional, format specific 
 
 ## Solution
 
-Please either...
-* update the documentation ([API](https://developers.phrase.com/api/#post-/projects/-project_id-/uploads) and [.phrase.yml example](https://support.phrase.com/hc/en-us/articles/5784118494492)) to reflect this requirement
-* or update the `phrase-cli` to handle the `locale_mapping` parameter as optional.
+Please either:
+* Update the documentation ([API](https://developers.phrase.com/api/#post-/projects/-project_id-/uploads) and [.phrase.yml example](https://support.phrase.com/hc/en-us/articles/5784118494492)) to reflect this requirement.
+* Update the `phrase-cli` to handle the `locale_mapping` parameter as optional.
 
 
 ## Context
 
-I was trying to use the `phrase push` command to upload a CSV file to update a Phrase Strings project. However, I kept encountering the following error:
+I was trying to use the `phrase push` command to upload a CSV file to update a Phrase Strings project. However, I encountered the following error:
 
 ```txt
 API response: {"message":"Validation failed","errors":[{"resource":"Upload","field":"locale_mapping","message":"You must provide a locale_mapping parameter."}]}
 ERROR: 422 Unprocessable Entity
 ```
 
-I fixed the issue by adding the `locale_mapping` parameter to the `.phrase.yml` file. However, the documentation does not mention that this parameter is required.
+I resolved the issue by adding the `locale_mapping` parameter to the `.phrase.yml` file. However, the documentation does not mention that this parameter is required.
 
 ```yaml
 phrase:
