@@ -1,10 +1,13 @@
 # Quick Start on Using Kintone Web Database in a Hackathon Project
 
-## Outline <!-- omit in toc -->
+<!-- markdownlint-disable MD033 -->
+
+## Table of Contents <!-- omit in toc -->
+
 * [3 Reasons to Use Kintone for your hack](#3-reasons-to-use-kintone-for-your-hack)
 * [🚀 Getting your FREE Kintone Database](#-getting-your-free-kintone-database)
   * [1. Fill out the Kintone Developer License Registration form](#1-fill-out-the-kintone-developer-license-registration-form)
-  * [2. Check your email & click `Activate Now`](#2-check-your-email--click-activate-now)
+  * [2. Check your email \& click `Activate Now`](#2-check-your-email--click-activate-now)
 * [💪 Using your Kintone Database](#-using-your-kintone-database)
   * [3. Let's Log into Kintone](#3-lets-log-into-kintone)
   * [4. Create a Kintone Database App](#4-create-a-kintone-database-app)
@@ -15,17 +18,22 @@
   * [Running an easily configurable Space Invaders game on Kintone](#running-an-easily-configurable-space-invaders-game-on-kintone)
   * [Connect IoT Obniz Board to Kintone Web Database all in 10 minutes](#connect-iot-obniz-board-to-kintone-web-database-all-in-10-minutes)
   * [Deploy a REST API calling node.js App to Heroku](#deploy-a-rest-api-calling-nodejs-app-to-heroku)
-  * [React, REST API, & Kintone: GET & POST to a Web Database](#react-rest-api--kintone-get--post-to-a-web-database)
+  * [React, REST API, \& Kintone: GET \& POST to a Web Database](#react-rest-api--kintone-get--post-to-a-web-database)
 * [More Resources](#more-resources)
 
+
 ## 3 Reasons to Use Kintone for your hack
+
 1. No servers are needed! - Ridiculously fast to build databases!
 1. Effortlessly manage database data and schema with GUI!
 1. Super simple to build JS customizations!
 
+
 ## 🚀 Getting your FREE Kintone Database
 
+
 ### 1. Fill out the Kintone Developer License Registration form
+
 Head over to the [Developer License Registration Form](https://kintone.dev/en/developer-license-registration-form/#terms-of-service-for-the-developer-license)
 * ✅ Accept the Cookies first
 * ✅ Use Chrome & Firefox
@@ -33,6 +41,7 @@ Head over to the [Developer License Registration Form](https://kintone.dev/en/de
 When creating your Kintone Subdomain:
 * ⚡ Only use lowercase, numbers, & hyphens in your subdomain
 * ⚠ Do not use uppercase or special characters
+
 
 ### 2. Check your email & click `Activate Now`
 
@@ -45,12 +54,16 @@ Then you will be redirected to your Kintone Subdomain to set the initial passwor
 | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | ![Step 1: Fill out the Kintone Developer license sign-up form](./img/SignUp-1.png) | ![Step 2: Email address will be the login name & the subdomain will be your unique link](./img/SignUp-2.png) |
 
+
 ## 💪 Using your Kintone Database
+
+
 ### 3. Let's Log into Kintone
 
 Once you create your Kintone Subdomain, it is super simple to access it.
 
 Simply go to `YOUR_SUBDOMAIN.kintone.com` with `YOUR_SUBDOMAIN` swapped with your unique Kintone Subdomain.
+
 
 ### 4. Create a Kintone Database App
 
@@ -62,6 +75,7 @@ To create a Database App, from the Portal screen, click the [+] button on the ri
 
 ---
 
+
 ## 📺 How to Create a Kintone Database App? - Video
 
 Check out this guide that goes over creating an example Manga Database App.
@@ -72,6 +86,7 @@ Check out this guide that goes over creating an example Manga Database App.
       src="https://img.youtube.com/vi/pRtfn-8cf_I/hqdefault.jpg">
   </a>
 </div>
+
 
 ## How to generate a Kintone API Token?
 
@@ -87,7 +102,9 @@ Confused? 🤔 → Check out the [Get the API Token](https://youtu.be/pRtfn-8cf_
 
 ---
 
+
 ## Where Can I Get Help?
+
 If you are stuck, post your question & code on the [Kintone Developer forum](https://forum.kintone.dev/)!
 
 If a Kintone mentor is available, post on the Slack workspace!
@@ -96,8 +113,11 @@ We are more than happy to answer any questions or help fix any problems regardin
 
 ---
 
+
 ## What can I build with Kintone?
+
 Here are a few projects that use Kintone as the web database!  
+
 
 ### Running an easily configurable Space Invaders game on Kintone
 
@@ -109,6 +129,7 @@ This is a phaser.io game running on Kintone. It is super easy to get started! No
 
 Check out the tutorial on [Having Fun with Browser Games & Web databases - DEV Community 👩‍💻👨‍💻](https://dev.to/will_yama/having-fun-with-phaser-io-games-web-databases-4f08)
 
+
 ### Connect IoT Obniz Board to Kintone Web Database all in 10 minutes
 
 <div align="center">
@@ -118,11 +139,12 @@ Check out the tutorial on [Having Fun with Browser Games & Web databases - DEV C
   </a>
 </div>
 
-[Obniz Board](https://obniz.com/products/Obnizboard/) is an IoT Microprocessor that is easily programable with JavaScript! Since Kintone supports [JavaScript customizations](https://get.kintone.help/k/en/user/app_settings/js_customize.html), it is the best web database to integrate with Obniz Board!
+[Obniz Board](https://store.obniz.com/products/obniz) is an IoT Microprocessor that is easily programable with JavaScript! Since Kintone supports [JavaScript customizations](https://get.kintone.help/k/en/user/app_settings/js_customize.html), it is the best web database to integrate with Obniz Board!
 
 Here is a step-by-step tutorial explaining everything you need to get an Obniz Board exporting data to the Kintone web database!
 
 [Setup Obniz Board as a counter & store data in Kintone Web Database all in 10 minutes! - DEV Community 👩‍💻👨‍💻](https://dev.to/ahandsel/setup-obniz-board-as-a-counter-store-data-in-kintone-web-database-all-in-10-minutes-23e)
+
 
 ### Deploy a REST API calling node.js App to Heroku
 
@@ -133,6 +155,7 @@ Here is a step-by-step tutorial explaining everything you need to get an Obniz B
 In this particular example, the node.js app retrieves record data from a Kintone web database via REST API and displays it on the page of the node.js app.
 
 Check out the tutorial on [Deploy a REST API calling node.js App to Heroku - DEV Community 👩‍💻👨‍💻](https://dev.to/will_yama/deploy-a-rest-api-calling-node-js-app-to-heroku-2mia)
+
 
 ### React, REST API, & Kintone: GET & POST to a Web Database
 
@@ -150,9 +173,10 @@ Code & Slides are available at this GitHub Repo:
 [ahandsel/React_Workshop_by_Kintone](https://github.com/ahandsel/React_Workshop_by_Kintone)
 
 Clone the codebase & follow along with the video to build out the POST functionality!
-If you are stuck, check out the [GET_n_POST branch](https://github.com/ahandsel/React_Workshop_by_Kintone/tree/GET_n_POST) with the completed version!
+If you are stuck, check the [docs](https://github.com/ahandsel/React_Workshop_by_Kintone/tree/main/docs) with the completed version!
 
 ---
+
 
 ## More Resources
 
