@@ -1,11 +1,13 @@
 # How to Avoid Japanese Characters in Your Code!
 
+
 ## The Problem - Do not mix `=` with `＝`
 
 If you are working with Japanese in your code, you might have encountered a bug where you are using a "wrong" equal sign or semi-colon.
 
 For example, I had `height＝100` instead of `height=100` in my code which caused a bug.  
 Surprisingly hard to spot with the naked eye! 😅
+
 
 ## Unicode Ranges for Japanese Characters
 
@@ -17,6 +19,7 @@ These ranges are:
 * Full-Width Roman Characters and Half-Width Katakana ( ff00 - ffef)
 * CJK Unified Ideographs Common and Uncommon Kanji ( 4e00 - 9faf)
 
+
 ## The Solution - Use the Highlight Bad Chars Extension
 
 The [Highlight Bad Chars](https://marketplace.visualstudio.com/items?itemName=wengerk.highlight-bad-chars) extension allows you to highlight any Unicode characters you want in the VS Code editor.
@@ -24,7 +27,9 @@ Natively, it highlights some bad characters, such as the No-break space (` `) an
 
 I added the Japanese Unicode ranges to the `highlight-bad-chars.additionalUnicodeChars` setting to see when I have Japanese characters in my code clearly.
 
+
 ### VS Code Settings
+
 ⚡ I recommend configuring the Japanese character highlighting setup as VS Code's [Workspace settings](https://code.visualstudio.com/docs/getstarted/settings#_workspace-settings) so that it is only applied to specific projects.
 
 First, install the [Highlight Bad Chars](https://marketplace.visualstudio.com/items?itemName=wengerk.highlight-bad-chars) extension.
@@ -39,6 +44,7 @@ Then, append the following to your VS Code Workspace settings file (`.vscode/set
 ```
 
 Then all the Japanese characters will be highlighted in your VS Code editor.
+
 
 ## Test
 

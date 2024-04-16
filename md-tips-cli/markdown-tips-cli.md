@@ -2,6 +2,7 @@
 
 * [Markdown Linters](#markdown-linters)
 
+
 ## Markdown Linters
 
 Run `markdown-link-check` to check broken links - [tcort/markdown-link-check](https://github.com/tcort/markdown-link-check)

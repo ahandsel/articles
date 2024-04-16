@@ -1,8 +1,10 @@
 # Setup Obniz Board as a counter & store data in Kintone Web Database all in 10 minutes!
 
+
 ## Introduction
 
-### What is [Obniz Board](https://Obniz.com/products/Obnizboard/)?
+
+### What is [Obniz Board](https://store.obniz.com/products/obniz)?
 
 Obniz Board is an IoT Microprocessor that is easily programable with JavaScript!  
 The code can be stored on the cloud & you have full device control with just one JavaScript library, making it an ideal IoT device for a hackathon.
@@ -10,15 +12,18 @@ The code can be stored on the cloud & you have full device control with just one
 2-min video on Obniz Board's functionality:
 <https://youtu.be/Y_PXOgRP_AU>
 
+
 ### What is [Kintone](https://www.kintone.com/)?
-Kintone is acloud platform that creates Web Databases ridiculously quickly!
+
+Kintone is a cloud platform that creates Web Databases ridiculously quickly!
 Databases are created with intuitive drag-and-drop GUI and since your data lives in the cloud, no need to worry about servers to maintain. Control everything on your browser or use REST API.
 
-## Outline
+
+## Table of Contents <!-- omit in toc -->
+
 * [Introduction](#introduction)
   * [What is Obniz Board?](#what-is-obniz-board)
   * [What is Kintone?](#what-is-kintone)
-* [Outline](#outline)
 * [Get an Obniz Board](#get-an-obniz-board)
 * [Connect Obniz Board to WiFi](#connect-obniz-board-to-wifi)
   * [Step 1: Plug-in the Obniz Board to power via Micro USB cable](#step-1-plug-in-the-obniz-board-to-power-via-micro-usb-cable)
@@ -29,7 +34,7 @@ Databases are created with intuitive drag-and-drop GUI and since your data lives
   * [Step 6: Press "**Connect**" button to complete the process.](#step-6-press-connect-button-to-complete-the-process)
   * [Success + obnizID](#success--obnizid)
 * [Configure the Script.js](#configure-the-scriptjs)
-    * [Code's Author](#codes-author)
+  * [Code's Author](#codes-author)
 * [Get a FREE Kintone Developer License](#get-a-free-kintone-developer-license)
 * [Create the Database](#create-the-database)
 * [Verify](#verify)
@@ -38,45 +43,54 @@ Databases are created with intuitive drag-and-drop GUI and since your data lives
   * [References for Obniz Board](#references-for-obniz-board)
   * [References for Kintone](#references-for-kintone)
 
+
 ## Get an Obniz Board
+
 Obniz Board is on [Amazon](https://www.amazon.com/dp/B07DD6FK8G) for $49 (At the time of publishing).  
 This tutorial assumes you are using the [original Obniz Board](https://www.amazon.com/dp/B07DD6FK8G), but you can use their [newer Obniz Board 1Y](https://www.amazon.com/dp/B082MDPRWZ) as well.
+
 
 ## Connect Obniz Board to WiFi
 
 Now that you are a proud owner of Obniz Board, time to plug it in & connect it to WiFi.
 
 Overview of the parts
-![Graphic overview of the Obniz Board. Micro USB: power can be turned on/off by connecting/disconnecting to the battery; Dial switch: cursor is moved when turning the dial witch. Click the dial switch to select it; 12x IOs with motor driver (up to 1A) & Analog Input](https://obniz.com/doc/reference/board-1y/quick-start/images/board_description.png?)
+![Graphic overview of the Obniz Board. Micro USB: power can be turned on/off by connecting/disconnecting to the battery; Dial switch: cursor is moved when turning the dial witch. Click the dial switch to select it; 12x IOs with motor driver (up to 1A) & Analog Input](https://docs.obniz.com/reference/board-1y/quick-start/images/board_description.png?)
 
 We will be using the **Dial Switch** as the input mechanism.
 
+
 ### Step 1: Plug-in the Obniz Board to power via Micro USB cable
+
 Turn on the Obniz Board by plugging in a Micro USB that is connected to a charger, battery, or PC.
 
+
 ### Step 2: Connect to the Obniz Board's network from your PC
+
 Obniz Board can act as a WiFi access point for configuring it from a browser.
 
 The network name will be `obniz-XXXXXXXXXX`
 
+
 ### Step 3: Open [http://192.168.0.1](http://192.168.0.1)
+
 
 ### Step 4: Select the target WiFi network's SSID from the pull-down menu
 
+
 ### Step 5: Enter the password in alphanumeric characters.
+
 
 ### Step 6: Press "**Connect**" button to complete the process.
 
-| Login Page | Success Page |
-| ---------- | ------------ |
-| ![](https://obniz.com/doc/reference/obnizos-for-esp32/settings/images/wifi_configure.png) | ![](https://obniz.com/doc/reference/obnizos-for-esp32/settings/images/wifi_configure_after.png) |
 
 ### Success + obnizID
+
 Once you have your Obniz Board successfully connected to the internet, a QR Code and the 8-digit **obnizID** will be displayed.
 
-For details on the process, refer to [Obniz Document on Setting from Browser](https://obniz.com/doc/reference/obnizos-for-esp32/settings/setting-via-browser).
+For details on the process, refer to [Obniz Document on Setting from Browser](https://docs.obniz.com/reference/obnizos-for-esp32/settings/setting-via-browser).
 
-If an error is displayed or Obniz Board is not starting up, refer to [Obniz Troubleshooting Guide](https://obniz.com/quickstart/troubleshooting)
+If an error is displayed or Obniz Board is not starting up, refer to [Obniz Troubleshooting Guide](https://docs.obniz.com/quickstart/troubleshooting)
 
 
 ## Configure the Script.js
@@ -141,11 +155,15 @@ Save the code as `Script.js` and replace the Xs in Line 5 with your obnizID.
 })();
 ```
 
-#### Code's Author
+
+### Code's Author
+
 The above code is in large part by written by **[@RyBB](https://github.com/RyBB)**.
 RyBB is a Technical Evangelist at Cybozu where he promotes fun hacks using the Kintone Platform. Check out his Japanese articles at [Qitta @RyBB](https://qiita.com/RyBB).
 
+
 ## Get a FREE Kintone Developer License
+
 Sign up for the FREE Kintone Developer License by filling out this web form: [kintone.dev/new](http://kintone.dev/new)
 
 When selecting your subdomain, please...
@@ -158,7 +176,9 @@ The Subdomain will be used to access your Kintone Database.
 
 By default, the login name is your email.
 
+
 ## Create the Database
+
 Databases in Kintone are called "Apps".
 
 This video will go over how to make a Kintone Database for this project.
@@ -191,6 +211,7 @@ The steps it takes are also written below.
 Your Kintone Database is now ready!  
 You can access it from the **Portal** Page under the **Apps** section.
 
+
 ## Verify
 
 Time to test your new counter!
@@ -202,13 +223,15 @@ Time to test your new counter!
 3. Now move the **Dial Switch** (Black Wheel Nob, Top Left) to the **Right** and click **Click** it
 4. A new record in the `Obniz Counter` Database App should appear with `1` as the count.
 
-| Record List Page | Record Details Page |
-| ---------------- | ------------------- |
+| Record List Page                                                                                              | Record Details Page                                                                                        |
+| ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | ![Blue record button on All Records view](https://dev-to-uploads.s3.amazonaws.com/i/3eo3zmqltdce5jlh5avo.png) | ![Count field from Record Detail view](https://dev-to-uploads.s3.amazonaws.com/i/qbiojy43ob26je003jcl.png) |
+
 
 ### 📺️ Demo Video
 
 {% youtube sbGRnKAYzDs %}
+
 
 ## Conclusion
 
@@ -218,13 +241,17 @@ If you have any questions or problems with **Kintone**, post a comment & I will 
 
 If you have any questions or problems with **Obniz Board**, tweet at them at [@obniz_io](https://twitter.com/obniz_io) or make a post in their [forum](https://forum.obniz.com/).
 
+
 ### References for Obniz Board
-* [Obniz Board Specs](https://Obniz.com/products/Obnizboard/)
+
+* [Obniz Board Specs](https://store.obniz.com/products/obniz)
 * [Interesting Projects Using Obniz](https://blog.Obniz.com/en/example/)
 * [2-min Video on Obniz Board's Functionality](https://youtu.be/sFnDtFq3dJY)
-* [Obniz Board Quick Start](https://obniz.com/doc/reference/board-1y/quick-start/)
+* [Obniz Board Quick Start](https://docs.obniz.com/reference/board-1y/quick-start/)
+
 
 ### References for Kintone
+
 * [Kintone Developer Docs & Tutorials](http://developer.kintone.io/)
 * [Add Record POST REST API](https://developer.kintone.io/hc/en-us/articles/212494628)
 * [Creating a Kintone App from Scratch](https://get.kintone.help/k/en/user/create_app/tutorial.html)

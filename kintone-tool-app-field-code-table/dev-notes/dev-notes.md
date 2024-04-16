@@ -1,7 +1,7 @@
 # App Field Code Table Project
 
 
-## Outline <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 
 * [Status](#status)
 * [Objective](#objective)

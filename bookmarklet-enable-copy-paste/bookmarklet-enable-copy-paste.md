@@ -2,13 +2,16 @@
 
 I despise websites that disable copy/paste functionality. I understand that forcing users to type in their information manually is one way to make them verify their information is correct, but it's a horrible user experience. Here is the bookmarklet that I use to get around this limitation.
 
-## Table of Content <!-- omit in toc -->
+
+## Table of Contents <!-- omit in toc -->
+
 * [forceEnableCopyPaste.js](#forceenablecopypastejs)
 * [Usage](#usage)
 * [Understanding The Code](#understanding-the-code)
 * [Warning and Disclaimer](#warning-and-disclaimer)
 
 ---
+
 
 ## forceEnableCopyPaste.js
 
@@ -29,6 +32,7 @@ javascript: (function () {
 
 ---
 
+
 ## Usage
 
 Initial Setup
@@ -42,6 +46,7 @@ Disabling Copy-Paste Restrictions
 1. Enjoy copying & pasting!
 
 ---
+
 
 ## Understanding The Code
 
@@ -66,7 +71,9 @@ Here, an array containing two strings, `'paste'` and `'copy'`, represents the ev
 
 ---
 
+
 ## Warning and Disclaimer
+
 * ⚠️ Using this bookmarklet on certain websites may break other functionalities, thus rendering the website unusable.
 * ⚠️ Using this bookmarklet on certain websites may violate their terms and conditions.
 * ⚠️ Always respect the intellectual property rights and terms of service of websites you visit.

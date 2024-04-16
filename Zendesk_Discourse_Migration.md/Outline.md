@@ -1,5 +1,6 @@
 # Outline of Zendesk to Discourse Migration Article
 
+
 ## Warnings
 
 Edit the Zendesk URLs made in the community posts!

@@ -4,6 +4,7 @@ This is an error related to account permissions and kintone-customize-uploader
 
 If you encounter the `KintoneRestAPIError: [403] [CB_NO02] No privilege to proceed.`, it most likely concerns the account used to execute the `kintone-customize-uploader` cli tool.
 
+
 ## Full Error Message
 
 ```shell
@@ -16,14 +17,18 @@ KintoneRestAPIError: [403] [CB_NO02] No privilege to proceed. (SoyMA67jQV6mU3NHz
 Child process exited with code: 1 and signal:. Terminating parent process...
 ```
 
+
 ## Cause
+
 The cause is that the account used to upload the customization files to the Kintone App is not a Kintone Administrator.
 
 As specified in the [Customizing an App Using JavaScript and CSS](https://get.kintone.help/k/en/id/040556.html) help document, only Kintone Administrators are allowed to upload JS & CSS customization files to any Kintone Apps.
 
 > Note that JavaScript and CSS files can be uploaded on Kintone only by Kintone Administrators.
 
+
 ## Solution
+
 Use an account with [Kintone Administrator](https://get.kintone.help/k/en/id/04058.html#permission_admin_permissions_concept_20) privilege when executing the `kintone-customize-uploader`.
 
 To upgrade a Kintone account to have **Kintone Administrator** privilege:
@@ -48,7 +53,9 @@ To upgrade a Kintone account to have **Kintone Administrator** privilege:
 
 9. Click the **Save** button.
 
+
 ## Resources
+
 * GitHub Repo: [js-sdk/packages/customize-uploader/](https://github.com/kintone/js-sdk/tree/master/packages/customize-uploader#kintone-customize-uploader)
 * Tutorial: [Upload JavaScript and CSS files with Customize-uploader - Kintone Developer Program](https://kintone.dev/en/tutorials/tool-guides/upload-javascript-and-css-files-with-customize-uploader/)
 * Kintone Help Documents:

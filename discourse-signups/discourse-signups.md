@@ -2,12 +2,15 @@
 
 Here is my note on how to get the number of new sign-ups for a discourse forum.
 
+
 ## Background
+
 As a developer advocate, I oversee our developer forum that is hosted using [Discourse](https://www.discourse.org/) platform.
 
 For a monthly metric report, I need to determine how many new sign-ups we have for the prior month.
 
 Surprisingly, it is tedious to get this number.
+
 
 ## Bookmarklet Method
 
@@ -35,17 +38,23 @@ javascript: (function () {
 })();
 ```
 
+
 ## Zapier Method
+
 Here is the Zapier workflow I created to get a monthly Slack post with the sign-up count.
 
+
 ### 1. Every Month in Schedule by Zapier
+
 * App: `Schedule by Zapier`
 * Event: `Every Month`
 * Step details
   * Day of the Month: `1`
   * Time of Day: `Noon`
 
+
 ### 2. Change Date Format to YYYY-MM-DD (for Schedule by Zapier's "Pretty Date" field)
+
 * App: `Formatter by Zapier`
 * Event: `Date / Time`
 * Step details
@@ -56,7 +65,9 @@ Here is the Zapier workflow I created to get a monthly Slack post with the sign-
   * From Format: `MMM D, YYYY`
   * From Timezone: `UTC`
 
+
 ### 3. Run Javascript in Code by Zapier
+
 * App: `Code by Zapier`
 * Event: `Run Javascript`
 * Step details
@@ -120,7 +131,9 @@ Here is the Zapier workflow I created to get a monthly Slack post with the sign-
     output = { url: endPoint};
     ```
 
+
 ### 4. Get Request in Webhooks by Zapier
+
 * App: `Webhooks by Zapier`
 * Event: `GET`
 * Step details
@@ -132,7 +145,9 @@ Here is the Zapier workflow I created to get a monthly Slack post with the sign-
     * `Api-Key`: `your_discourse_api_key`
     * `Api-Username`: `your_discourse_username`
 
+
 ### 5. Run Javascript in Code by Zapier
+
 * App: `Code by Zapier`
 * Event: `Run Javascript`
 * Step details:
@@ -151,7 +166,9 @@ Here is the Zapier workflow I created to get a monthly Slack post with the sign-
     output = { sum: sum };
     ```
 
+
 ### 6. Send Channel Message in Slack
+
 * App: `Slack`
 * Event: `Send Channel Message`
 * Slack: Your Account
@@ -160,5 +177,7 @@ Here is the Zapier workflow I created to get a monthly Slack post with the sign-
   * Message Text: `Last month's sign-up count: {5. Output: sum}`
 * Send as a bot?: `yes`
 
+
 ## Conclusion
+
 I hope this demonstrates that it is pretty simple to build an automation to handle a Discourse metric.

@@ -2,15 +2,20 @@
 
 This is a step-by-step guide that will go over everything you need to do before our React workshop!
 
-## Outline <!-- omit in toc -->
+
+## Table of Contents <!-- omit in toc -->
+
 * [Check if you already have Node.js or npm](#check-if-you-already-have-nodejs-or-npm)
 * [macOS with nodenv](#macos-with-nodenv)
 * [Windows with nvm-windows](#windows-with-nvm-windows)
 * [Installing Node.js - Video](#installing-nodejs---video)
 
+
 ## Which
 
+
 ## Check if you already have Node.js or npm
+
 Since we will be using the [create-react-app](https://github.com/facebook/create-react-app) tool, **Node ≥ 14.0.0** is required!
 
 1. Create a `my_project` folder - Somewhere inside your Document folder will be good.
@@ -22,6 +27,7 @@ npm -v
 ```
 
 If Node & npm are missing, let's install them!
+
 
 ## macOS with nodenv
 
@@ -92,6 +98,7 @@ Download the required packages by opening a terminal for both the `frontend` & `
 
 ---
 
+
 ## Windows with nvm-windows
 
 The following steps are straight from the Microsoft Docs on [Set up NodeJS on native Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows). We recommend installing and managing Node.js with [nvm-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows)
@@ -130,6 +137,7 @@ Having different Node.js installations can lead to conflict issues.
 Alright! Your Windows is now armed with Node.js!
 
 Download the required packages by opening a terminal for both the `frontend` & `backend` folders and then running the `npm install` command!
+
 
 ## Installing Node.js - Video
 
