@@ -13,7 +13,7 @@ Copying and pasting event details from Garoon to Apple Calendar is tedious. This
   * [Initial Setup](#initial-setup)
   * [Export a Garoon Event to Apple Calendar](#export-a-garoon-event-to-apple-calendar)
 * [Not working? 🤔](#not-working-)
-* [Garoon\_to\_Apple\_Bookmarklet.js](#garoon_to_apple_bookmarkletjs)
+* [garoon-to-apple-bookmarklet-v0.js](#garoon-to-apple-bookmarklet-v0js)
 * [What is a Bookmarklet?](#what-is-a-bookmarklet)
 * [Code Breakdown](#code-breakdown)
   * [Wrap the Code in an IIFE](#wrap-the-code-in-an-iife)
@@ -38,7 +38,7 @@ Copying and pasting event details from Garoon to Apple Calendar is tedious. This
 
 ### Initial Setup
 
-1. Copy the below `Garoon_to_Apple_Bookmarklet.js` code block
+1. Copy the below `garoon-to-apple-bookmarklet-v0.js` code block
 1. Enter `@bookmarks` in the Chrome's address bar
 1. Click on the `⋮` at the top-right-corner
 1. Click `Add new bookmark` & paste the code in the URL field
@@ -60,7 +60,7 @@ Copying and pasting event details from Garoon to Apple Calendar is tedious. This
 2. Check if you are getting an error message
 
 
-## Garoon_to_Apple_Bookmarklet.js
+## garoon-to-apple-bookmarklet-v0.js
 
 ```javascript
 javascript: (() => {
@@ -277,4 +277,4 @@ Consider [buying atymic a coffee](https://ko-fi.com/slashdev) for creating [caln
 
 * [Calndr's API Doc](https://calndr.link/api-docs#dynamic)
 * [スケジュールオブジェクト - cybozu developer network](https://cybozu.dev/ja/garoon/docs/overview/schedule-object/)
-* [Garoon_to_Apple_Bookmarklet_v0.js - GitHub](https://github.com/ahandsel/articles/blob/master/Garoon_to_Apple/Garoon_to_Apple_Bookmarklet_v0.js)
+* [garoon-to-apple-bookmarklet-v0.js - GitHub](https://github.com/ahandsel/articles/tree/main/garoon-to-apple/garoon-to-apple-bookmarklet-v0.js)
