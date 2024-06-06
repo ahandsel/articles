@@ -127,3 +127,7 @@ To run the shortcut:
 1. Download the calendar files (`.ics`) to the folder you specified.
 2. Open the Shortcuts app and run the shortcut.
 3. The events will be imported to your Apple Calendar and the files will be deleted from the folder.
+
+## Apple Shortcut Screenshot
+
+![calendar-event-importer-screenshot.png](calendar-event-importer-screenshot.png)
