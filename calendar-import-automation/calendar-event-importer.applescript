@@ -1,6 +1,6 @@
 -- Script Name: Calendar Event Importer
 -- Version: 1.1 - Improved script with timeout mechanism
--- Usage: Use this script to automate the process of importing calendar events in the Calendar app on macOS.
+-- Usage: Use this script to automate importing calendar events in the Calendar app on macOS.
 
 -- Function: Check if the Calendar event window is open
 on isEventWindowOpen(timeoutSeconds)
