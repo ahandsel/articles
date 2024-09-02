@@ -52,7 +52,6 @@ This is a list of Visual Studio Code extensions that I recommend.
 | [Change Case][change-case]                         | Easily change the case of text.                                                                 |
 | [Insert Line Number][andersliu-insert-line-number] | Insert line numbers to selected lines or the whole document.                                    |
 | [DupChecker][dupchecker]                           | Checks for and removes duplicate lines in the file content or selection.                        |
-| [:emojisense:][emojisense]                         | Autocomplete for emoji.                                                                         |
 | [Replace Curly Quotes][replace-curly-quotes]       | Replaces curly quotes (`‘`, `’`, `“`, `”`) in a document with straight quotes (`'`, `"`).       |
 | [Sort lines][tyriar-sort-lines]                    | Sorts lines of text.                                                                            |
 
@@ -61,7 +60,6 @@ This is a list of Visual Studio Code extensions that I recommend.
 [change-case]: https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case
 [andersliu-insert-line-number]: https://marketplace.visualstudio.com/items?itemName=andersliu.insert-line-number
 [dupchecker]: https://marketplace.visualstudio.com/items?itemName=jianbingfang.dupchecker
-[emojisense]: https://marketplace.visualstudio.com/items?itemName=bierner.emojisense
 [replace-curly-quotes]: https://marketplace.visualstudio.com/items?itemName=jinhyuk.replace-curly-quotes
 [tyriar-sort-lines]: https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines
 
@@ -183,7 +181,6 @@ You can install all the recommended extensions easily by creating an `extensions
     "jerriepelser.copy-markdown-as-html",
     "phplasma.csv-to-table",
     "jianbingfang.dupchecker",
-    "bierner.emojisense",
     "ginfuru.ginfuru-better-solarized-dark-theme",
     "bierner.github-markdown-preview",
     "wengerk.highlight-bad-chars",
