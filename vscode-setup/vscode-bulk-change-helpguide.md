@@ -30,8 +30,7 @@
 
 This guide will walk you through using the **Change All Occurrences** and **Multi-Cursor Editing** features to modify multiple lines or text snippets efficiently. It is intended for users looking to enhance their editing speed. By the end of this guide, you will be able to **make bulk edits across multiple lines of text quickly**.
 
-> [!NOTE]
-> Windows users can follow these steps; however, specific keybindings may differ. Please refer to the [Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) VS Code document.
+> 📝 Windows users can follow these steps; however, specific keybindings may differ. Please refer to the [Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) VS Code document.
 
 
 ## Preparations
@@ -58,8 +57,7 @@ The **Change All Occurrences** feature in VS Code allows you to select all insta
 3. **Edit the Text**  
     With all instances selected, type to edit. Changes you make will apply to each selected instance.
 
-> [!TIP]
-> You can also use the **Change All Occurrences** feature by right-clicking on the selected text and choosing **Change All Occurrences** from the context menu.
+> ⚡ You can also use the **Change All Occurrences** feature by right-clicking on the selected text and choosing **Change All Occurrences** from the context menu.
 
 
 ### Using Multi-Cursor Editing
@@ -106,8 +104,7 @@ VS Code allows you to customize keybindings for nearly all features, including *
 5. **Save and Test the New Keybindings**  
     After adjusting your shortcuts, test them in a file to ensure they work as expected.
 
-> [!TIP]
-> You can easily export your custom keybindings to a file for backup or sharing with others by using the `Preferences: Open Keyboard Shortcuts (JSON)` command from the command palette to access the `keybindings.json` file.
+> ⚡ You can easily export your custom keybindings to a file for backup or sharing with others by using the `Preferences: Open Keyboard Shortcuts (JSON)` command from the command palette to access the `keybindings.json` file.
 
 
 ## Restrictions
