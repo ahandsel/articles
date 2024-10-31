@@ -1,8 +1,7 @@
 # Phrase CLI Config YAML
 
-Here is the `.phrase.yml` file with all possible specifications.
-
-It is strangely difficult to find on [Phrase's Help Website](https://support.phrase.com/hc/en-us/articles/5784118494492).
+This is a quick breakdown into the `.phrase.yml` file used for configuring the Phrase CLI and the various options available for pushing and pulling translations.
+I found it strangely difficult to find the `.phrase.yml` on [Phrase's Help Website](https://support.phrase.com/hc/en-us/articles/5784118494492) and their documentation is not always clear.
 
 
 ## Table of Contents <!-- omit in toc -->
