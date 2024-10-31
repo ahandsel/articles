@@ -22,38 +22,41 @@ The example `.phrase.yml` file can be found here on [GitHub](hhttps://github.com
 
 ### Phrase CLI - Header Options
 
-| Option         | Value (Type)                  | Notes                                                                                                          | Example  |
-| -------------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------- | -------- |
-| `access_token` | ACCESS_TOKEN (string)         | Add your personal access token to authenticate; Read [Generate API Access Token][phrase-tokens] for more info. | `abc123` |
-| `project_id`   | PROJECT_ID (string)           | The Project ID available in the Project Settings (API tab)                                                     | `123456` |
-| `file_format`  | FORMAT_API_EXTENSION (string) | Specify a [supported file type][phrase-file-types] for the whole configuration file.                           | `csv`    |
+| Option         | Value (Type)                  | Notes                                                                                 | Example  |
+| -------------- | ----------------------------- | ------------------------------------------------------------------------------------- | -------- |
+| `access_token` | ACCESS_TOKEN (string)         | Add personal access token to authenticate.                                            | `abc123` |
+| `project_id`   | PROJECT_ID (string)           | The Project ID (Copy from Project Settings > API tab).                                | `123456` |
+| `file_format`  | FORMAT_API_EXTENSION (string) | Specify a [supported file type][phrase-file-types] for the entire configuration file. | `csv`    |
 
 [phrase-tokens]: https://help.phrase.com/help/access-tokens
 [phrase-file-types]: https://help.phrase.com/help/supported-platforms-and-formats
 
 Tip: If the `file_format` is specified in the header, it is no longer required in the `push` and `pull` commands.
 
+Additional notes:
+* For instructions on generating an access token, refer to the [Generate API Access Token][phrase-tokens] help doc.
+
 
 ### Phrase CLI Push - Parameters
 
-The `push` commands uploads files to Phrase via the [upload API endpoint](https://developers.phrase.com/api/#post-/projects/%7Bproject_id%7D/uploads). The parameters you can use when uploading files to Phrase are as follows:
+The `push` command uploads files to Phrase via the [upload API endpoint](https://developers.phrase.com/api/#post-/projects/%7Bproject_id%7D/uploads). The parameters you can use when uploading files to Phrase are as follows:
 
 | Parameter             | Value (Type)                         | Notes                                                                                               | Example       |
 | --------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------- | ------------- |
 | `file_format`         | FORMAT_API_EXTENSION (string)        | Specify the upload file type.                                                                       | `csv`         |
-| `locale_id`           | LOCALE_ID (string)                   | Locale name or public id (via Language settings -> API)                                             | `en-US`       |
+| `locale_id`           | LOCALE_ID (string)                   | Locale name or public ID (via Language settings -> API).                                            | `en-US`       |
 | `tags`                | TAG_1, TAG_2 (string)                | Tags to be used for the new keys in the upload.                                                     | `tag1, tag2`  |
-| `update_translations` | false (boolean)                      | If true, existing translations should be updated with the upload's content.                         | `true`        |
-| `update_descriptions` | false (boolean)                      | If true, the upload's key descriptions (include empty descriptions) will overwrite existing ones.   | `true`        |
-| `skip_upload_tags`    | false (boolean)                      | If true, upload should not create upload tags.                                                      | `true`        |
+| `update_translations` | false (boolean)                      | If true, existing translations will be updated with the upload's content.                           | `true`        |
+| `update_descriptions` | false (boolean)                      | If true, the upload's key descriptions (including empty descriptions) will overwrite existing ones. | `true`        |
+| `skip_upload_tags`    | false (boolean)                      | If true, upload will not create upload tags.                                                        | `true`        |
 | `skip_unverification` | false (boolean)                      | If true, updated translations will be unverified.                                                   | `true`        |
 | `file_encoding`       | ENCODING (string)                    | Enforces a specific file encoding. Options: `UTF-8`, `UTF-16`, `UTF-16BE`, `UTF-16LE`, `ISO-8859-1` | `UTF-8`       |
-| `locale_mapping`      | {"LANGUAGE_CODE": "COLUMN"} (object) | Optional, format specific (Excel, CSV) mapping between locale names and column locations            | `{"en": "2"}` |
+| `locale_mapping`      | {"LANGUAGE_CODE": "COLUMN"} (object) | Optional, format-specific (Excel, CSV) mapping between locale names and column locations.           | `{"en": "2"}` |
 | `autotranslate`       | false (boolean)                      | If true, the [pre-translation feature][phrase-pre-trans] will be used to generate translations.     | `true`        |
 | `mark_reviewed`       | false (boolean)                      | If true, the imported translations will be marked as reviewed.                                      | `true`        |
 
 Additional notes:
-* `file_format` is required if file type is not specified in the source or target entries.
+* `file_format` is required if the file type is not specified in the source or target entries.
 * `mark_reviewed` is only available if the review workflow is enabled for the project.
 
 
@@ -61,7 +64,7 @@ Additional notes:
 
 Here are the format options you can use when uploading files to Phrase:
 
-| Format Otion                   | Value (Type)      | Only for           | Notes                                                                       | Example |
+| Format Option                  | Value (Type)      | Only for           | Notes                                                                       | Example |
 | ------------------------------ | ----------------- | ------------------ | --------------------------------------------------------------------------- | ------- |
 | `ignore_source_translations`   | false (boolean)   | XLIFF/XLIFF 2.0    | If true, source translations in the file will be ignored during the upload. | `true`  |
 | `ignore_target_translations`   | false (boolean)   | XLIFF/XLIFF 2.0    | If true, target translations in the file will be ignored during the upload. | `true`  |
@@ -76,8 +79,8 @@ Here are the format options you can use when uploading files to Phrase:
 | `header_content_row`           | false (boolean)   | CSV                | If true, the first row is the header so will be skipped.                    | `true`  |
 | `first_content_row`            | 1 (integer)       | Excel              | Index of the first row containing translation content (1-based index).      | `2`     |
 | `enable_pluralization`         | true (boolean)    | Simple/Nested JSON | If true, pluralized keys will be detected and persisted.                    | `true`  |
-| `unescape_linebreaks`          | false (boolean)   | Android XML        | If true, all `\n` will be imported as true newlines.                        | `true`  |
-| `escape_single_quotes`         | false (boolean)   | Java Properties    | If true, single quotes will be escaped with another single quote.           |
+| `unescape_linebreaks`          | false (boolean)   | Android XML        | If true, all `\n` will be imported as newlines.                             | `true`  |
+| `escape_single_quotes`         | false (boolean)   | Java Properties    | If true, single quotes will be escaped with another single quote.           | `true`  |
 
 [phrase-pre-trans]: https://support.phrase.com/hc/en-us/articles/5822187934364
 
@@ -89,21 +92,21 @@ The `pull` command downloads files from Phrase via the [locales download API end
 | Parameter                         | Value (Type)                  | Notes                                                                                               | Example      |
 | --------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------- | ------------ |
 | `file_format`                     | FORMAT_API_EXTENSION (string) | Specify the download file type.                                                                     | `csv`        |
-| `locale_id`                       | LOCALE_ID (string)            | Locale name or public id (via Language settings -> API).                                            | `en-US`      |
+| `locale_id`                       | LOCALE_ID (string)            | Locale name or public ID (via Language settings -> API).                                            | `en-US`      |
 | `tags`                            | TAG_1, TAG_2 (string)         | Tags to limit results to keys tagged with a list of comma-separated tag names.                      | `tag1, tag2` |
 | `include_empty_translations`      | false (boolean)               | If true, keys without translations will be included in the download.                                | `true`       |
 | `exclude_empty_zero_forms`        | false (boolean)               | If true, zero forms will be included when empty in pluralized keys.                                 | `true`       |
 | `include_translated_keys`         | true (boolean)                | If true, translated keys will be included in the locale file.                                       | `true`       |
-| `keep_notranslate_tags`           | false (boolean)               | If true, [NOTRANSLATE] tags will be kept.                                                           | `true`       |
+| `keep_notranslate_tags`           | false (boolean)               | If true, [NOTRANSLATE] tags will be retained.                                                       | `true`       |
 | `encoding`                        | ENCODING (string)             | Enforces a specific file encoding. Options: `UTF-8`, `UTF-16`, `UTF-16BE`, `UTF-16LE`, `ISO-8859-1` | `UTF-8`      |
 | `include_unverified_translations` | true (boolean)                | If true, unverified translations will be included.                                                  | `true`       |
 | `use_last_reviewed_version`       | false (boolean)               | If true, the last reviewed version of a translation will be used.                                   | `true`       |
-| `fallback_locale_id`              | LOCALE_ID (string)            | Locale name or public id (via Language settings -> API).                                            | `en-US`      |
+| `fallback_locale_id`              | LOCALE_ID (string)            | Locale name or public ID (via Language settings -> API).                                            | `en-US`      |
 
 > Tip: To download only untranslated keys, set `include_empty_translations` to `true` and `include_translated_keys` to `false`.
 
 Additional notes:
-* `file_format` is required if file type is not specified in the source or target entries.
+* `file_format` is required if the file type is not specified in the source or target entries.
 * `use_last_reviewed_version` is only available if the review workflow is enabled for the project.
 
 
@@ -113,7 +116,7 @@ Here are the format options you can use when downloading files from Phrase:
 
 | Format Option                       | Value (Type)         | Only for                        | Notes                                                                          | Example |
 | ----------------------------------- | -------------------- | ------------------------------- | ------------------------------------------------------------------------------ | ------- |
-| `document_id`                       | DOCUMENT_ID (string) | HTML                            | Takes the document ID of existing HTML documents for export.                   | `12345` |
+| `document_id`                       | DOCUMENT_ID (string) | HTML                            | Specifies the document ID of existing HTML documents for export.               | `12345` |
 | `enclose_in_cdata`                  | false (boolean)      | XLIFF/Symfony XLIFF/Android XML | If true, translations with HTML tags will be enclosed in CDATA.                | `true`  |
 | `include_translation_state`         | false (boolean)      | XLIFF/Symfony XLIFF             | If true, the state of translations will be included in the target locale.      | `true`  |
 | `indent_size`                       | 4 (integer)          | XLIFF/Android XML               | Specifies the number of indentation characters.                                | `4`     |
@@ -129,6 +132,7 @@ Here are the format options you can use when downloading files from Phrase:
 | `escape_single_quotes`              | false (boolean)      | Java/Play Framework Properties  | If true, single quotes will be escaped with another single quote.              | `true`  |
 | `omit_separator_space`              | false (boolean)      | Java Properties                 | If true, the space before and after the separator sign (`=`) will be skipped.  | `true`  |
 | `crlf_line_terminators`             | false (boolean)      | Java Properties                 | If true, CRLF (Windows) line terminator characters will be used.               | `true`  |
+
 
 ## Phrase CLI Config YAML Template
 
