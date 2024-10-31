@@ -1,9 +1,9 @@
 # Phrase CLI Config YAML
 
 This is a quick breakdown into the `.phrase.yml` file used for configuring the Phrase CLI and the various options available for pushing and pulling translations.
-I found it strangely difficult to find the `.phrase.yml` on [Phrase's Help Website](https://support.phrase.com/hc/en-us/articles/5784118494492) and their documentation is not always clear.
+I found it strangely challenging to locate the `.phrase.yml` configuration file template on [Phrase's Help Website](https://support.phrase.com/hc/en-us/articles/5784118494492), and their documentation is not always straightforward.
 
-The example `.phrase.yml` file can be found here on [GitHub](hhttps://github.com/ahandsel/articles/blob/main/phrase-cli/phrase-configuration-overview.yml) or under [Phrase CLI Config YAML Template](#phrase-cli-config-yaml-template) section.
+You can find the `.phrase.yml` configuration file template on [GitHub](https://github.com/ahandsel/articles/blob/main/phrase-cli/phrase-configuration-overview.yml) or in this article's [Phrase CLI Config YAML Template](#phrase-cli-config-yaml-template) section.
 
 
 ## Table of Contents <!-- omit in toc -->
@@ -68,7 +68,7 @@ Here are the format options you can use when uploading files to Phrase:
 | ------------------------------ | ----------------- | ------------------ | --------------------------------------------------------------------------- | ------- |
 | `ignore_source_translations`   | false (boolean)   | XLIFF/XLIFF 2.0    | If true, source translations in the file will be ignored during the upload. | `true`  |
 | `ignore_target_translations`   | false (boolean)   | XLIFF/XLIFF 2.0    | If true, target translations in the file will be ignored during the upload. | `true`  |
-| `msgid_as_default`             | false (boolean)   | Gettext POT        | If true, the key name (msgid) will be used as translation.                  | `true`  |
+| `msgid_as_default`             | false (boolean)   | Gettext POT        | If true, the key name (msgid) will be used as a translation.                | `true`  |
 | `strip_placeholder_delimiters` | false (boolean)   | XLIFF              | If true, `<ph>` tags will be removed from translations.                     | `true`  |
 | `override_file_language`       | false (boolean)   | XLIFF/XLIFF 2.0    | If true, the specified language will override the language in the file.     | `true`  |
 | `key_index`                    | [empty] (integer) | Excel/CSV          | Index of the column containing key names (1-based index).                   | `1`     |
@@ -76,7 +76,7 @@ Here are the format options you can use when uploading files to Phrase:
 | `tag_column`                   | [empty] (integer) | Excel/CSV          | Index of the column containing tags (1-based index).                        | `4`     |
 | `column_separator`             | `,` (string)      | CSV                | Character used to separate columns.                                         | `,`     |
 | `quote_char`                   | `"` (string)      | CSV                | Character used to quote newlines and column separators.                     | `"`     |
-| `header_content_row`           | false (boolean)   | CSV                | If true, the first row is the header so will be skipped.                    | `true`  |
+| `header_content_row`           | false (boolean)   | CSV                | If true, the first row is the header, so it will be skipped.                | `true`  |
 | `first_content_row`            | 1 (integer)       | Excel              | Index of the first row containing translation content (1-based index).      | `2`     |
 | `enable_pluralization`         | true (boolean)    | Simple/Nested JSON | If true, pluralized keys will be detected and persisted.                    | `true`  |
 | `unescape_linebreaks`          | false (boolean)   | Android XML        | If true, all `\n` will be imported as newlines.                             | `true`  |
