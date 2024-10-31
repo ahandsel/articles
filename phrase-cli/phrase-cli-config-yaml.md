@@ -142,23 +142,23 @@ Additional notes:
 
 Here are the format options you can use when uploading files to Phrase:
 
-| Format Otion                   | Value (Type)     | Only for           | Notes                                                                       | Example |
-| ------------------------------ | ---------------- | ------------------ | --------------------------------------------------------------------------- | ------- |
-| `ignore_source_translations`   | false (boolean)  | XLIFF/XLIFF 2.0    | If true, source translations in the file will be ignored during the upload. | `true`  |
-| `ignore_target_translations`   | false (boolean)  | XLIFF/XLIFF 2.0    | If true, target translations in the file will be ignored during the upload. | `true`  |
-| `msgid_as_default`             | false (boolean)  | Gettext POT        | If true, the key name (msgid) will be used as translation.                  | `true`  |
-| `strip_placeholder_delimiters` | false (boolean)  | XLIFF              | If true, `<ph>` tags will be removed from translations.                     | `true`  |
-| `override_file_language`       | false (boolean)  | XLIFF/XLIFF 2.0    | If true, the specified language will override the language in the file.     | `true`  |
-| `key_index`                    | [empty](integer) | Excel/CSV          | Index of the column containing key names (1-based index).                   | `1`     |
-| `comment_index`                | [empty](integer) | Excel/CSV          | Index of the column containing key descriptions (1-based index).            | `3`     |
-| `tag_column`                   | [empty](integer) | Excel/CSV          | Index of the column containing tags (1-based index).                        | `4`     |
-| `column_separator`             | `,` (string)     | CSV                | Character used to separate columns.                                         | `,`     |
-| `quote_char`                   | `"` (string)     | CSV                | Character used to quote newlines and column separators.                     | `"`     |
-| `header_content_row`           | false (boolean)  | CSV                | If true, the first row is the header so will be skipped.                    | `true`  |
-| `first_content_row`            | 1 (integer)      | Excel              | Index of the first row containing translation content (1-based index).      | `2`     |
-| `enable_pluralization`         | true (boolean)   | Simple/Nested JSON | If true, pluralized keys will be detected and persisted.                    | `true`  |
-| `unescape_linebreaks`          | false (boolean)  | Android XML        | If true, all `\n` will be imported as true newlines.                        | `true`  |
-| `escape_single_quotes`         | false (boolean)  | Java Properties    | If true, single quotes will be escaped with another single quote.           |
+| Format Otion                   | Value (Type)      | Only for           | Notes                                                                       | Example |
+| ------------------------------ | ----------------- | ------------------ | --------------------------------------------------------------------------- | ------- |
+| `ignore_source_translations`   | false (boolean)   | XLIFF/XLIFF 2.0    | If true, source translations in the file will be ignored during the upload. | `true`  |
+| `ignore_target_translations`   | false (boolean)   | XLIFF/XLIFF 2.0    | If true, target translations in the file will be ignored during the upload. | `true`  |
+| `msgid_as_default`             | false (boolean)   | Gettext POT        | If true, the key name (msgid) will be used as translation.                  | `true`  |
+| `strip_placeholder_delimiters` | false (boolean)   | XLIFF              | If true, `<ph>` tags will be removed from translations.                     | `true`  |
+| `override_file_language`       | false (boolean)   | XLIFF/XLIFF 2.0    | If true, the specified language will override the language in the file.     | `true`  |
+| `key_index`                    | [empty] (integer) | Excel/CSV          | Index of the column containing key names (1-based index).                   | `1`     |
+| `comment_index`                | [empty] (integer) | Excel/CSV          | Index of the column containing key descriptions (1-based index).            | `3`     |
+| `tag_column`                   | [empty] (integer) | Excel/CSV          | Index of the column containing tags (1-based index).                        | `4`     |
+| `column_separator`             | `,` (string)      | CSV                | Character used to separate columns.                                         | `,`     |
+| `quote_char`                   | `"` (string)      | CSV                | Character used to quote newlines and column separators.                     | `"`     |
+| `header_content_row`           | false (boolean)   | CSV                | If true, the first row is the header so will be skipped.                    | `true`  |
+| `first_content_row`            | 1 (integer)       | Excel              | Index of the first row containing translation content (1-based index).      | `2`     |
+| `enable_pluralization`         | true (boolean)    | Simple/Nested JSON | If true, pluralized keys will be detected and persisted.                    | `true`  |
+| `unescape_linebreaks`          | false (boolean)   | Android XML        | If true, all `\n` will be imported as true newlines.                        | `true`  |
+| `escape_single_quotes`         | false (boolean)   | Java Properties    | If true, single quotes will be escaped with another single quote.           |
 
 [phrase-pre-trans]: https://support.phrase.com/hc/en-us/articles/5822187934364
 
