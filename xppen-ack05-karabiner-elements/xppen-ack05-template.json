@@ -1,0 +1,366 @@
+{
+  "title": "XPPen ACK05 template",
+  "rules": [
+    {
+      "description": "XPPen ACK05 template",
+      "manipulators": [
+        {
+          "description": "Wheel Left",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514,
+                  "description": "XPPen ACK05"
+                }
+              ]
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "keypad_hyphen",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "description": "Wheel Left",
+              "key_code": "l"
+            }
+          ]
+        },
+        {
+          "description": "Wheel Right",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514,
+                  "description": "XPPen ACK05"
+                }
+              ]
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "keypad_plus",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "description": "Wheel Right",
+              "key_code": "r"
+            }
+          ]
+        },
+        {
+          "description": "K4",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514,
+                  "description": "XPPen ACK05"
+                }
+              ]
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "description": "K4",
+              "key_code": "4"
+            }
+          ]
+        },
+        {
+          "description": "K3",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514,
+                  "description": "XPPen ACK05"
+                }
+              ]
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "f5"
+          },
+          "to": [
+            {
+              "description": "K3",
+              "key_code": "3"
+            }
+          ]
+        },
+        {
+          "description": "K2",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514,
+                  "description": "XPPen ACK05"
+                }
+              ]
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "description": "K2",
+              "key_code": "2"
+            }
+          ]
+        },
+        {
+          "description": "K1",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514,
+                  "description": "XPPen ACK05"
+                }
+              ]
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "description": "K1",
+              "key_code": "1"
+            }
+          ]
+        },
+        {
+          "description": "K10",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514,
+                  "description": "XPPen ACK05"
+                }
+              ]
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "optional": ["any"],
+              "mandatory": [
+                "left_control",
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "description": "K10",
+              "key_code": "0"
+            }
+          ]
+        },
+        {
+          "description": "K9",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514,
+                  "description": "XPPen ACK05"
+                }
+              ]
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar"
+          },
+          "to": [
+            {
+              "description": "K9",
+              "key_code": "9"
+            }
+          ]
+        },
+        {
+          "description": "K8",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514,
+                  "description": "XPPen ACK05"
+                }
+              ]
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "optional": ["any"],
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "description": "K8",
+              "key_code": "8"
+            }
+          ]
+        },
+        {
+          "description": "K7",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514,
+                  "description": "XPPen ACK05"
+                }
+              ]
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "left_option"
+          },
+          "to": [
+            {
+              "description": "K7",
+              "key_code": "7"
+            }
+          ]
+        },
+        {
+          "description": "K6",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514,
+                  "description": "XPPen ACK05"
+                }
+              ]
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "description": "K6",
+              "key_code": "6"
+            }
+          ]
+        },
+        {
+          "description": "K5",
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 10429,
+                  "product_id": 514,
+                  "description": "XPPen ACK05"
+                }
+              ]
+            }
+          ],
+          "type": "basic",
+          "from": {
+            "key_code": "left_shift",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "description": "K5",
+              "key_code": "5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

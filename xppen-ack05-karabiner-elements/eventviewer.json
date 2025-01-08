@@ -1,0 +1,16 @@
+[
+  {
+      "device_id": 4295013257,
+      "is_game_pad": false,
+      "is_karabiner_virtual_hid_device": false,
+      "is_keyboard": true,
+      "is_pointing_device": true,
+      "location_id": 34603008,
+      "manufacturer": "HANVON UGEE",
+      "product": "Shortcut Remote",
+      "product_id": 514,
+      "serial_number": "0000000000",
+      "transport": "USB",
+      "vendor_id": 10429
+  }
+]
