@@ -3,7 +3,7 @@
 
 ## What is GitHub Copilot?
 
-GitHub Copilot is an AI pair programmer that helps you write better code. It draws context from the code you’re working on, suggesting whole lines or entire functions.
+GitHub Copilot is an AI pair programmer that helps you write better code. It draws context from the code you're working on, suggesting whole lines or entire functions.
 
 
 ## Enable GitHub Copilot

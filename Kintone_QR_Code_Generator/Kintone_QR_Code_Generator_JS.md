@@ -70,4 +70,4 @@ The following Kintone fields are required for the customization:
 
 * [Kintone Developer Program](https://kintone.dev/en/)
 * [kintoneのフィールド値からQRコードを生成するプラグイン - Qiita](https://qiita.com/spica/items/6f7eed5efa8cf4f74167)
-* [QR code API: command “create-qr-code” (generate QR code, QR code generator)](https://goqr.me/api/doc/create-qr-code/)
+* [QR code API: command "create-qr-code" (generate QR code, QR code generator)](https://goqr.me/api/doc/create-qr-code/)

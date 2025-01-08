@@ -1,8 +1,10 @@
 # Figma ConFig 2024 Notes
 
+
 ## Homework
 
 * [Session Agenda](https://config.figma.com/agenda/session?session_id=dd264cc5a405&lang=en)
+
 
 ## General Notes
 
@@ -14,11 +16,13 @@
   * Manager for those who want to lead.
   * Staff for those who want to focus on tasks & skillsets.
 
+
 ## Figma Plugin
 
 * Join the Figma x Dev Forum.
 * Figma x Azure translation plug-in -> Worth building.
   * Stress test design with Dutch & German (Short to long).
+
 
 ## Product Launch
 
@@ -29,12 +33,14 @@
   * SDK - Upload code to Figma.
   * Encourages developers to use the design system.
 
+
 ## Figma x AI
 
 * Translations? Wording edits?
 * Search from an image to find components or similar design.
   * Find components via simple sketch.
 * Help generate the first draft.
+
 
 ## Wording Notes
 
@@ -44,15 +50,18 @@
 * Visual search for community & teams.
 * Let AI do the grunt work.
 
+
 ## Writing Workflow
 
-* See if the “rename layer name” feature can help streamline.
+* See if the "rename layer name" feature can help streamline.
+
 
 ## AI
 
 * Find what you need, stay in the flow, and get started.
 * Just use OpenAI.
-* AI features require a “make changes” or “edit prompt” feature for an iterative workflow.
+* AI features require a "make changes" or "edit prompt" feature for an iterative workflow.
+
 
 ## UX Writer @Figma
 
@@ -69,7 +78,9 @@
 * TODO: UX writing x AI workflow content is lacking; I should create some.
 * Writing is technology.
 
+
 ## Complexity Creep
+
 
 ## Global Audience
 
@@ -83,21 +94,24 @@
   * Make it memorable.
 * International English - Simple, standard, not specific to UK or US.
 
+
 ## Migration Content
 
-* Once an organization is going to migrate to a new digital tool/platform, individuals do not care about “new features” but rather addressing the pain points.
+* Once an organization is going to migrate to a new digital tool/platform, individuals do not care about "new features" but rather addressing the pain points.
   * Figma Slides was more popular than AI new features.
 * Ask individuals making the move, * what are you concerned about? What sucks right now?
 * Example: Office move; most popular question was, where to get coffee? Which elevator to take? Most popular: coffee machine.
 
+
 ## Figma Plug-in
 
-* Plugin’s interface is just HTML; Vue framework(?).
+* Plugin's interface is just HTML; Vue framework(?).
 * Backend -> Figma.
-* `themeColors` set as true to access Figma’s color CSS.
+* `themeColors` set as true to access Figma's color CSS.
 * End the postMessage with `"*"`.
 * [Dotenv for Figma](https://figma.dotenv.dev/)
   * An easy way to download starters to make your Figma plugin without messing with config files.
+
 
 ### How to get started?
 
@@ -106,7 +120,8 @@
 * Client-side AI.
 * [Design Tips Today](https://designtips.today/projects)
 
-## Discord’s Spellbook
+
+## Discord's Spellbook
 
 * Figma Plugin built internally to implement style guide.
 * Safety tools - Branch control.
@@ -119,6 +134,7 @@
   * Branch protection.
 * Single modular plugin improves discoverability.
 
+
 ### TODO: Figma Plugin for renaming layer name
 
 * Automatically create version history.
@@ -129,6 +145,7 @@
 * Replace text layer name.
 * Figma Community Creators | Fund Your Creativity.
 
+
 ## Podcast Notes
 
 * How to balance increasing functionality without making it more complex.
@@ -136,6 +153,7 @@
 
 [Hyperbrew Resources](https://hyperbrew.co/resources/bolt-figma/)
 * Content Reel plugin for Figma | Microsoft Design Tools.
+
 
 ### Watch:
 

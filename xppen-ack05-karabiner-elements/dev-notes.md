@@ -5,6 +5,7 @@
 
 [XPPen ACK05 ショートカットリモートを macOS の Karabiner-Elements と組み合わせて使用する](https://zenn.dev/komatsuh/articles/6a0da36a5229d1)
 
+
 ## EventViewer.json for ACK05
 
 ```json
