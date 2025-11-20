@@ -105,6 +105,7 @@ export default defineConfig({
           // First pass: render to populate env.frontmatter and other metadata
           await md.renderAsync(src, env)
 
+          // Use empty object as fallback if frontmatter is undefined
           const fm = env.frontmatter ?? {}
 
           // Honor per-page opt out: `search: false` in frontmatter
@@ -130,14 +131,13 @@ export default defineConfig({
           }
 
           // Strip any remaining $frontmatter interpolations from indexable text
-          rewritten = rewritten.replace(/\{\{\s*\$frontmatter\.[^}]+\}\}/g, '')
+          rewritten = rewritten.replace(/\{\{\s*\$frontmatter\.[^}]*\}\}/g, '')
 
           // Final render used for indexing
           return await md.renderAsync(rewritten, env)
         }
       }
-    }
-    // end of themeConfig
+    } // end of search options
   }
 })
 ```
