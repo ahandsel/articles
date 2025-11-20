@@ -135,10 +135,11 @@ export default defineConfig({
 
           // Final render used for indexing
           return await md.renderAsync(rewritten, env)
-        }
-      }
-    } // end of search options
-  }
+        },
+      },
+    }, // end of search options
+    // ... other themeConfig options ...
+  } // end of themeConfig
 })
 ```
 
